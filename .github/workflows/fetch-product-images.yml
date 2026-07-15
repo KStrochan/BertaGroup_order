@@ -1,31 +1,28 @@
-name: Fetch verified product images
+name: Fetch exact product images from internet
 
 on:
   workflow_dispatch:
     inputs:
       section:
-        description: Catalog section to process
+        description: Catalog section
         required: true
         default: all
         type: choice
-        options:
-          - all
-          - Food
-          - NONFood
+        options: [all, Food, NONFood]
       limit:
-        description: Maximum new products checked in this run
+        description: Maximum products checked in this run
         required: true
         default: "1000"
         type: string
       min_score:
-        description: Exact-match threshold (0.82 recommended)
+        description: Exact-match threshold
         required: true
-        default: "0.82"
+        default: "0.86"
         type: string
       retry_unmatched:
         description: Check previously unmatched products again
         required: true
-        default: false
+        default: true
         type: boolean
       force:
         description: Re-download products that already have images
@@ -57,12 +54,12 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: Install image tools
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements-images.txt
 
-      - name: Find and optimize exact product images
+      - name: Search and optimize exact product images
         shell: bash
         run: |
           EXTRA_ARGS=()
@@ -73,15 +70,15 @@ jobs:
             EXTRA_ARGS+=(--force)
           fi
 
-          # The script is intentionally conservative: uncertain products keep the category icon.
           python tools/fetch_product_images.py \
             --section "${{ inputs.section }}" \
             --limit "${{ inputs.limit }}" \
             --min-score "${{ inputs.min_score }}" \
-            --sleep 0.65 \
+            --providers "openfacts,duckduckgo,bing" \
+            --sleep 0.55 \
             "${EXTRA_ARGS[@]}" || true
 
-      - name: Save generated files as a workflow artifact
+      - name: Upload result archive
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -95,7 +92,7 @@ jobs:
             public/data/image-attribution.json
             reports/product-image-report.csv
 
-      - name: Commit downloaded images and catalog links
+      - name: Commit images and catalog links
         shell: bash
         run: |
           if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then
@@ -106,5 +103,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A public/data public/images/products reports
-          git commit -m "Add verified licensed product images"
+          git commit -m "Add exact product images"
           git push
