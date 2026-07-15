@@ -48,21 +48,12 @@ jobs:
         with:
           fetch-depth: 0
 
-<<<<<<< HEAD
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: requirements-images.txt
-=======
-- name: Set up Python
-  uses: actions/setup-python@v5
-  with:
-    python-version: "3.12"
-    cache: pip
-    cache-dependency-path: requirements-images.txt
->>>>>>> 9dff96fad22aabc45b0c36ea0e952e671a2a236f
 
       - name: Install dependencies
         run: |
