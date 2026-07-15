@@ -4,8 +4,8 @@
 
 ## Що вже реалізовано
 
-- 969 товарів з наданих Excel-прайсів:
-  - Food — 515;
+- 967 товарів з наданих Excel-прайсів:
+  - Food — 513;
   - NONFood — 454.
 - Початкові ціни з Excel, без застосування знижок.
 - Пошук і фільтрація за категоріями.
@@ -77,7 +77,7 @@ http://localhost:3000/api/health
 {
   "ok": true,
   "telegramConfigured": true,
-  "productCount": 969
+  "productCount": 967
 }
 ```
 

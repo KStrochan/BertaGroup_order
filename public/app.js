@@ -204,12 +204,21 @@ function renderProducts() {
     card.querySelector(".product-symbol").textContent = getCategoryEmoji(product);
     card.querySelector(".product-category").textContent = toTitleCase(product.category);
     card.querySelector(".product-name").textContent = product.name;
+    const packSize = getPackSize(product);
+    const priceLabel = card.querySelector(".product-price-wrap span");
     card.querySelector(".product-price").textContent = formatMoney(product.price);
+    if (packSize > 1 && product.priceBasis === "pack") {
+      priceLabel.textContent = `за уп. · ${packSize} шт`;
+    } else if (packSize > 1) {
+      priceLabel.textContent = `за шт. · уп. ${packSize} шт = ${formatMoney(getLineTotal(product, packSize))}`;
+    } else {
+      priceLabel.textContent = "за од.";
+    }
 
     const addButton = card.querySelector(".add-button");
     if (state.cart[product.id]) {
       addButton.classList.add("is-added");
-      addButton.textContent = `У кошику: ${state.cart[product.id]}`;
+      addButton.textContent = formatCartButtonQuantity(product, state.cart[product.id]);
     }
     addButton.addEventListener("click", () => addToCart(product.id, addButton));
     fragment.append(card);
@@ -235,12 +244,16 @@ function resetFilters() {
 }
 
 function addToCart(productId, button) {
-  state.cart[productId] = Math.min(999, (state.cart[productId] || 0) + 1);
+  const product = state.productById.get(productId);
+  if (!product) return;
+  const step = getPackSize(product);
+  const maxQuantity = getMaxQuantity(product);
+  state.cart[productId] = Math.min(maxQuantity, (state.cart[productId] || 0) + step);
   saveCart();
   renderCart();
   button.classList.add("is-added");
-  button.textContent = `У кошику: ${state.cart[productId]}`;
-  showToast("Товар додано до кошика");
+  button.textContent = formatCartButtonQuantity(product, state.cart[productId]);
+  showToast(step > 1 ? `Додано упаковку: ${step} шт` : "Товар додано до кошика");
 }
 
 function renderCart() {
@@ -252,15 +265,27 @@ function renderCart() {
     item.dataset.productId = product.id;
     item.querySelector(".cart-item-section").textContent = `${product.section} · ${toTitleCase(product.category)}`;
     item.querySelector(".cart-item-name").textContent = product.name;
-    item.querySelector(".cart-item-price").textContent = `${formatMoney(product.price)} за од.`;
-    item.querySelector(".cart-item-total").textContent = formatMoney(product.price * quantity);
+    const packSize = getPackSize(product);
+    if (packSize > 1 && product.priceBasis === "pack") {
+      item.querySelector(".cart-item-price").textContent =
+        `${formatMoney(product.price)} за упаковку · ${packSize} шт`;
+    } else if (packSize > 1) {
+      item.querySelector(".cart-item-price").textContent =
+        `${formatMoney(product.price)} за шт. · упаковка ${packSize} шт`;
+    } else {
+      item.querySelector(".cart-item-price").textContent = `${formatMoney(product.price)} за од.`;
+    }
+    item.querySelector(".cart-item-total").textContent = formatMoney(getLineTotal(product, quantity));
 
     const input = item.querySelector(".quantity-input");
     input.value = quantity;
+    input.min = String(packSize);
+    input.step = String(packSize);
+    input.max = String(getMaxQuantity(product));
     input.addEventListener("change", () => updateQuantity(product.id, input.value));
-    input.addEventListener("blur", () => { input.value = state.cart[product.id] || 1; });
-    item.querySelector(".quantity-minus").addEventListener("click", () => updateQuantity(product.id, quantity - 1));
-    item.querySelector(".quantity-plus").addEventListener("click", () => updateQuantity(product.id, quantity + 1));
+    input.addEventListener("blur", () => { input.value = state.cart[product.id] || packSize; });
+    item.querySelector(".quantity-minus").addEventListener("click", () => updateQuantity(product.id, quantity - packSize));
+    item.querySelector(".quantity-plus").addEventListener("click", () => updateQuantity(product.id, quantity + packSize));
     item.querySelector(".cart-remove").addEventListener("click", () => removeFromCart(product.id));
     fragment.append(item);
   }
@@ -271,7 +296,7 @@ function renderCart() {
   els.checkoutButton.disabled = entries.length === 0;
 
   const units = entries.reduce((sum, entry) => sum + entry.quantity, 0);
-  const total = entries.reduce((sum, entry) => sum + entry.product.price * entry.quantity, 0);
+  const total = entries.reduce((sum, entry) => sum + getLineTotal(entry.product, entry.quantity), 0);
   els.headerCartCount.textContent = String(units);
   els.floatingCartCount.textContent = String(units);
   els.floatingCartTotal.textContent = formatMoney(total);
@@ -283,8 +308,9 @@ function renderCart() {
 }
 
 function updateQuantity(productId, value) {
-  const quantity = Math.max(1, Math.min(999, Math.round(Number(value) || 1)));
-  state.cart[productId] = quantity;
+  const product = state.productById.get(productId);
+  if (!product) return;
+  state.cart[productId] = normalizeQuantity(product, value);
   saveCart();
   renderCart();
 }
@@ -308,7 +334,7 @@ function updateVisibleProductButtons() {
     const button = card.querySelector(".add-button");
     const quantity = state.cart[id];
     button.classList.toggle("is-added", Boolean(quantity));
-    button.textContent = quantity ? `У кошику: ${quantity}` : "Додати";
+    button.textContent = quantity ? formatCartButtonQuantity(state.productById.get(id), quantity) : "Додати";
   });
 }
 
@@ -471,11 +497,41 @@ function loadCart() {
 
 function pruneCart() {
   for (const [id, value] of Object.entries(state.cart)) {
+    const product = state.productById.get(id);
     const quantity = Number(value);
-    if (!state.productById.has(id) || !Number.isInteger(quantity) || quantity < 1) delete state.cart[id];
-    else state.cart[id] = Math.min(999, quantity);
+    if (!product || !Number.isFinite(quantity) || quantity < 1) delete state.cart[id];
+    else state.cart[id] = normalizeQuantity(product, quantity);
   }
   saveCart();
+}
+
+function getPackSize(product) {
+  const packSize = Math.round(Number(product?.packSize) || 1);
+  return Math.max(1, packSize);
+}
+
+function getMaxQuantity(product) {
+  return Math.min(999999, getPackSize(product) * 999);
+}
+
+function normalizeQuantity(product, value) {
+  const step = getPackSize(product);
+  const raw = Math.max(step, Number(value) || step);
+  const packages = Math.max(1, Math.round(raw / step));
+  return Math.min(getMaxQuantity(product), packages * step);
+}
+
+function getLineTotal(product, quantity) {
+  const packSize = getPackSize(product);
+  if (packSize > 1 && product.priceBasis === "pack") {
+    return product.price * (quantity / packSize);
+  }
+  return product.price * quantity;
+}
+
+function formatCartButtonQuantity(product, quantity) {
+  const packSize = getPackSize(product);
+  return packSize > 1 ? `У кошику: ${quantity} шт` : `У кошику: ${quantity}`;
 }
 
 function setMinimumDeliveryDate() {

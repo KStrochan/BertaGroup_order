@@ -117,8 +117,14 @@ async function handleOrder(req, res) {
 
   const calculatedItems = items.map(({ id, quantity }) => {
     const product = productById.get(id);
-    const lineTotal = roundMoney(product.price * quantity);
-    return { ...product, quantity, lineTotal };
+    const packSize = getPackSize(product);
+    const packages = quantity / packSize;
+    const lineTotal = roundMoney(
+      packSize > 1 && product.priceBasis === "pack"
+        ? product.price * packages
+        : product.price * quantity,
+    );
+    return { ...product, quantity, packSize, packages, lineTotal };
   });
   const total = roundMoney(calculatedItems.reduce((sum, item) => sum + item.lineTotal, 0));
 
@@ -184,13 +190,30 @@ function validateOrder(payload) {
   for (const item of payload.items) {
     const id = cleanInput(item?.id, 40);
     const quantity = Number(item?.quantity);
-    if (!productById.has(id)) {
+    const product = productById.get(id);
+    if (!product) {
       return { ok: false, error: "Один із товарів не знайдено в актуальному каталозі" };
     }
-    if (!Number.isInteger(quantity) || quantity < 1 || quantity > 999) {
-      return { ok: false, error: "Некоректна кількість товару" };
+    const packSize = getPackSize(product);
+    const maxQuantity = Math.min(999999, packSize * 999);
+    if (
+      !Number.isInteger(quantity) ||
+      quantity < packSize ||
+      quantity > maxQuantity ||
+      quantity % packSize !== 0
+    ) {
+      return {
+        ok: false,
+        error: packSize > 1
+          ? `Кількість товару «${product.name}» має бути кратною упаковці ${packSize} шт`
+          : "Некоректна кількість товару",
+      };
     }
-    merged.set(id, Math.min(999, (merged.get(id) || 0) + quantity));
+    const mergedQuantity = (merged.get(id) || 0) + quantity;
+    if (mergedQuantity > maxQuantity) {
+      return { ok: false, error: `Завелика кількість товару «${product.name}»` };
+    }
+    merged.set(id, mergedQuantity);
   }
 
   return {
@@ -200,6 +223,11 @@ function validateOrder(payload) {
       items: [...merged.entries()].map(([id, quantity]) => ({ id, quantity })),
     },
   };
+}
+
+function getPackSize(product) {
+  const packSize = Math.round(Number(product?.packSize) || 1);
+  return Math.max(1, packSize);
 }
 
 function buildTelegramMessages({ orderId, orderTime, customer, items, total }) {
@@ -227,10 +255,25 @@ function buildTelegramMessages({ orderId, orderTime, customer, items, total }) {
     "<b>Товари:</b>",
   ].filter((line) => line !== "").join("\n");
 
-  const itemLines = items.map((item, index) => [
-    `${index + 1}. <b>${escapeHtml(item.name)}</b>`,
-    `   ${item.quantity} × ${formatMoney(item.price)} = <b>${formatMoney(item.lineTotal)}</b>`,
-  ].join("\n"));
+  const itemLines = items.map((item, index) => {
+    let quantityLine;
+    if (item.packSize > 1 && item.priceBasis === "pack") {
+      quantityLine =
+        `${item.packages} уп. × ${formatMoney(item.price)} ` +
+        `(${item.quantity} шт) = <b>${formatMoney(item.lineTotal)}</b>`;
+    } else if (item.packSize > 1) {
+      quantityLine =
+        `${item.quantity} шт × ${formatMoney(item.price)} ` +
+        `(${item.packages} уп.) = <b>${formatMoney(item.lineTotal)}</b>`;
+    } else {
+      quantityLine =
+        `${item.quantity} × ${formatMoney(item.price)} = <b>${formatMoney(item.lineTotal)}</b>`;
+    }
+    return [
+      `${index + 1}. <b>${escapeHtml(item.name)}</b>`,
+      `   ${quantityLine}`,
+    ].join("\n");
+  });
 
   const footer = `\n\n<b>Разом: ${formatMoney(total)}</b>\nПозицій: ${items.length}`;
   const maxLength = 3800;
