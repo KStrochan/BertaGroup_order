@@ -189,7 +189,11 @@ function getFilteredProducts() {
     if (product.section !== state.section) return false;
     if (state.category && product.category !== state.category) return false;
     if (!query) return true;
-    return normalizeSearch(`${product.name} ${product.category} ${product.parentCategory}`).includes(query);
+
+    return matchesSearch(
+      `${product.name} ${product.category} ${product.parentCategory}`,
+      query,
+    );
   });
 }
 
@@ -554,6 +558,56 @@ function normalizeSearch(value) {
     .replace(/[’'`]/g, "")
     .replace(/[^\p{L}\p{N}]+/gu, " ")
     .trim();
+}
+
+// Пошук не залежить від порядку слів, підтримує частини слів і одну невелику помилку.
+// Наприклад, "Олія Pros" знайде "PROSMAZH Олія РВД 5 л".
+function matchesSearch(value, normalizedQuery) {
+  const searchText = normalizeSearch(value);
+  const searchWords = searchText.split(" ").filter(Boolean);
+  const queryWords = normalizeSearch(normalizedQuery).split(" ").filter(Boolean);
+
+  return queryWords.every((queryWord) => {
+    if (searchText.includes(queryWord)) return true;
+
+    return searchWords.some((searchWord) => {
+      if (searchWord.startsWith(queryWord)) return true;
+      if (queryWord.length < 4) return false;
+
+      const prefix = searchWord.slice(0, queryWord.length);
+      return isWithinOneEdit(prefix, queryWord);
+    });
+  });
+}
+
+function isWithinOneEdit(first, second) {
+  if (first === second) return true;
+  if (Math.abs(first.length - second.length) > 1) return false;
+
+  let firstIndex = 0;
+  let secondIndex = 0;
+  let edits = 0;
+
+  while (firstIndex < first.length && secondIndex < second.length) {
+    if (first[firstIndex] === second[secondIndex]) {
+      firstIndex += 1;
+      secondIndex += 1;
+      continue;
+    }
+
+    edits += 1;
+    if (edits > 1) return false;
+
+    if (first.length > second.length) firstIndex += 1;
+    else if (second.length > first.length) secondIndex += 1;
+    else {
+      firstIndex += 1;
+      secondIndex += 1;
+    }
+  }
+
+  if (firstIndex < first.length || secondIndex < second.length) edits += 1;
+  return edits <= 1;
 }
 
 function toTitleCase(value) {
