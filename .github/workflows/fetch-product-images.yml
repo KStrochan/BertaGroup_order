@@ -1,0 +1,110 @@
+name: Fetch verified product images
+
+on:
+  workflow_dispatch:
+    inputs:
+      section:
+        description: Catalog section to process
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - Food
+          - NONFood
+      limit:
+        description: Maximum new products checked in this run
+        required: true
+        default: "1000"
+        type: string
+      min_score:
+        description: Exact-match threshold (0.82 recommended)
+        required: true
+        default: "0.82"
+        type: string
+      retry_unmatched:
+        description: Check previously unmatched products again
+        required: true
+        default: false
+        type: boolean
+      force:
+        description: Re-download products that already have images
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-images-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  fetch-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install image tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-images.txt
+
+      - name: Find and optimize exact product images
+        shell: bash
+        run: |
+          EXTRA_ARGS=()
+          if [[ "${{ inputs.retry_unmatched }}" == "true" ]]; then
+            EXTRA_ARGS+=(--retry-unmatched)
+          fi
+          if [[ "${{ inputs.force }}" == "true" ]]; then
+            EXTRA_ARGS+=(--force)
+          fi
+
+          # The script is intentionally conservative: uncertain products keep the category icon.
+          python tools/fetch_product_images.py \
+            --section "${{ inputs.section }}" \
+            --limit "${{ inputs.limit }}" \
+            --min-score "${{ inputs.min_score }}" \
+            --sleep 0.65 \
+            "${EXTRA_ARGS[@]}" || true
+
+      - name: Save generated files as a workflow artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: berta-product-images-${{ github.run_number }}
+          if-no-files-found: ignore
+          retention-days: 14
+          path: |
+            public/images/products
+            public/data/products.json
+            public/data/image-fetch-state.json
+            public/data/image-attribution.json
+            reports/product-image-report.csv
+
+      - name: Commit downloaded images and catalog links
+        shell: bash
+        run: |
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then
+            echo "No verified new images were found."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A public/data public/images/products reports
+          git commit -m "Add verified licensed product images"
+          git push

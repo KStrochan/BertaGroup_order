@@ -205,7 +205,19 @@ function renderProducts() {
   for (const product of visible) {
     const card = els.productCardTemplate.content.firstElementChild.cloneNode(true);
     card.dataset.productId = product.id;
-    card.querySelector(".product-symbol").textContent = getCategoryEmoji(product);
+    const symbol = card.querySelector(".product-symbol");
+    const image = card.querySelector(".product-image");
+    symbol.textContent = getCategoryEmoji(product);
+    if (product.image) {
+      image.src = product.image;
+      image.alt = product.name;
+      image.hidden = false;
+      symbol.hidden = true;
+      image.addEventListener("error", () => {
+        image.hidden = true;
+        symbol.hidden = false;
+      }, { once: true });
+    }
     card.querySelector(".product-category").textContent = toTitleCase(product.category);
     card.querySelector(".product-name").textContent = product.name;
     const packSize = getPackSize(product);

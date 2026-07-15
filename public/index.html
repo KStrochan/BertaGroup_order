@@ -149,7 +149,7 @@
         <img src="/berta-logo.webp" alt="Berta Group" width="431" height="125" />
         <span>Berta HoReCa</span>
       </div>
-      <p>Доставка Food і NONFood продукції по Львівській області.</p>
+      <p>Доставка Food і NONFood продукції по Львівській області.<br><a href="/image-sources.html">Джерела фотографій товарів</a></p>
     </div>
   </footer>
 
@@ -275,8 +275,11 @@
 
   <template id="productCardTemplate">
     <article class="product-card">
-      <div class="product-card-top">
+      <div class="product-visual">
+        <img class="product-image" alt="" loading="lazy" decoding="async" hidden />
         <div class="product-symbol" aria-hidden="true"></div>
+      </div>
+      <div class="product-card-top">
         <span class="product-category"></span>
       </div>
       <h3 class="product-name"></h3>

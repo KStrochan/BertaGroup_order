@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Джерела фотографій — Berta HoReCa</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #1b232c; background: #f6f7f8; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 80px; }
+    a { color: #e91530; }
+    .back { display: inline-flex; margin-bottom: 28px; font-weight: 750; text-decoration: none; }
+    h1 { margin: 0 0 10px; font-size: clamp(34px, 6vw, 58px); letter-spacing: -.04em; }
+    .intro { max-width: 760px; color: #66717d; line-height: 1.65; }
+    .sources { margin-top: 34px; display: grid; gap: 12px; }
+    .source { padding: 18px 20px; border: 1px solid #e0e3e6; border-radius: 16px; background: white; }
+    .source strong { display: block; margin-bottom: 7px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: #66717d; font-size: 13px; }
+    .empty { padding: 30px; border-radius: 18px; background: white; border: 1px dashed #ccd1d6; color: #66717d; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">← Повернутися до каталогу</a>
+    <h1>Джерела фотографій</h1>
+    <p class="intro">Точні фотографії товарів, отримані з відкритих баз Open Food Facts та Open Products Facts, використовуються відповідно до ліцензії CC BY-SA 3.0. Якщо точного збігу немає, картка товару показує стандартну іконку категорії.</p>
+    <div class="sources" id="sources"><div class="empty">Завантаження переліку…</div></div>
+  </main>
+  <script>
+    const container = document.querySelector("#sources");
+    fetch("/data/image-attribution.json", { cache: "no-cache" })
+      .then((response) => response.ok ? response.json() : {})
+      .then((data) => {
+        const entries = Object.entries(data).sort((a, b) => String(a[1].productName).localeCompare(String(b[1].productName), "uk"));
+        if (!entries.length) {
+          container.innerHTML = '<div class="empty">Фотографії з відкритих джерел ще не додані.</div>';
+          return;
+        }
+        container.replaceChildren(...entries.map(([id, item]) => {
+          const article = document.createElement("article");
+          article.className = "source";
+          const title = document.createElement("strong");
+          title.textContent = item.productName || id;
+          const meta = document.createElement("div");
+          meta.className = "meta";
+          const source = document.createElement("span");
+          source.textContent = `${item.source || "Відкрите джерело"} · ${item.license || ""}`;
+          meta.append(source);
+          if (item.sourcePage) {
+            const link = document.createElement("a");
+            link.href = item.sourcePage;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = "Сторінка товару";
+            meta.append(link);
+          }
+          article.append(title, meta);
+          return article;
+        }));
+      })
+      .catch(() => { container.innerHTML = '<div class="empty">Не вдалося завантажити перелік джерел.</div>'; });
+  </script>
+</body>
+</html>
