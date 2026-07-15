@@ -1,1 +1,122 @@
-{}
+{
+  "food-0003": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:50:11+00:00"
+  },
+  "food-0004": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:50:17+00:00"
+  },
+  "food-0005": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:50:22+00:00"
+  },
+  "food-0006": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-15T21:50:29+00:00"
+  },
+  "food-0007": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:50:35+00:00"
+  },
+  "food-0008": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:50:41+00:00"
+  },
+  "food-0009": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:50:46+00:00"
+  },
+  "food-0010": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:50:51+00:00"
+  },
+  "food-0011": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:50:58+00:00"
+  },
+  "food-0012": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:03+00:00"
+  },
+  "food-0013": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:09+00:00"
+  },
+  "food-0014": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:15+00:00"
+  },
+  "food-0015": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:21+00:00"
+  },
+  "food-0016": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:28+00:00"
+  },
+  "food-0017": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:33+00:00"
+  },
+  "food-0018": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:38+00:00"
+  },
+  "food-0019": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:44+00:00"
+  },
+  "food-0020": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:47+00:00"
+  },
+  "food-0021": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:50+00:00"
+  },
+  "food-0022": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-15T21:51:54+00:00"
+  }
+}
