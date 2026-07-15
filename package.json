@@ -1,0 +1,14 @@
+{
+  "name": "berta-horeca-orders",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "B2B-каталог Berta HoReCa з відправленням замовлень у Telegram",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

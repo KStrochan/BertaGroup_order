@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f11931" />
+  <meta name="description" content="Каталог Food і NONFood продукції Berta HoReCa з доставкою по Львівській області." />
+  <title>Berta HoReCa — замовлення для бізнесу</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/berta-logo.webp" as="image" type="image/webp" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/app.js" type="module"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Berta HoReCa — на головну">
+        <img src="/berta-logo.webp" alt="Berta Group" width="431" height="125" />
+        <span class="brand-caption">HoReCa</span>
+      </a>
+      <nav class="header-nav" aria-label="Головна навігація">
+        <a href="#catalog">Каталог</a>
+        <a href="#delivery">Доставка</a>
+      </nav>
+      <button class="cart-button" id="headerCartButton" type="button" aria-label="Відкрити кошик">
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span class="cart-button-text">Кошик</span>
+        <span class="cart-badge" id="headerCartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">B2B-каталог для закладів</p>
+          <h1>Все необхідне для вашого HoReCa-бізнесу</h1>
+          <p class="hero-description">
+            Food і NONFood продукція в одному каталозі. Оберіть товари, вкажіть адресу — замовлення одразу надійде нашому менеджеру в Telegram.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalog">Перейти до каталогу</a>
+            <button class="button button-secondary" id="heroCartButton" type="button">Відкрити кошик</button>
+          </div>
+          <ul class="hero-benefits" aria-label="Переваги">
+            <li><strong id="heroProductCount">969</strong><span>товарів</span></li>
+            <li><strong>Без</strong><span>реєстрації</span></li>
+            <li><strong>Львівська</strong><span>область</span></li>
+          </ul>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card hero-card-main">
+            <span class="hero-card-kicker">Каталог</span>
+            <strong>Food + NONFood</strong>
+            <span>для кафе, ресторанів, готелів і магазинів</span>
+          </div>
+          <div class="hero-card hero-card-small hero-card-food">
+            <span class="hero-card-emoji">🍽️</span>
+            <strong>Food</strong>
+            <span id="foodCountHero">515 позицій</span>
+          </div>
+          <div class="hero-card hero-card-small hero-card-nonfood">
+            <span class="hero-card-emoji">🧴</span>
+            <strong>NONFood</strong>
+            <span id="nonfoodCountHero">454 позиції</span>
+          </div>
+          <div class="hero-orbit hero-orbit-one"></div>
+          <div class="hero-orbit hero-orbit-two"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalog">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Асортимент Berta HoReCa</p>
+            <h2>Оберіть необхідні товари</h2>
+          </div>
+          <p class="section-note">Ціни вказані згідно з початковою ціною у наданому прайсі.</p>
+        </div>
+
+        <div class="catalog-toolbar" id="catalogToolbar">
+          <div class="section-tabs" role="tablist" aria-label="Розділ каталогу">
+            <button class="section-tab is-active" type="button" data-section="Food" role="tab" aria-selected="true">
+              Food <span id="foodTabCount">515</span>
+            </button>
+            <button class="section-tab" type="button" data-section="NONFood" role="tab" aria-selected="false">
+              NONFood <span id="nonfoodTabCount">454</span>
+            </button>
+          </div>
+
+          <div class="catalog-filters">
+            <label class="search-field">
+              <span class="visually-hidden">Пошук товару</span>
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="searchInput" type="search" placeholder="Пошук за назвою товару…" autocomplete="off" />
+              <button id="clearSearchButton" class="clear-search" type="button" aria-label="Очистити пошук">×</button>
+            </label>
+
+            <label class="select-field">
+              <span class="visually-hidden">Категорія</span>
+              <select id="categorySelect">
+                <option value="">Усі категорії</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="catalog-summary">
+          <p id="resultsText">Завантажуємо каталог…</p>
+          <button class="link-button" id="resetFiltersButton" type="button">Скинути фільтри</button>
+        </div>
+
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <span class="empty-icon">🔎</span>
+          <h3>Товарів не знайдено</h3>
+          <p>Спробуйте змінити пошуковий запит або вибрати іншу категорію.</p>
+          <button class="button button-secondary" id="emptyResetButton" type="button">Очистити фільтри</button>
+        </div>
+
+        <div class="load-more-wrap">
+          <button class="button button-secondary load-more" id="loadMoreButton" type="button" hidden>Показати ще</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery-section" id="delivery">
+      <div class="container delivery-grid">
+        <div>
+          <p class="eyebrow">Як це працює</p>
+          <h2>Замовлення без дзвінків і реєстрації</h2>
+        </div>
+        <ol class="steps-list">
+          <li><span>01</span><div><strong>Оберіть товари</strong><p>Додайте необхідну кількість позицій до кошика.</p></div></li>
+          <li><span>02</span><div><strong>Вкажіть дані</strong><p>Назву ФОП, телефон і адресу у Львівській області.</p></div></li>
+          <li><span>03</span><div><strong>Відправте замовлення</strong><p>Після підтвердження Telegram ви побачите «Замовлення відправлено».</p></div></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="/berta-logo.webp" alt="Berta Group" width="431" height="125" />
+        <span>Berta HoReCa</span>
+      </div>
+      <p>Доставка Food і NONFood продукції по Львівській області.</p>
+    </div>
+  </footer>
+
+  <button class="floating-cart" id="floatingCartButton" type="button" aria-label="Відкрити кошик" hidden>
+    <span>🛒</span>
+    <span><strong id="floatingCartCount">0</strong> товарів</span>
+    <span id="floatingCartTotal">0,00 грн</span>
+  </button>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Кошик" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <p class="drawer-kicker">Ваше замовлення</p>
+        <h2 id="drawerTitle">Кошик</h2>
+      </div>
+      <button class="icon-button" id="closeDrawerButton" type="button" aria-label="Закрити кошик">×</button>
+    </div>
+
+    <div class="drawer-content">
+      <section id="cartStep" class="drawer-step">
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-empty" id="cartEmpty">
+          <span>🛒</span>
+          <h3>Кошик порожній</h3>
+          <p>Додайте товари з каталогу, щоб оформити замовлення.</p>
+          <button class="button button-secondary" id="continueShoppingButton" type="button">Перейти до каталогу</button>
+        </div>
+      </section>
+
+      <section id="checkoutStep" class="drawer-step" hidden>
+        <button class="back-button" id="backToCartButton" type="button">← Повернутися до кошика</button>
+        <form id="checkoutForm" novalidate>
+          <div class="form-section">
+            <h3>Дані клієнта</h3>
+            <label class="form-field form-field-wide">
+              <span>ФОП або назва компанії *</span>
+              <input name="company" type="text" maxlength="160" autocomplete="organization" placeholder="Наприклад, ФОП Іваненко І. І." required />
+            </label>
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Контактна особа *</span>
+                <input name="contact" type="text" maxlength="160" autocomplete="name" placeholder="Ім’я" required />
+              </label>
+              <label class="form-field">
+                <span>Телефон *</span>
+                <input name="phone" type="tel" maxlength="30" autocomplete="tel" inputmode="tel" placeholder="+380…" required />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-heading">
+              <h3>Адреса доставки</h3>
+              <span>Львівська область</span>
+            </div>
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Місто / населений пункт *</span>
+                <input name="city" type="text" maxlength="160" autocomplete="address-level2" placeholder="Львів" required />
+              </label>
+              <label class="form-field">
+                <span>Вулиця *</span>
+                <input name="street" type="text" maxlength="160" autocomplete="street-address" placeholder="Городоцька" required />
+              </label>
+              <label class="form-field">
+                <span>Номер будинку *</span>
+                <input name="house" type="text" maxlength="40" placeholder="120" required />
+              </label>
+              <label class="form-field">
+                <span>Заклад / приміщення</span>
+                <input name="location" type="text" maxlength="120" placeholder="Кафе, поверх, вхід…" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Бажана дата доставки</span>
+                <input name="deliveryDate" id="deliveryDateInput" type="date" />
+              </label>
+              <label class="form-field form-field-wide">
+                <span>Коментар</span>
+                <textarea name="comment" maxlength="800" rows="3" placeholder="Наприклад, доставка після 14:00"></textarea>
+              </label>
+            </div>
+          </div>
+
+          <label class="spam-field" aria-hidden="true">
+            Website
+            <input name="website" type="text" tabindex="-1" autocomplete="off" />
+          </label>
+
+          <div class="form-error" id="formError" role="alert" hidden></div>
+        </form>
+      </section>
+    </div>
+
+    <div class="drawer-footer" id="drawerFooter">
+      <div class="cart-total-row">
+        <span>Разом</span>
+        <strong id="drawerTotal">0,00 грн</strong>
+      </div>
+      <button class="button button-primary button-full" id="checkoutButton" type="button">Оформити замовлення</button>
+      <button class="button button-primary button-full" id="submitOrderButton" type="submit" form="checkoutForm" hidden>
+        <span class="button-label">Відправити замовлення</span>
+        <span class="button-spinner" aria-hidden="true"></span>
+      </button>
+      <p class="drawer-disclaimer">Замовлення буде передано менеджерам Berta HoReCa у Telegram.</p>
+    </div>
+  </aside>
+
+  <div class="success-modal" id="successModal" hidden>
+    <div class="success-card" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+      <div class="success-icon">✓</div>
+      <h2 id="successTitle">Замовлення відправлено</h2>
+      <button class="button button-primary" id="successCloseButton" type="button">Готово</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="productCardTemplate">
+    <article class="product-card">
+      <div class="product-card-top">
+        <div class="product-symbol" aria-hidden="true"></div>
+        <span class="product-category"></span>
+      </div>
+      <h3 class="product-name"></h3>
+      <div class="product-card-bottom">
+        <div class="product-price-wrap">
+          <strong class="product-price"></strong>
+          <span>за од.</span>
+        </div>
+        <button class="add-button" type="button">Додати</button>
+      </div>
+    </article>
+  </template>
+
+  <template id="cartItemTemplate">
+    <article class="cart-item">
+      <div class="cart-item-main">
+        <span class="cart-item-section"></span>
+        <h3 class="cart-item-name"></h3>
+        <p class="cart-item-price"></p>
+      </div>
+      <button class="cart-remove" type="button" aria-label="Видалити товар">×</button>
+      <div class="quantity-control">
+        <button class="quantity-minus" type="button" aria-label="Зменшити кількість">−</button>
+        <input class="quantity-input" type="number" min="1" max="999" inputmode="numeric" aria-label="Кількість" />
+        <button class="quantity-plus" type="button" aria-label="Збільшити кількість">+</button>
+      </div>
+      <strong class="cart-item-total"></strong>
+    </article>
+  </template>
+</body>
+</html>
