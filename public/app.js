@@ -62,7 +62,7 @@ async function init() {
   setMinimumDeliveryDate();
 
   try {
-    const response = await fetch("/data/products.json", { cache: "no-cache" });
+   const response = await fetch("./data/products.json", { cache: "no-cache" });
     if (!response.ok) throw new Error("Не вдалося завантажити каталог");
     state.products = await response.json();
     state.productById = new Map(state.products.map((product) => [product.id, product]));
@@ -209,6 +209,7 @@ function renderProducts() {
     const image = card.querySelector(".product-image");
     symbol.textContent = getCategoryEmoji(product);
     if (product.image) {
+      image.src = "." + product.image;
       image.src = product.image;
       image.alt = product.name;
       image.hidden = false;
