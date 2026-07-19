@@ -90,6 +90,16 @@ def parse_args() -> argparse.Namespace:
             "committed to the repo)."
         ),
     )
+    parser.add_argument(
+        "--max-minutes", type=float, default=280.0,
+        help="Stop starting new products after this many minutes and save what was found "
+             "(keeps the run safely under the workflow's own timeout).",
+    )
+    parser.add_argument(
+        "--checkpoint-every", type=int, default=15,
+        help="Save products.json/state/report to disk every N processed products, so a "
+             "cancelled or timed-out run doesn't lose earlier matches.",
+    )
     return parser.parse_args()
 
 
@@ -300,7 +310,7 @@ def search_openfacts(session: requests.Session, product: dict[str, Any], delay: 
             response = session.get(endpoint, params={
                 "search_terms": query, "search_simple": 1, "action": "process", "json": 1,
                 "page_size": 15, "fields": fields,
-            }, timeout=35)
+            }, timeout=12)
             response.raise_for_status()
             for item in response.json().get("products", []):
                 key = str(item.get("code") or item.get("image_front_url") or item.get("image_url") or "")
@@ -321,7 +331,7 @@ def search_openfacts(session: requests.Session, product: dict[str, Any], delay: 
 
 
 def ddg_vqd(session: requests.Session, query: str) -> str:
-    response = session.get(DDG_HOME, params={"q": query}, timeout=30)
+    response = session.get(DDG_HOME, params={"q": query}, timeout=12)
     response.raise_for_status()
     text = response.text
     patterns = [r"vqd=['\"]([^'\"]+)", r"'vqd'\s*:\s*'([^']+)'", r'"vqd"\s*:\s*"([^"]+)"']
@@ -342,7 +352,7 @@ def search_duckduckgo(session: requests.Session, product: dict[str, Any], delay:
                 continue
             response = session.get(DDG_IMAGES, params={
                 "l": "uk-ua", "o": "json", "q": query, "vqd": vqd, "f": ",,,,,", "p": "1",
-            }, headers={"Referer": DDG_HOME}, timeout=35)
+            }, headers={"Referer": DDG_HOME}, timeout=12)
             response.raise_for_status()
             for item in response.json().get("results", [])[:25]:
                 image_url = str(item.get("image") or "")
@@ -369,7 +379,7 @@ def search_bing(session: requests.Session, product: dict[str, Any], delay: float
     seen: set[str] = set()
     for query in build_queries(product):
         try:
-            response = session.get(BING_IMAGES, params={"q": query, "form": "HDRSC2", "first": 1}, timeout=35)
+            response = session.get(BING_IMAGES, params={"q": query, "form": "HDRSC2", "first": 1}, timeout=12)
             response.raise_for_status()
             for raw in re.findall(r'<a[^>]+class="[^"]*iusc[^"]*"[^>]+m="([^"]+)"', response.text):
                 try:
@@ -534,11 +544,27 @@ def main() -> int:
     print(f"Products in catalog: {len(products)}")
     print(f"Checking this run: {len(selected)}")
     matched = no_match = errors = 0
+    run_started = time.monotonic()
+    time_budget_seconds = max(0.0, args.max_minutes) * 60
 
     def now_iso() -> str:
         return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
+    def checkpoint() -> None:
+        if args.dry_run:
+            return
+        save_json(PRODUCTS_PATH, products, compact=True)
+        save_json(STATE_PATH, state)
+        save_json(ATTRIBUTION_PATH, attributions)
+        write_report(state, products_by_id)
+
     for index, product in enumerate(selected, 1):
+        if time.monotonic() - run_started > time_budget_seconds:
+            print(
+                f"\nStopping early after {index - 1}/{len(selected)} products "
+                f"(hit the {args.max_minutes:.0f}-minute time budget). Saving progress so far."
+            )
+            break
         product_id = str(product["id"])
         print(f"[{index}/{len(selected)}] {product_id}: {product.get('name')}")
         candidate = None
@@ -567,6 +593,9 @@ def main() -> int:
                 "checkedAt": now_iso(),
             }
             no_match += 1
+            if index % max(1, args.checkpoint_every) == 0:
+                checkpoint()
+                print(f"  [checkpoint saved at {index}/{len(selected)}]")
             continue
 
         image_url = str(candidate.get("image_front_url") or candidate.get("image_url") or "")
@@ -588,6 +617,9 @@ def main() -> int:
                 "reason": fail_reason, "checkedAt": now_iso(),
             }
             errors += 1
+            if index % max(1, args.checkpoint_every) == 0:
+                checkpoint()
+                print(f"  [checkpoint saved at {index}/{len(selected)}]")
             continue
 
         provider = str(candidate.get("provider") or "")
@@ -605,11 +637,12 @@ def main() -> int:
         }
         matched += 1
 
+        if index % max(1, args.checkpoint_every) == 0:
+            checkpoint()
+            print(f"  [checkpoint saved at {index}/{len(selected)}]")
+
     if not args.dry_run:
-        save_json(PRODUCTS_PATH, products, compact=True)
-        save_json(STATE_PATH, state)
-        save_json(ATTRIBUTION_PATH, attributions)
-        write_report(state, products_by_id)
+        checkpoint()
 
     print("\nSummary")
     print(f"  matched:  {matched}")

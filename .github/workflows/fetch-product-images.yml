@@ -85,6 +85,8 @@ jobs:
             --min-score "${{ inputs.min_score }}" \
             --providers "openfacts,duckduckgo,bing" \
             --sleep 0.55 \
+            --max-minutes 300 \
+            --checkpoint-every 15 \
             "${EXTRA_ARGS[@]}"
 
       - name: Upload result archive
