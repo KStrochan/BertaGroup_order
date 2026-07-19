@@ -81,6 +81,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--retry-unmatched", action="store_true")
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--hotlink",
+        action="store_true",
+        help=(
+            "Do not download or re-encode images. Store the matched image's direct URL in "
+            "products.json so the browser loads it straight from the source (no files are "
+            "committed to the repo)."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -433,6 +442,37 @@ def download_image(session: requests.Session, image_url: str, destination: Path)
         return False, str(exc)
 
 
+def verify_hotlink(session: requests.Session, image_url: str) -> tuple[bool, str]:
+    """Confirm the URL actually serves an image, without saving its bytes anywhere.
+
+    We still fetch it once (streamed, capped) so a dead link or an HTML error page never
+    lands in products.json, but nothing is written to disk — the browser will re-fetch the
+    same URL directly from its source every time a client opens the site.
+    """
+    try:
+        response = session.get(
+            image_url,
+            timeout=25,
+            stream=True,
+            headers={"Accept": "image/avif,image/webp,image/*,*/*;q=0.8"},
+        )
+        response.raise_for_status()
+        content_type = response.headers.get("Content-Type", "")
+        if not content_type.startswith("image/"):
+            return False, f"unexpected content-type: {content_type or 'unknown'}"
+        chunk = next(response.iter_content(chunk_size=64_000), b"")
+        if len(chunk) < 500:
+            return False, "response too small to be a real photo"
+        return True, ""
+    except (requests.RequestException, StopIteration) as exc:
+        return False, str(exc)
+    finally:
+        try:
+            response.close()
+        except Exception:
+            pass
+
+
 def write_report(state: dict[str, Any], products: dict[str, dict[str, Any]]) -> None:
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     fields = ["product_id", "section", "product_name", "status", "provider", "score", "matched_name",
@@ -475,13 +515,17 @@ def main() -> int:
             continue
         if args.section != "all" and product.get("section") != args.section:
             continue
-        image_path = IMAGES_DIR / f"{product_id}.webp"
         existing = state.get(product_id, {})
-        if not args.force and product.get("image") and image_path.exists():
-            continue
-        if not args.force and existing.get("status") == "matched" and image_path.exists():
-            product["image"] = f"/images/products/{product_id}.webp"
-            continue
+        if args.hotlink:
+            if not args.force and product.get("image"):
+                continue
+        else:
+            image_path = IMAGES_DIR / f"{product_id}.webp"
+            if not args.force and product.get("image") and image_path.exists():
+                continue
+            if not args.force and existing.get("status") == "matched" and image_path.exists():
+                product["image"] = f"/images/products/{product_id}.webp"
+                continue
         if not args.retry_unmatched and existing.get("status") == "no_match":
             continue
         eligible.append(product)
@@ -527,20 +571,27 @@ def main() -> int:
 
         image_url = str(candidate.get("image_front_url") or candidate.get("image_url") or "")
         source_page = str(candidate.get("source_page") or "")
-        destination = IMAGES_DIR / f"{product_id}.webp"
-        ok, error = (True, "") if args.dry_run else download_image(session, image_url, destination)
+
+        if args.hotlink:
+            ok, error = (True, "") if args.dry_run else verify_hotlink(session, image_url)
+            fail_reason = f"hotlink check failed: {error}"
+        else:
+            destination = IMAGES_DIR / f"{product_id}.webp"
+            ok, error = (True, "") if args.dry_run else download_image(session, image_url, destination)
+            fail_reason = f"download failed: {error}"
+
         if not ok:
             state[product_id] = {
                 "status": "error", "provider": candidate.get("provider", ""),
                 "score": round(score, 4), "matchedName": candidate_text(candidate),
                 "sourcePage": source_page, "imageUrl": image_url,
-                "reason": f"download failed: {error}", "checkedAt": now_iso(),
+                "reason": fail_reason, "checkedAt": now_iso(),
             }
             errors += 1
             continue
 
         provider = str(candidate.get("provider") or "")
-        product["image"] = f"/images/products/{product_id}.webp"
+        product["image"] = image_url if args.hotlink else f"/images/products/{product_id}.webp"
         state[product_id] = {
             "status": "matched", "provider": provider, "score": round(score, 4),
             "matchedName": candidate_text(candidate), "sourcePage": source_page,

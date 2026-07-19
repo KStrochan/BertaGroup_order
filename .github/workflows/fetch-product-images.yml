@@ -25,9 +25,14 @@ on:
         default: true
         type: boolean
       force:
-        description: Re-download products that already have images
+        description: Re-check products that already have an image
         required: true
         default: false
+        type: boolean
+      hotlink:
+        description: Store the found image URL directly (no files downloaded or committed)
+        required: true
+        default: true
         type: boolean
 
 permissions:
@@ -70,6 +75,9 @@ jobs:
           if [[ "${{ inputs.force }}" == "true" ]]; then
             EXTRA_ARGS+=(--force)
           fi
+          if [[ "${{ inputs.hotlink }}" == "true" ]]; then
+            EXTRA_ARGS+=(--hotlink)
+          fi
 
           python tools/fetch_product_images.py \
             --section "${{ inputs.section }}" \
@@ -104,5 +112,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A public/data public/images/products reports
-          git commit -m "Add exact product images"
+          if [[ "${{ inputs.hotlink }}" == "true" ]]; then
+            git commit -m "Add product image links (hotlinked, no files stored)"
+          else
+            git commit -m "Add exact product images"
+          fi
           git push
