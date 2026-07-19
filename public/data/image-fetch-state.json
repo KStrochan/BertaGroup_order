@@ -3,120 +3,3558 @@
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:50:11+00:00"
+    "checkedAt": "2026-07-19T21:39:18+00:00"
   },
   "food-0004": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:50:17+00:00"
+    "checkedAt": "2026-07-19T21:40:00+00:00"
   },
   "food-0005": {
     "status": "no_match",
     "score": 0.0,
-    "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:50:22+00:00"
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:40:41+00:00"
   },
   "food-0006": {
     "status": "no_match",
     "score": 0.0,
-    "reason": "source domain is not suitable",
-    "checkedAt": "2026-07-15T21:50:29+00:00"
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:41:22+00:00"
   },
   "food-0007": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:50:35+00:00"
+    "checkedAt": "2026-07-19T21:42:03+00:00"
   },
   "food-0008": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:50:41+00:00"
+    "checkedAt": "2026-07-19T21:42:46+00:00"
   },
   "food-0009": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:50:46+00:00"
+    "checkedAt": "2026-07-19T21:43:27+00:00"
   },
   "food-0010": {
     "status": "no_match",
     "score": 0.0,
-    "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:50:51+00:00"
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:44:10+00:00"
   },
   "food-0011": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:50:58+00:00"
+    "checkedAt": "2026-07-19T21:44:52+00:00"
   },
   "food-0012": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:03+00:00"
+    "checkedAt": "2026-07-19T21:45:34+00:00"
   },
   "food-0013": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:09+00:00"
+    "checkedAt": "2026-07-19T21:46:16+00:00"
   },
   "food-0014": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:15+00:00"
+    "checkedAt": "2026-07-19T21:46:58+00:00"
   },
   "food-0015": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:21+00:00"
+    "checkedAt": "2026-07-19T21:47:39+00:00"
   },
   "food-0016": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:28+00:00"
+    "checkedAt": "2026-07-19T21:48:20+00:00"
   },
   "food-0017": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:33+00:00"
+    "checkedAt": "2026-07-19T21:49:01+00:00"
   },
   "food-0018": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:38+00:00"
+    "checkedAt": "2026-07-19T21:49:42+00:00"
   },
   "food-0019": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:44+00:00"
+    "checkedAt": "2026-07-19T21:50:23+00:00"
   },
   "food-0020": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:47+00:00"
+    "checkedAt": "2026-07-19T21:51:04+00:00"
   },
   "food-0021": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:50+00:00"
+    "checkedAt": "2026-07-19T21:51:46+00:00"
   },
   "food-0022": {
     "status": "no_match",
     "score": 0.0,
     "reason": "package size/weight does not match or is missing",
-    "checkedAt": "2026-07-15T21:51:54+00:00"
+    "checkedAt": "2026-07-19T21:52:28+00:00"
+  },
+  "nonfood-0001": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (termopapir)",
+    "checkedAt": "2026-07-19T17:49:26+00:00"
+  },
+  "nonfood-0002": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (termopapir)",
+    "checkedAt": "2026-07-19T17:49:31+00:00"
+  },
+  "nonfood-0003": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T17:49:34+00:00"
+  },
+  "nonfood-0004": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (termonakleika)",
+    "checkedAt": "2026-07-19T17:49:38+00:00"
+  },
+  "nonfood-0005": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:49:43+00:00"
+  },
+  "nonfood-0006": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:49:48+00:00"
+  },
+  "nonfood-0007": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:49:55+00:00"
+  },
+  "nonfood-0008": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:50:01+00:00"
+  },
+  "nonfood-0009": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:50:07+00:00"
+  },
+  "nonfood-0010": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T17:50:12+00:00"
+  },
+  "nonfood-0011": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:50:16+00:00"
+  },
+  "nonfood-0012": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:50:19+00:00"
+  },
+  "nonfood-0013": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:50:23+00:00"
+  },
+  "nonfood-0014": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T17:50:27+00:00"
+  },
+  "nonfood-0015": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:50:32+00:00"
+  },
+  "nonfood-0016": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:50:36+00:00"
+  },
+  "nonfood-0017": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:50:39+00:00"
+  },
+  "nonfood-0018": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:50:44+00:00"
+  },
+  "nonfood-0019": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:50:47+00:00"
+  },
+  "nonfood-0020": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:50:52+00:00"
+  },
+  "nonfood-0021": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:50:55+00:00"
+  },
+  "nonfood-0022": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:00+00:00"
+  },
+  "nonfood-0023": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:06+00:00"
+  },
+  "nonfood-0024": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T17:51:09+00:00"
+  },
+  "nonfood-0025": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:12+00:00"
+  },
+  "nonfood-0026": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:17+00:00"
+  },
+  "nonfood-0027": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:20+00:00"
+  },
+  "nonfood-0028": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T17:51:24+00:00"
+  },
+  "nonfood-0029": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:27+00:00"
+  },
+  "nonfood-0030": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:31+00:00"
+  },
+  "nonfood-0031": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:34+00:00"
+  },
+  "nonfood-0032": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:37+00:00"
+  },
+  "nonfood-0033": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:51:41+00:00"
+  },
+  "nonfood-0034": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T17:51:46+00:00"
+  },
+  "nonfood-0035": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:49+00:00"
+  },
+  "nonfood-0036": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T17:51:52+00:00"
+  },
+  "nonfood-0037": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:56+00:00"
+  },
+  "nonfood-0038": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:51:59+00:00"
+  },
+  "nonfood-0039": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:52:03+00:00"
+  },
+  "nonfood-0040": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:52:08+00:00"
+  },
+  "nonfood-0041": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:52:13+00:00"
+  },
+  "nonfood-0042": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:52:17+00:00"
+  },
+  "nonfood-0043": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:52:20+00:00"
+  },
+  "nonfood-0044": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:52:24+00:00"
+  },
+  "nonfood-0045": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:52:27+00:00"
+  },
+  "nonfood-0046": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:52:31+00:00"
+  },
+  "nonfood-0047": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:53:00+00:00"
+  },
+  "nonfood-0048": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:53:41+00:00"
+  },
+  "nonfood-0049": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T17:54:21+00:00"
+  },
+  "nonfood-0050": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:55:02+00:00"
+  },
+  "nonfood-0051": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:55:42+00:00"
+  },
+  "nonfood-0052": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:56:23+00:00"
+  },
+  "nonfood-0053": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:57:04+00:00"
+  },
+  "nonfood-0054": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:57:46+00:00"
+  },
+  "nonfood-0055": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:58:28+00:00"
+  },
+  "nonfood-0056": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T17:59:08+00:00"
+  },
+  "nonfood-0057": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T17:59:49+00:00"
+  },
+  "nonfood-0058": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:00:30+00:00"
+  },
+  "nonfood-0059": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:01:11+00:00"
+  },
+  "nonfood-0060": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:01:38+00:00"
+  },
+  "nonfood-0061": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:02:06+00:00"
+  },
+  "nonfood-0062": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:02:34+00:00"
+  },
+  "nonfood-0063": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:03:15+00:00"
+  },
+  "nonfood-0064": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:03:55+00:00"
+  },
+  "nonfood-0065": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:04:36+00:00"
+  },
+  "nonfood-0066": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (iao)",
+    "checkedAt": "2026-07-19T18:05:03+00:00"
+  },
+  "nonfood-0067": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (iao)",
+    "checkedAt": "2026-07-19T18:05:31+00:00"
+  },
+  "nonfood-0068": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (iao)",
+    "checkedAt": "2026-07-19T18:05:58+00:00"
+  },
+  "nonfood-0069": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:06:39+00:00"
+  },
+  "nonfood-0070": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:07:20+00:00"
+  },
+  "nonfood-0071": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (get)",
+    "checkedAt": "2026-07-19T18:08:01+00:00"
+  },
+  "nonfood-0072": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (get)",
+    "checkedAt": "2026-07-19T18:08:41+00:00"
+  },
+  "nonfood-0073": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:09:23+00:00"
+  },
+  "nonfood-0074": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:10:05+00:00"
+  },
+  "nonfood-0075": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:10:46+00:00"
+  },
+  "nonfood-0076": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:11:27+00:00"
+  },
+  "nonfood-0077": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:12:07+00:00"
+  },
+  "nonfood-0078": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:12:49+00:00"
+  },
+  "nonfood-0079": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:13:29+00:00"
+  },
+  "nonfood-0080": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:14:10+00:00"
+  },
+  "nonfood-0081": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:14:51+00:00"
+  },
+  "nonfood-0082": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:15:18+00:00"
+  },
+  "nonfood-0083": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:16:00+00:00"
+  },
+  "nonfood-0084": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:16:41+00:00"
+  },
+  "nonfood-0085": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:17:21+00:00"
+  },
+  "nonfood-0086": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:18:02+00:00"
+  },
+  "nonfood-0087": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:18:43+00:00"
+  },
+  "nonfood-0088": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:19:23+00:00"
+  },
+  "nonfood-0089": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (pidkladka)",
+    "checkedAt": "2026-07-19T18:20:04+00:00"
+  },
+  "nonfood-0090": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (pidkladka)",
+    "checkedAt": "2026-07-19T18:20:45+00:00"
+  },
+  "nonfood-0091": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:21:26+00:00"
+  },
+  "nonfood-0092": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:22:07+00:00"
+  },
+  "nonfood-0093": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:22:48+00:00"
+  },
+  "nonfood-0094": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:23:15+00:00"
+  },
+  "nonfood-0095": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:23:56+00:00"
+  },
+  "nonfood-0096": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:24:37+00:00"
+  },
+  "nonfood-0097": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:25:18+00:00"
+  },
+  "nonfood-0098": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:26:00+00:00"
+  },
+  "nonfood-0099": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:26:42+00:00"
+  },
+  "nonfood-0100": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:27:24+00:00"
+  },
+  "nonfood-0101": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:28:04+00:00"
+  },
+  "nonfood-0102": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:28:46+00:00"
+  },
+  "nonfood-0103": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:29:28+00:00"
+  },
+  "nonfood-0104": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:30:11+00:00"
+  },
+  "nonfood-0105": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:30:51+00:00"
+  },
+  "nonfood-0106": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:31:33+00:00"
+  },
+  "nonfood-0107": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:32:14+00:00"
+  },
+  "nonfood-0108": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:32:55+00:00"
+  },
+  "nonfood-0109": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:33:36+00:00"
+  },
+  "nonfood-0110": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:34:18+00:00"
+  },
+  "nonfood-0111": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:35:00+00:00"
+  },
+  "nonfood-0112": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:35:40+00:00"
+  },
+  "nonfood-0113": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:36:22+00:00"
+  },
+  "nonfood-0114": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:37:04+00:00"
+  },
+  "nonfood-0115": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:37:44+00:00"
+  },
+  "nonfood-0116": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:38:25+00:00"
+  },
+  "nonfood-0117": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:39:06+00:00"
+  },
+  "nonfood-0118": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:39:46+00:00"
+  },
+  "nonfood-0119": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:40:27+00:00"
+  },
+  "nonfood-0120": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:41:08+00:00"
+  },
+  "nonfood-0121": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:41:50+00:00"
+  },
+  "nonfood-0122": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:42:31+00:00"
+  },
+  "nonfood-0123": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:43:11+00:00"
+  },
+  "nonfood-0124": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:43:52+00:00"
+  },
+  "nonfood-0125": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:44:33+00:00"
+  },
+  "nonfood-0126": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:45:15+00:00"
+  },
+  "nonfood-0127": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:45:55+00:00"
+  },
+  "nonfood-0128": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:46:36+00:00"
+  },
+  "nonfood-0129": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:47:16+00:00"
+  },
+  "nonfood-0130": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:47:58+00:00"
+  },
+  "nonfood-0131": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:48:40+00:00"
+  },
+  "nonfood-0132": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:49:20+00:00"
+  },
+  "nonfood-0133": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:50:02+00:00"
+  },
+  "nonfood-0134": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:50:44+00:00"
+  },
+  "nonfood-0135": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:51:24+00:00"
+  },
+  "nonfood-0136": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:52:06+00:00"
+  },
+  "nonfood-0137": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:52:46+00:00"
+  },
+  "nonfood-0138": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:53:28+00:00"
+  },
+  "nonfood-0139": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:54:08+00:00"
+  },
+  "nonfood-0140": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:54:50+00:00"
+  },
+  "nonfood-0141": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:55:30+00:00"
+  },
+  "nonfood-0142": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T18:56:11+00:00"
+  },
+  "nonfood-0143": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:56:52+00:00"
+  },
+  "nonfood-0144": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:57:33+00:00"
+  },
+  "nonfood-0145": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T18:58:01+00:00"
+  },
+  "nonfood-0146": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:58:41+00:00"
+  },
+  "nonfood-0147": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T18:59:23+00:00"
+  },
+  "nonfood-0148": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:00:03+00:00"
+  },
+  "nonfood-0149": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:00:31+00:00"
+  },
+  "nonfood-0150": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:01:11+00:00"
+  },
+  "nonfood-0151": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:01:52+00:00"
+  },
+  "nonfood-0152": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:02:33+00:00"
+  },
+  "nonfood-0153": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:03:14+00:00"
+  },
+  "nonfood-0154": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:03:55+00:00"
+  },
+  "nonfood-0155": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:04:35+00:00"
+  },
+  "nonfood-0156": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:05:17+00:00"
+  },
+  "nonfood-0157": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:05:57+00:00"
+  },
+  "nonfood-0158": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:06:38+00:00"
+  },
+  "nonfood-0159": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:07:18+00:00"
+  },
+  "nonfood-0160": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:07:59+00:00"
+  },
+  "nonfood-0161": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:08:40+00:00"
+  },
+  "nonfood-0162": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:09:20+00:00"
+  },
+  "nonfood-0163": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:10:02+00:00"
+  },
+  "nonfood-0164": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:10:43+00:00"
+  },
+  "nonfood-0165": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:11:24+00:00"
+  },
+  "nonfood-0166": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:12:04+00:00"
+  },
+  "nonfood-0167": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:12:32+00:00"
+  },
+  "nonfood-0168": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:13:13+00:00"
+  },
+  "nonfood-0169": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:13:54+00:00"
+  },
+  "nonfood-0170": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:14:22+00:00"
+  },
+  "nonfood-0171": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:14:49+00:00"
+  },
+  "nonfood-0172": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:15:17+00:00"
+  },
+  "nonfood-0173": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:15:45+00:00"
+  },
+  "nonfood-0174": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:16:12+00:00"
+  },
+  "nonfood-0175": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:16:53+00:00"
+  },
+  "nonfood-0176": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:17:34+00:00"
+  },
+  "nonfood-0177": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:18:15+00:00"
+  },
+  "nonfood-0178": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:18:56+00:00"
+  },
+  "nonfood-0179": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:19:38+00:00"
+  },
+  "nonfood-0180": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:20:18+00:00"
+  },
+  "nonfood-0181": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (lanch)",
+    "checkedAt": "2026-07-19T19:21:00+00:00"
+  },
+  "nonfood-0182": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:21:28+00:00"
+  },
+  "nonfood-0183": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:21:56+00:00"
+  },
+  "nonfood-0184": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:22:23+00:00"
+  },
+  "nonfood-0185": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:22:52+00:00"
+  },
+  "nonfood-0186": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:23:20+00:00"
+  },
+  "nonfood-0187": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:24:01+00:00"
+  },
+  "nonfood-0188": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:24:41+00:00"
+  },
+  "nonfood-0189": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:25:09+00:00"
+  },
+  "nonfood-0190": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:25:37+00:00"
+  },
+  "nonfood-0191": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:26:05+00:00"
+  },
+  "nonfood-0192": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:26:32+00:00"
+  },
+  "nonfood-0193": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:27:00+00:00"
+  },
+  "nonfood-0194": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:27:27+00:00"
+  },
+  "nonfood-0195": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:27:55+00:00"
+  },
+  "nonfood-0196": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:28:23+00:00"
+  },
+  "nonfood-0197": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:29:04+00:00"
+  },
+  "nonfood-0198": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:29:45+00:00"
+  },
+  "nonfood-0199": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:30:27+00:00"
+  },
+  "nonfood-0200": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:31:08+00:00"
+  },
+  "nonfood-0201": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:31:48+00:00"
+  },
+  "nonfood-0202": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:32:29+00:00"
+  },
+  "nonfood-0203": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:33:11+00:00"
+  },
+  "nonfood-0204": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:33:53+00:00"
+  },
+  "nonfood-0205": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:34:34+00:00"
+  },
+  "nonfood-0206": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:35:14+00:00"
+  },
+  "nonfood-0207": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:35:55+00:00"
+  },
+  "nonfood-0208": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:36:36+00:00"
+  },
+  "nonfood-0209": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:37:16+00:00"
+  },
+  "nonfood-0210": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:37:57+00:00"
+  },
+  "nonfood-0211": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:38:38+00:00"
+  },
+  "nonfood-0212": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:39:20+00:00"
+  },
+  "nonfood-0213": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:40:01+00:00"
+  },
+  "nonfood-0214": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:40:42+00:00"
+  },
+  "nonfood-0215": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:41:22+00:00"
+  },
+  "nonfood-0216": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:42:03+00:00"
+  },
+  "nonfood-0217": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:42:44+00:00"
+  },
+  "nonfood-0218": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:43:24+00:00"
+  },
+  "nonfood-0219": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:44:06+00:00"
+  },
+  "nonfood-0220": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:44:46+00:00"
+  },
+  "nonfood-0221": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:45:28+00:00"
+  },
+  "nonfood-0222": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:46:09+00:00"
+  },
+  "nonfood-0223": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:46:49+00:00"
+  },
+  "nonfood-0224": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:47:30+00:00"
+  },
+  "nonfood-0225": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:48:10+00:00"
+  },
+  "nonfood-0226": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:48:52+00:00"
+  },
+  "nonfood-0227": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:49:33+00:00"
+  },
+  "nonfood-0228": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:50:14+00:00"
+  },
+  "nonfood-0229": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:50:55+00:00"
+  },
+  "nonfood-0230": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:51:36+00:00"
+  },
+  "nonfood-0231": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:52:18+00:00"
+  },
+  "nonfood-0232": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:52:46+00:00"
+  },
+  "nonfood-0233": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:52:51+00:00"
+  },
+  "nonfood-0234": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:52:55+00:00"
+  },
+  "nonfood-0235": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:53:00+00:00"
+  },
+  "nonfood-0236": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:53:04+00:00"
+  },
+  "nonfood-0237": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:53:09+00:00"
+  },
+  "nonfood-0238": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:14+00:00"
+  },
+  "nonfood-0239": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:18+00:00"
+  },
+  "nonfood-0240": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:22+00:00"
+  },
+  "nonfood-0241": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:25+00:00"
+  },
+  "nonfood-0242": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:32+00:00"
+  },
+  "nonfood-0243": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:36+00:00"
+  },
+  "nonfood-0244": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:53:40+00:00"
+  },
+  "nonfood-0245": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:44+00:00"
+  },
+  "nonfood-0246": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:47+00:00"
+  },
+  "nonfood-0247": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:51+00:00"
+  },
+  "nonfood-0248": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:55+00:00"
+  },
+  "nonfood-0249": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:53:58+00:00"
+  },
+  "nonfood-0250": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:54:02+00:00"
+  },
+  "nonfood-0251": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:54:05+00:00"
+  },
+  "nonfood-0252": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:54:09+00:00"
+  },
+  "nonfood-0253": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:54:13+00:00"
+  },
+  "nonfood-0254": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:54:17+00:00"
+  },
+  "nonfood-0255": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:54:21+00:00"
+  },
+  "nonfood-0256": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:54:25+00:00"
+  },
+  "nonfood-0257": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:54:29+00:00"
+  },
+  "nonfood-0258": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:54:33+00:00"
+  },
+  "nonfood-0259": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (hoffen)",
+    "checkedAt": "2026-07-19T19:54:37+00:00"
+  },
+  "nonfood-0260": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:54:42+00:00"
+  },
+  "nonfood-0261": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetki)",
+    "checkedAt": "2026-07-19T19:54:45+00:00"
+  },
+  "nonfood-0262": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:54:49+00:00"
+  },
+  "nonfood-0263": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (zubochistki)",
+    "checkedAt": "2026-07-19T19:54:53+00:00"
+  },
+  "nonfood-0264": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (get)",
+    "checkedAt": "2026-07-19T19:54:58+00:00"
+  },
+  "nonfood-0265": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (get)",
+    "checkedAt": "2026-07-19T19:55:02+00:00"
+  },
+  "nonfood-0266": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (get)",
+    "checkedAt": "2026-07-19T19:55:05+00:00"
+  },
+  "nonfood-0267": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (get)",
+    "checkedAt": "2026-07-19T19:55:10+00:00"
+  },
+  "nonfood-0268": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (get)",
+    "checkedAt": "2026-07-19T19:55:13+00:00"
+  },
+  "nonfood-0269": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (get)",
+    "checkedAt": "2026-07-19T19:55:18+00:00"
+  },
+  "nonfood-0270": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (papir)",
+    "checkedAt": "2026-07-19T19:55:22+00:00"
+  },
+  "nonfood-0271": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:55:26+00:00"
+  },
+  "nonfood-0272": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (pergament)",
+    "checkedAt": "2026-07-19T19:55:30+00:00"
+  },
+  "nonfood-0273": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (pergament)",
+    "checkedAt": "2026-07-19T19:55:33+00:00"
+  },
+  "nonfood-0274": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:55:36+00:00"
+  },
+  "nonfood-0275": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (plivka)",
+    "checkedAt": "2026-07-19T19:55:40+00:00"
+  },
+  "nonfood-0276": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (plivka)",
+    "checkedAt": "2026-07-19T19:55:43+00:00"
+  },
+  "nonfood-0277": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (plivka)",
+    "checkedAt": "2026-07-19T19:55:47+00:00"
+  },
+  "nonfood-0278": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:55:50+00:00"
+  },
+  "nonfood-0279": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetka)",
+    "checkedAt": "2026-07-19T19:55:53+00:00"
+  },
+  "nonfood-0280": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:55:57+00:00"
+  },
+  "nonfood-0281": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetka)",
+    "checkedAt": "2026-07-19T19:55:59+00:00"
+  },
+  "nonfood-0282": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T19:56:03+00:00"
+  },
+  "nonfood-0283": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetka)",
+    "checkedAt": "2026-07-19T19:56:07+00:00"
+  },
+  "nonfood-0284": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:56:10+00:00"
+  },
+  "nonfood-0285": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:56:13+00:00"
+  },
+  "nonfood-0286": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetka)",
+    "checkedAt": "2026-07-19T19:56:15+00:00"
+  },
+  "nonfood-0287": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (folga)",
+    "checkedAt": "2026-07-19T19:56:20+00:00"
+  },
+  "nonfood-0288": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (folga)",
+    "checkedAt": "2026-07-19T19:56:23+00:00"
+  },
+  "nonfood-0289": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (folga)",
+    "checkedAt": "2026-07-19T19:56:27+00:00"
+  },
+  "nonfood-0290": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:56:45+00:00"
+  },
+  "nonfood-0291": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T19:57:27+00:00"
+  },
+  "nonfood-0292": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:57:55+00:00"
+  },
+  "nonfood-0293": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:58:23+00:00"
+  },
+  "nonfood-0294": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:58:50+00:00"
+  },
+  "nonfood-0295": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:59:18+00:00"
+  },
+  "nonfood-0296": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T19:59:46+00:00"
+  },
+  "nonfood-0297": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:00:27+00:00"
+  },
+  "nonfood-0298": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:01:08+00:00"
+  },
+  "nonfood-0299": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:01:48+00:00"
+  },
+  "nonfood-0300": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:02:30+00:00"
+  },
+  "nonfood-0301": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:03:10+00:00"
+  },
+  "nonfood-0302": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:03:51+00:00"
+  },
+  "nonfood-0303": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:04:32+00:00"
+  },
+  "nonfood-0304": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:05:14+00:00"
+  },
+  "nonfood-0305": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:05:55+00:00"
+  },
+  "nonfood-0306": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:06:37+00:00"
+  },
+  "nonfood-0307": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:07:18+00:00"
+  },
+  "nonfood-0308": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:07:59+00:00"
+  },
+  "nonfood-0309": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:08:40+00:00"
+  },
+  "nonfood-0310": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:09:22+00:00"
+  },
+  "nonfood-0311": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:10:03+00:00"
+  },
+  "nonfood-0312": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:10:45+00:00"
+  },
+  "nonfood-0313": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:11:27+00:00"
+  },
+  "nonfood-0314": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:12:08+00:00"
+  },
+  "nonfood-0315": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:12:50+00:00"
+  },
+  "nonfood-0316": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:13:31+00:00"
+  },
+  "nonfood-0317": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:14:13+00:00"
+  },
+  "nonfood-0318": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:14:54+00:00"
+  },
+  "nonfood-0319": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:15:34+00:00"
+  },
+  "nonfood-0320": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:16:15+00:00"
+  },
+  "nonfood-0321": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:16:56+00:00"
+  },
+  "nonfood-0322": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:17:37+00:00"
+  },
+  "nonfood-0323": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:18:18+00:00"
+  },
+  "nonfood-0324": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:18:59+00:00"
+  },
+  "nonfood-0325": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:19:40+00:00"
+  },
+  "nonfood-0326": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:20:22+00:00"
+  },
+  "nonfood-0327": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:21:02+00:00"
+  },
+  "nonfood-0328": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:21:44+00:00"
+  },
+  "nonfood-0329": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:22:25+00:00"
+  },
+  "nonfood-0330": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:23:06+00:00"
+  },
+  "nonfood-0331": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:23:46+00:00"
+  },
+  "nonfood-0332": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:24:27+00:00"
+  },
+  "nonfood-0333": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:25:08+00:00"
+  },
+  "nonfood-0334": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:25:49+00:00"
+  },
+  "nonfood-0335": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:26:30+00:00"
+  },
+  "nonfood-0336": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:27:11+00:00"
+  },
+  "nonfood-0337": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (zasib)",
+    "checkedAt": "2026-07-19T20:27:52+00:00"
+  },
+  "nonfood-0338": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:28:33+00:00"
+  },
+  "nonfood-0339": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:29:15+00:00"
+  },
+  "nonfood-0340": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:29:56+00:00"
+  },
+  "nonfood-0341": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:30:37+00:00"
+  },
+  "nonfood-0342": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:31:18+00:00"
+  },
+  "nonfood-0343": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:31:59+00:00"
+  },
+  "nonfood-0344": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:32:41+00:00"
+  },
+  "nonfood-0345": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:33:21+00:00"
+  },
+  "nonfood-0346": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:34:03+00:00"
+  },
+  "nonfood-0347": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:34:43+00:00"
+  },
+  "nonfood-0348": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:35:25+00:00"
+  },
+  "nonfood-0349": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:36:05+00:00"
+  },
+  "nonfood-0350": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:36:46+00:00"
+  },
+  "nonfood-0351": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:37:28+00:00"
+  },
+  "nonfood-0352": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:38:09+00:00"
+  },
+  "nonfood-0353": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:38:49+00:00"
+  },
+  "nonfood-0354": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:39:30+00:00"
+  },
+  "nonfood-0355": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:40:12+00:00"
+  },
+  "nonfood-0356": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:40:53+00:00"
+  },
+  "nonfood-0357": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:41:33+00:00"
+  },
+  "nonfood-0358": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:42:14+00:00"
+  },
+  "nonfood-0359": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:42:54+00:00"
+  },
+  "nonfood-0360": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:43:36+00:00"
+  },
+  "nonfood-0361": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:44:16+00:00"
+  },
+  "nonfood-0362": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:44:57+00:00"
+  },
+  "nonfood-0363": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:45:38+00:00"
+  },
+  "nonfood-0364": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:46:19+00:00"
+  },
+  "nonfood-0365": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:46:59+00:00"
+  },
+  "nonfood-0366": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:47:41+00:00"
+  },
+  "nonfood-0367": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:48:21+00:00"
+  },
+  "nonfood-0368": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:49:03+00:00"
+  },
+  "nonfood-0369": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:49:43+00:00"
+  },
+  "nonfood-0370": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:50:25+00:00"
+  },
+  "nonfood-0371": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:51:07+00:00"
+  },
+  "nonfood-0372": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:51:47+00:00"
+  },
+  "nonfood-0373": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:52:29+00:00"
+  },
+  "nonfood-0374": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:53:09+00:00"
+  },
+  "nonfood-0375": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:53:50+00:00"
+  },
+  "nonfood-0376": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:54:31+00:00"
+  },
+  "nonfood-0377": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:55:13+00:00"
+  },
+  "nonfood-0378": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:55:54+00:00"
+  },
+  "nonfood-0379": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:56:35+00:00"
+  },
+  "nonfood-0380": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:57:16+00:00"
+  },
+  "nonfood-0381": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:57:57+00:00"
+  },
+  "nonfood-0382": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T20:58:38+00:00"
+  },
+  "nonfood-0383": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T20:59:19+00:00"
+  },
+  "nonfood-0384": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:00:00+00:00"
+  },
+  "nonfood-0385": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:00:41+00:00"
+  },
+  "nonfood-0386": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:01:22+00:00"
+  },
+  "nonfood-0387": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:02:04+00:00"
+  },
+  "nonfood-0388": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:02:44+00:00"
+  },
+  "nonfood-0389": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:03:25+00:00"
+  },
+  "nonfood-0390": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:03:53+00:00"
+  },
+  "nonfood-0391": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:04:20+00:00"
+  },
+  "nonfood-0392": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:04:48+00:00"
+  },
+  "nonfood-0393": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:05:15+00:00"
+  },
+  "nonfood-0394": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:05:42+00:00"
+  },
+  "nonfood-0395": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:06:10+00:00"
+  },
+  "nonfood-0396": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:06:37+00:00"
+  },
+  "nonfood-0397": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:07:04+00:00"
+  },
+  "nonfood-0398": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:07:32+00:00"
+  },
+  "nonfood-0399": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:08:00+00:00"
+  },
+  "nonfood-0400": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:08:28+00:00"
+  },
+  "nonfood-0401": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:08:56+00:00"
+  },
+  "nonfood-0402": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:09:23+00:00"
+  },
+  "nonfood-0403": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:09:51+00:00"
+  },
+  "nonfood-0404": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:10:19+00:00"
+  },
+  "nonfood-0405": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:10:47+00:00"
+  },
+  "nonfood-0406": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:11:15+00:00"
+  },
+  "nonfood-0407": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetki)",
+    "checkedAt": "2026-07-19T21:11:43+00:00"
+  },
+  "nonfood-0408": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetka)",
+    "checkedAt": "2026-07-19T21:12:10+00:00"
+  },
+  "nonfood-0409": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetka)",
+    "checkedAt": "2026-07-19T21:12:52+00:00"
+  },
+  "nonfood-0410": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetka)",
+    "checkedAt": "2026-07-19T21:13:34+00:00"
+  },
+  "nonfood-0411": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetka)",
+    "checkedAt": "2026-07-19T21:14:02+00:00"
+  },
+  "nonfood-0412": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:14:43+00:00"
+  },
+  "nonfood-0413": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetka)",
+    "checkedAt": "2026-07-19T21:15:25+00:00"
+  },
+  "nonfood-0414": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (divo)",
+    "checkedAt": "2026-07-19T21:16:06+00:00"
+  },
+  "nonfood-0415": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (rushnik)",
+    "checkedAt": "2026-07-19T21:16:33+00:00"
+  },
+  "nonfood-0416": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (rushnik)",
+    "checkedAt": "2026-07-19T21:17:02+00:00"
+  },
+  "nonfood-0417": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (rushnik)",
+    "checkedAt": "2026-07-19T21:17:29+00:00"
+  },
+  "nonfood-0418": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (rushnik)",
+    "checkedAt": "2026-07-19T21:17:57+00:00"
+  },
+  "nonfood-0419": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (rushnik)",
+    "checkedAt": "2026-07-19T21:18:26+00:00"
+  },
+  "nonfood-0420": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (rushnik)",
+    "checkedAt": "2026-07-19T21:19:07+00:00"
+  },
+  "nonfood-0421": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (rushnik)",
+    "checkedAt": "2026-07-19T21:19:35+00:00"
+  },
+  "nonfood-0422": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (rushnik)",
+    "checkedAt": "2026-07-19T21:20:16+00:00"
+  },
+  "nonfood-0423": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (rushniki)",
+    "checkedAt": "2026-07-19T21:20:57+00:00"
+  },
+  "nonfood-0424": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (rushnik)",
+    "checkedAt": "2026-07-19T21:21:38+00:00"
+  },
+  "nonfood-0425": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T21:22:19+00:00"
+  },
+  "nonfood-0426": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (tualetnii)",
+    "checkedAt": "2026-07-19T21:22:47+00:00"
+  },
+  "nonfood-0427": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T21:23:28+00:00"
+  },
+  "nonfood-0428": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T21:24:09+00:00"
+  },
+  "nonfood-0429": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T21:24:50+00:00"
+  },
+  "nonfood-0430": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T21:25:32+00:00"
+  },
+  "nonfood-0431": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T21:26:13+00:00"
+  },
+  "nonfood-0432": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (papir)",
+    "checkedAt": "2026-07-19T21:26:54+00:00"
+  },
+  "nonfood-0433": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (papir)",
+    "checkedAt": "2026-07-19T21:27:35+00:00"
+  },
+  "nonfood-0434": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T21:28:16+00:00"
+  },
+  "nonfood-0435": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T21:28:58+00:00"
+  },
+  "nonfood-0436": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (get)",
+    "checkedAt": "2026-07-19T21:29:26+00:00"
+  },
+  "nonfood-0437": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetki)",
+    "checkedAt": "2026-07-19T21:29:53+00:00"
+  },
+  "nonfood-0438": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:30:21+00:00"
+  },
+  "nonfood-0439": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T21:31:01+00:00"
+  },
+  "nonfood-0440": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "generic product match is not specific enough",
+    "checkedAt": "2026-07-19T21:31:29+00:00"
+  },
+  "nonfood-0441": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetki)",
+    "checkedAt": "2026-07-19T21:31:56+00:00"
+  },
+  "nonfood-0442": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (servetki)",
+    "checkedAt": "2026-07-19T21:32:24+00:00"
+  },
+  "nonfood-0443": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:32:51+00:00"
+  },
+  "nonfood-0444": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (ganchirka)",
+    "checkedAt": "2026-07-19T21:33:33+00:00"
+  },
+  "nonfood-0445": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (gubka)",
+    "checkedAt": "2026-07-19T21:34:00+00:00"
+  },
+  "nonfood-0446": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (gubka)",
+    "checkedAt": "2026-07-19T21:34:28+00:00"
+  },
+  "nonfood-0447": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (gubka)",
+    "checkedAt": "2026-07-19T21:34:56+00:00"
+  },
+  "nonfood-0448": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:35:36+00:00"
+  },
+  "nonfood-0449": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:36:18+00:00"
+  },
+  "nonfood-0450": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (gubka)",
+    "checkedAt": "2026-07-19T21:36:46+00:00"
+  },
+  "nonfood-0451": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (skrebok)",
+    "checkedAt": "2026-07-19T21:37:13+00:00"
+  },
+  "nonfood-0452": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (skrebok)",
+    "checkedAt": "2026-07-19T21:37:40+00:00"
+  },
+  "nonfood-0453": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:38:08+00:00"
+  },
+  "nonfood-0454": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (skrebok)",
+    "checkedAt": "2026-07-19T21:38:36+00:00"
+  },
+  "food-0023": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:53:10+00:00"
+  },
+  "food-0024": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:53:51+00:00"
+  },
+  "food-0025": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:54:32+00:00"
+  },
+  "food-0026": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:55:14+00:00"
+  },
+  "food-0027": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:55:55+00:00"
+  },
+  "food-0028": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:56:38+00:00"
+  },
+  "food-0029": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:56:55+00:00"
+  },
+  "food-0030": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:57:02+00:00"
+  },
+  "food-0031": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:57:08+00:00"
+  },
+  "food-0032": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:57:14+00:00"
+  },
+  "food-0033": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:57:20+00:00"
+  },
+  "food-0034": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:57:26+00:00"
+  },
+  "food-0035": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:57:33+00:00"
+  },
+  "food-0036": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:57:39+00:00"
+  },
+  "food-0037": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:57:45+00:00"
+  },
+  "food-0038": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:57:51+00:00"
+  },
+  "food-0039": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:57:57+00:00"
+  },
+  "food-0040": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:58:03+00:00"
+  },
+  "food-0041": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:58:09+00:00"
+  },
+  "food-0042": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:58:14+00:00"
+  },
+  "food-0043": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:58:21+00:00"
+  },
+  "food-0044": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:58:28+00:00"
+  },
+  "food-0045": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:58:34+00:00"
+  },
+  "food-0046": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:58:40+00:00"
+  },
+  "food-0047": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:58:45+00:00"
+  },
+  "food-0048": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:58:48+00:00"
+  },
+  "food-0049": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:58:53+00:00"
+  },
+  "food-0050": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:58:57+00:00"
+  },
+  "food-0051": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:01+00:00"
+  },
+  "food-0052": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:05+00:00"
+  },
+  "food-0053": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:59:09+00:00"
+  },
+  "food-0054": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:14+00:00"
+  },
+  "food-0055": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:17+00:00"
+  },
+  "food-0056": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:59:21+00:00"
+  },
+  "food-0057": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:25+00:00"
+  },
+  "food-0058": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:30+00:00"
+  },
+  "food-0059": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:34+00:00"
+  },
+  "food-0060": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:59:39+00:00"
+  },
+  "food-0061": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:44+00:00"
+  },
+  "food-0062": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:48+00:00"
+  },
+  "food-0063": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:51+00:00"
+  },
+  "food-0064": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T21:59:55+00:00"
+  },
+  "food-0065": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T21:59:59+00:00"
+  },
+  "food-0066": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:00:03+00:00"
+  },
+  "food-0067": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:00:07+00:00"
+  },
+  "food-0068": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:00:11+00:00"
+  },
+  "food-0069": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:00:15+00:00"
+  },
+  "food-0070": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:00:56+00:00"
+  },
+  "food-0071": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:01:38+00:00"
+  },
+  "food-0072": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:02:20+00:00"
+  },
+  "food-0073": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:03:01+00:00"
+  },
+  "food-0074": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:03:42+00:00"
+  },
+  "food-0075": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:04:23+00:00"
+  },
+  "food-0076": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:05:04+00:00"
+  },
+  "food-0077": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:05:47+00:00"
+  },
+  "food-0078": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:06:28+00:00"
+  },
+  "food-0079": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:07:09+00:00"
+  },
+  "food-0080": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:07:50+00:00"
+  },
+  "food-0081": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:08:33+00:00"
+  },
+  "food-0082": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:09:14+00:00"
+  },
+  "food-0083": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:09:56+00:00"
+  },
+  "food-0084": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:10:39+00:00"
+  },
+  "food-0085": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:11:20+00:00"
+  },
+  "food-0086": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:12:00+00:00"
+  },
+  "food-0087": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:12:42+00:00"
+  },
+  "food-0088": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:13:24+00:00"
+  },
+  "food-0089": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:14:05+00:00"
+  },
+  "food-0090": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:14:47+00:00"
+  },
+  "food-0091": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:15:28+00:00"
+  },
+  "food-0092": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:16:10+00:00"
+  },
+  "food-0093": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:16:51+00:00"
+  },
+  "food-0094": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:17:32+00:00"
+  },
+  "food-0095": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:18:13+00:00"
+  },
+  "food-0096": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:18:56+00:00"
+  },
+  "food-0097": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:19:38+00:00"
+  },
+  "food-0098": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:20:20+00:00"
+  },
+  "food-0099": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:21:01+00:00"
+  },
+  "food-0100": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:21:42+00:00"
+  },
+  "food-0101": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:22:23+00:00"
+  },
+  "food-0102": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:23:04+00:00"
+  },
+  "food-0103": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:23:45+00:00"
+  },
+  "food-0104": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:24:26+00:00"
+  },
+  "food-0105": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:25:07+00:00"
+  },
+  "food-0106": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:25:49+00:00"
+  },
+  "food-0107": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:26:30+00:00"
+  },
+  "food-0108": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:27:11+00:00"
+  },
+  "food-0109": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:27:53+00:00"
+  },
+  "food-0110": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:28:35+00:00"
+  },
+  "food-0111": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:29:16+00:00"
+  },
+  "food-0112": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:29:57+00:00"
+  },
+  "food-0113": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:30:39+00:00"
+  },
+  "food-0114": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:31:21+00:00"
+  },
+  "food-0115": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:32:03+00:00"
+  },
+  "food-0116": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:32:44+00:00"
+  },
+  "food-0117": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:33:26+00:00"
+  },
+  "food-0118": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:34:07+00:00"
+  },
+  "food-0119": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:34:49+00:00"
+  },
+  "food-0120": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:35:30+00:00"
+  },
+  "food-0121": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:36:11+00:00"
+  },
+  "food-0122": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:36:52+00:00"
+  },
+  "food-0123": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:37:33+00:00"
+  },
+  "food-0124": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:38:14+00:00"
+  },
+  "food-0125": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:38:56+00:00"
+  },
+  "food-0126": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:39:25+00:00"
+  },
+  "food-0127": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:39:53+00:00"
+  },
+  "food-0128": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:40:21+00:00"
+  },
+  "food-0129": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:41:02+00:00"
+  },
+  "food-0130": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:41:43+00:00"
+  },
+  "food-0131": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (grchts)",
+    "checkedAt": "2026-07-19T22:42:24+00:00"
+  },
+  "food-0132": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (grchts)",
+    "checkedAt": "2026-07-19T22:43:05+00:00"
+  },
+  "food-0133": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "brand does not match (grchts)",
+    "checkedAt": "2026-07-19T22:43:47+00:00"
+  },
+  "food-0134": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:44:30+00:00"
+  },
+  "food-0135": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:45:11+00:00"
+  },
+  "food-0136": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:45:52+00:00"
+  },
+  "food-0137": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:46:35+00:00"
+  },
+  "food-0138": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:47:17+00:00"
+  },
+  "food-0139": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:47:58+00:00"
+  },
+  "food-0140": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "package size/weight does not match or is missing",
+    "checkedAt": "2026-07-19T22:48:40+00:00"
+  },
+  "food-0141": {
+    "status": "no_match",
+    "score": 0.0,
+    "reason": "source domain is not suitable",
+    "checkedAt": "2026-07-19T22:49:21+00:00"
   }
 }
