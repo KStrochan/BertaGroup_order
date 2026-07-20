@@ -1,21 +1,594 @@
 ﻿product_id,section,product_name,status,provider,score,matched_name,source_page,image_url,reason,checked_at
-food-0003,Food,Кама Олія Соняшниково Оливкова Рафін 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:50:11+00:00
-food-0004,Food,Кама Олія Кукурудзяна Нераф Дез 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:50:17+00:00
-food-0005,Food,Кама Олія Кукурудзяна Раф Дез 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:50:22+00:00
-food-0006,Food,PROSMAZH Олія РВД 5 л,no_match,,0.0,,,,source domain is not suitable,2026-07-15T21:50:29+00:00
-food-0007,Food,PROSMAZH Олія РВД фритюр 5 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:50:35+00:00
-food-0008,Food,Майола Екстра Олія РВД 1 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:50:41+00:00
-food-0009,Food,Майола Екстра Олія РВД 2 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:50:46+00:00
-food-0010,Food,Майола Екстра Олія РВД 5 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:50:51+00:00
-food-0011,Food,Оліяр Олія Master Fry РВД 5 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:50:58+00:00
-food-0012,Food,Оліяр Олія РВД 1 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:03+00:00
-food-0013,Food,Оліяр Олія РВД 2 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:09+00:00
-food-0014,Food,Оліяр Олія РВД 5 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:15+00:00
-food-0015,Food,БПГ орошок Консервований М/б 420 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:21+00:00
-food-0016,Food,БПК укурудза Цукрова В/у М/б 340 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:28+00:00
-food-0017,Food,ID В'ялені помідори в олії 1 кг с/б,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:33+00:00
-food-0018,Food,ID Дольки артишоку натуральні ж/б 3000 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:38+00:00
-food-0019,Food,ID М'якоть помідора в томатному соку ж/б 2500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:44+00:00
-food-0020,Food,ID М'якоть помідора в томатному соку ж/б 400 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:47+00:00
-food-0021,Food,ID Цілі помідори б/з шкірки в томатномусоку ж/б 2500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:50+00:00
-food-0022,Food,ID Цілі помідори б/з шкірки в томатномусоку ж/б 400 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-15T21:51:54+00:00
+food-0003,Food,Кама Олія Соняшниково Оливкова Рафін 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:39:18+00:00
+food-0004,Food,Кама Олія Кукурудзяна Нераф Дез 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:40:00+00:00
+food-0005,Food,Кама Олія Кукурудзяна Раф Дез 1 л,no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:40:41+00:00
+food-0006,Food,PROSMAZH Олія РВД 5 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:41:22+00:00
+food-0007,Food,PROSMAZH Олія РВД фритюр 5 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:42:03+00:00
+food-0008,Food,Майола Екстра Олія РВД 1 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:42:46+00:00
+food-0009,Food,Майола Екстра Олія РВД 2 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:43:27+00:00
+food-0010,Food,Майола Екстра Олія РВД 5 л АК,no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:44:10+00:00
+food-0011,Food,Оліяр Олія Master Fry РВД 5 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:44:52+00:00
+food-0012,Food,Оліяр Олія РВД 1 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:45:34+00:00
+food-0013,Food,Оліяр Олія РВД 2 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:46:16+00:00
+food-0014,Food,Оліяр Олія РВД 5 л АК,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:46:58+00:00
+food-0015,Food,БПГ орошок Консервований М/б 420 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:47:39+00:00
+food-0016,Food,БПК укурудза Цукрова В/у М/б 340 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:48:20+00:00
+food-0017,Food,ID В'ялені помідори в олії 1 кг с/б,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:49:01+00:00
+food-0018,Food,ID Дольки артишоку натуральні ж/б 3000 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:49:42+00:00
+food-0019,Food,ID М'якоть помідора в томатному соку ж/б 2500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:50:23+00:00
+food-0020,Food,ID М'якоть помідора в томатному соку ж/б 400 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:51:04+00:00
+food-0021,Food,ID Цілі помідори б/з шкірки в томатномусоку ж/б 2500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:51:46+00:00
+food-0022,Food,ID Цілі помідори б/з шкірки в томатномусоку ж/б 400 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:52:28+00:00
+food-0023,Food,HELCOM Ананас Шматочками 3100 мл.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:53:10+00:00
+food-0024,Food,HELCOM Каперси в Маринаді 650 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:53:51+00:00
+food-0025,Food,"HELCOM Оливки Зелені Без Кісточки Ж/Б 4, 15 кг",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:54:32+00:00
+food-0026,Food,"HELCOM Помідори Цілі Ж/Б 2, 5 кг",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:55:14+00:00
+food-0027,Food,Iberica Маслини Econ Б/К 280 г/12 шт,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:55:55+00:00
+food-0028,Food,Iberica Маслини Mini Б/К 300 г/12 шт,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:56:38+00:00
+food-0029,Food,Iberica Маслини Б/К 420 г/12 шт,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:56:55+00:00
+food-0030,Food,Iberica Оливки Б/К 300 г/12 шт,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:57:02+00:00
+food-0031,Food,"Iberica Олія Оливкова Рафін 0, 25 л/12 шт",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:57:08+00:00
+food-0032,Food,АКВАБ ички Обсмажені Т/С 230 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:57:14+00:00
+food-0033,Food,АКВАК iлька Нероз.Т/С 230 г СНП,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:57:20+00:00
+food-0034,Food,АКВАЛ осось Шматочками 230 г × 36,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:57:26+00:00
+food-0035,Food,АКВАП ечінка Трiски 115 г × 12 × × ×,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:57:33+00:00
+food-0036,Food,АКВАС ардина Бланшована Д/О 230 г × 36,no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:57:39+00:00
+food-0037,Food,АКВАС ардина Натуральна Д/О 230 г НП,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:57:45+00:00
+food-0038,Food,АКВАТ унець Філе В/О 185 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:57:51+00:00
+food-0039,Food,PJ Макаронні вироби Вермішель№7 500 г,no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:57:57+00:00
+food-0040,Food,PJ Макаронні вироби Ньоккі(мушля) 500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:58:03+00:00
+food-0041,Food,PJ Макаронні вироби Пенне Pігате(пера) 500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:58:09+00:00
+food-0042,Food,PJ Макаронні вироби Спагеті№5 500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:58:14+00:00
+food-0043,Food,PJ Макаронні вироби Спагетіні№3 500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:58:21+00:00
+food-0044,Food,PJ Макаронні вироби Тортільйоні(трубочки хвилясті) 500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:58:28+00:00
+food-0045,Food,PJ Макаронні вироби Тривеліне(спіралі) 500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:58:34+00:00
+food-0046,Food,Cantare Макарони Вермічеллі 400 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:58:40+00:00
+food-0047,Food,Cantare Макарони Пенне Рігате 400 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:58:45+00:00
+food-0048,Food,Cantare Макарони Спагеті 400 г × 20,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:58:48+00:00
+food-0049,Food,Cantare Макарони Фузілі 400 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:58:53+00:00
+food-0050,Food,Cantare Макарони Челентані 400 г,no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:58:57+00:00
+food-0051,Food,Тая Вермішель Довга 15 кг,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:01+00:00
+food-0052,Food,Тая Спагеті 16 кг,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:05+00:00
+food-0053,Food,Тая Спагетіні 15 кг,no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:59:09+00:00
+food-0054,Food,Тая Вермішель Павутинка 1 кг,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:14+00:00
+food-0055,Food,Тая Завитки 1 кг × 7,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:17+00:00
+food-0056,Food,Тая Перо 1 кг × 7,no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:59:21+00:00
+food-0057,Food,Тая Ріжки 1 кг × 10,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:25+00:00
+food-0058,Food,Тая Спагеті Довгі 450 г × 20,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:30+00:00
+food-0059,Food,Тая Спіральки 1 кг × 7,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:34+00:00
+food-0060,Food,Тая Черепашечки 1 кг × 10,no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:59:39+00:00
+food-0061,Food,Львівські Дріжджі Сухі 100 г × 30 шт,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:44+00:00
+food-0062,Food,Львівські Дріжджі Сухі 12 г × 960,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:48+00:00
+food-0063,Food,Львівські Дріжджі Сухі Extra 500 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:51+00:00
+food-0064,Food,Пластівці Дріжджові Морква Flakes 80 г.,no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:59:55+00:00
+food-0065,Food,Пластівці Дріжджові Сир Горіх Flakes 250 г.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:59:59+00:00
+food-0066,Food,Hokkaido IPPONК ласичний Соус 20 л Bagin Box,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:00:03+00:00
+food-0067,Food,Hokkaido Класичний Соус 20 л Bagin Box,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:00:07+00:00
+food-0068,Food,Hokkaido Оцет рисовий 1000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:00:11+00:00
+food-0069,Food,"Hokkaido Соєвий Соус Класичний 1000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:00:15+00:00
+food-0070,Food,"Hokkaido Соєвий Соус Класичний 3000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:00:56+00:00
+food-0071,Food,"Hokkaido Соєвий Соус Класичний 500 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:01:38+00:00
+food-0072,Food,Hokkaido Соєвий Соус Преміум 1000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:02:20+00:00
+food-0073,Food,Hokkaido Соєвий Соус ТЕРІЯКІ 1000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:03:01+00:00
+food-0074,Food,Hokkaido Соєвий Соус ТЕРІЯКІ 3000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:03:42+00:00
+food-0075,Food,Hokkaido Соєвий Соус ТЕРІЯКІ 500 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:04:23+00:00
+food-0076,Food,Hokkaido Соєвий Соус УНАГІ 1000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:05:04+00:00
+food-0077,Food,Hokkaido Соєвий Соус УНАГІ 500 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:05:47+00:00
+food-0078,Food,"Hokkaido Соус АДЖИКА 1000 мл, ПЕТ",no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:06:28+00:00
+food-0079,Food,Hokkaido Соус БАЛЬЗАМІК 1000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:07:09+00:00
+food-0080,Food,Hokkaido Соус БАРБЕКЮ 1000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:07:50+00:00
+food-0081,Food,"Hokkaido Соус Блек пепер 1000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:08:33+00:00
+food-0082,Food,"Hokkaido Соус Горіховий 1000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:09:14+00:00
+food-0083,Food,"Hokkaido Соус Горіховий 500 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:09:56+00:00
+food-0084,Food,"Hokkaido Соус ЖУРАВЛИНИЙ 1000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:10:39+00:00
+food-0085,Food,Hokkaido Соус КИСЛО-СОЛОДКИЙ 1000 мл.ПЕТ,no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:11:20+00:00
+food-0086,Food,Hokkaido Соус КИСЛО-СОЛОДКИЙ 3000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:12:00+00:00
+food-0087,Food,Hokkaido Соус КІМ-ЧІ 1000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:12:42+00:00
+food-0088,Food,"Hokkaido Соус Кунжутний 1000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:13:24+00:00
+food-0089,Food,"Hokkaido Соус Манго ЧИЛІ 1000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:14:05+00:00
+food-0090,Food,"Hokkaido Соус МІРІН 1000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:14:47+00:00
+food-0091,Food,"Hokkaido Соус НАРШАРАБ 1000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:15:28+00:00
+food-0092,Food,"Hokkaido Соус НАРШАРАБ 3000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:16:10+00:00
+food-0093,Food,"Hokkaido Соус НАРШАРАБ гранатовий 500 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:16:51+00:00
+food-0094,Food,"Hokkaido Соус САЦЕБЕЛІ 1000 мл, ПЕТ",no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:17:32+00:00
+food-0095,Food,Hokkaido Соус СОЛОДКИЙ ЧИЛІ 1000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:18:13+00:00
+food-0096,Food,Hokkaido Соус СОЛОДКИЙ ЧИЛІ 3000 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:18:56+00:00
+food-0097,Food,Hokkaido Соус СОЛОДКИЙ ЧИЛІ 500 мл.ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:19:38+00:00
+food-0098,Food,"Hokkaido Соус УСТРИЧНИЙ 1000 мл, ПЕТ",no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:20:20+00:00
+food-0099,Food,"Hokkaido Соус ХОЙСІН 1000 мл, ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:21:01+00:00
+food-0100,Food,Hokkaido Соус ШРІРАЧА 1000 мл.ПЕТ,no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:21:42+00:00
+food-0101,Food,Анрі Оцет Винний 6%850 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:22:23+00:00
+food-0102,Food,Анрі Оцет Яблучний 6%850 г,no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:23:04+00:00
+food-0103,Food,Кама Оцет Столовий 9%1 л,no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:23:45+00:00
+food-0104,Food,Соєв Торч Кл 6 × 500 г№3,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:24:26+00:00
+food-0105,Food,"ОТ Гірчиця ""Американська"" ТМ ""Profi Life"", ПЕТ 830 г",no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:25:07+00:00
+food-0106,Food,"ОТ Гірчиця ""Американська"" ТМ ""Profi Line"", короб 4 кг",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:25:49+00:00
+food-0107,Food,ОТ Гірчиця Міцна Пет 830 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:26:30+00:00
+food-0108,Food,ОТ Гірчиця Французька 1000 г Відро,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:27:11+00:00
+food-0109,Food,ОТ Кетчуп Класичний Лайт 830 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:27:53+00:00
+food-0110,Food,ОТ Кетчуп Класичний ПЕТ 830 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:28:35+00:00
+food-0111,Food,ОТ Кетчуп Класік 5 кг Відро,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:29:16+00:00
+food-0112,Food,ОТ Кетчуп Класік Лайт 5 кг Відро,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:29:57+00:00
+food-0113,Food,ОТ Кетчуп Шашличний лайт 5 кг Відро,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:30:39+00:00
+food-0114,Food,"ОТ Майонезний Соус Реал 30%4, 9 кг Відро",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:31:21+00:00
+food-0115,Food,"ОТ Майонез Преміум 67%4, 9 кг Відро",no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:32:03+00:00
+food-0116,Food,ОТ Майонез Провансаль 67%Філ Пак 300 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:32:44+00:00
+food-0117,Food,"ОТ Соус ""Сирний"" ТМ ""Profi Life"", відро 4, 9 кг",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:33:26+00:00
+food-0118,Food,"ОТ Соус Барбекю 4, 9 кг Відро",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:34:07+00:00
+food-0119,Food,ОТ Соус Сирний Пляшка 830 мл,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:34:49+00:00
+food-0120,Food,"ОТ Томатна Паста 0, 48 кг",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:35:30+00:00
+food-0121,Food,ОТ Томатна Паста 5 кг Відро,no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:36:11+00:00
+food-0122,Food,Heinz L&P Вустерський cоус 2 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:36:52+00:00
+food-0123,Food,Heinz кетчуп томатний в пласт пляшці 1000 г/875 мл,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:37:33+00:00
+food-0124,Food,"Heinz соус Барбекю 2, 15 л",no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:38:14+00:00
+food-0125,Food,Heinz Соус Барбекю ПЕТ 400 мл,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:38:56+00:00
+food-0126,Food,"Heinz соус Бургер Реліш 2, 15 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:39:25+00:00
+food-0127,Food,Heinz Соус МАЙОКЕТЧУП 415 мл,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:39:53+00:00
+food-0128,Food,Heinz Соус Фрітес 400 мл,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:40:21+00:00
+food-0129,Food,Heinz Соус Часниковий ПЕТ 400 мл,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:41:02+00:00
+food-0130,Food,Гірчиц Проф 3.3 кг,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:41:43+00:00
+food-0131,Food,Грчц Амер Проф 20 x 500,no_match,,0.0,,,,brand does not match (grchts),2026-07-19T22:42:24+00:00
+food-0132,Food,Грчц Діжонська 20 x 500,no_match,,0.0,,,,brand does not match (grchts),2026-07-19T22:43:05+00:00
+food-0133,Food,Грчц Міцна 20 x 500,no_match,,0.0,,,,brand does not match (grchts),2026-07-19T22:43:47+00:00
+food-0134,Food,Гірч Америк 18 × 230 г№2,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:44:30+00:00
+food-0135,Food,Гірч Америк 24 × 130 г№4,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:45:11+00:00
+food-0136,Food,Гірч Діжон 18 × 230 г№1,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:45:52+00:00
+food-0137,Food,Гірч Діжон 24 × 130 г№2,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:46:35+00:00
+food-0138,Food,Гірчиц Коза 48 × 130 г№4,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:47:17+00:00
+food-0139,Food,Гірчиця Міц 48 × 130 г№5,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:47:58+00:00
+food-0140,Food,Запр Буряк Том 33 × 220 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T22:48:40+00:00
+food-0141,Food,Кетч Лагід Проф 9 x 1000 г,no_match,,0.0,,,,source domain is not suitable,2026-07-19T22:49:21+00:00
+nonfood-0001,NONFood,Термопапір 57/17 ПСРШ (10 шт/сп),no_match,,0.0,,,,brand does not match (termopapir),2026-07-19T17:49:26+00:00
+nonfood-0002,NONFood,Термопапір 57/40 ПСРШ (5 шт/сп),no_match,,0.0,,,,brand does not match (termopapir),2026-07-19T17:49:31+00:00
+nonfood-0003,NONFood,Термопапір 80/60 ПСРШ (5 шт/сп),no_match,,0.0,,,,source domain is not suitable,2026-07-19T17:49:34+00:00
+nonfood-0004,NONFood,Термонаклейка 58/40,no_match,,0.0,,,,brand does not match (termonakleika),2026-07-19T17:49:38+00:00
+nonfood-0005,NONFood,АП Стакан ПИВНИЙ 500 мл(50 шт/пак)ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:49:43+00:00
+nonfood-0006,NONFood,"АП Стакан коктельний, 240 мл(50 шт/пак)ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:49:48+00:00
+nonfood-0007,NONFood,"АП Стакан коктельний, 360 мл(50 шт/пак)ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:49:55+00:00
+nonfood-0008,NONFood,"АП Стакан коктельний, 420 мл(50 шт/пак)ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:50:01+00:00
+nonfood-0009,NONFood,"АП Стакан коктельний, 480 мл(50 шт/пак)ПЕТ",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:50:07+00:00
+nonfood-0010,NONFood,АП Куп кришка для стакана б/зотв.(50 шт/пак) коктельна,no_match,,0.0,,,,source domain is not suitable,2026-07-19T17:50:12+00:00
+nonfood-0011,NONFood,АП Куп кришка для стаканаз отв.(50 шт/пак) коктельна,no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:50:16+00:00
+nonfood-0012,NONFood,АП Пл кришка для стакана з отв.(50 шт/пак) коктельна,no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:50:19+00:00
+nonfood-0013,NONFood,Pro Стакан паперовий двошаровий 185 мл КРАФТ(25 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:50:23+00:00
+nonfood-0014,NONFood,"PRO Кришка біла для папер. Cтакана 185 мл, чорна, 50 шт/уп",no_match,,0.0,,,,source domain is not suitable,2026-07-19T17:50:27+00:00
+nonfood-0015,NONFood,Pro Стакан паперовий двошаровий 270 мл КРАФТ(25 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:50:32+00:00
+nonfood-0016,NONFood,"PRO Кришка біла для папер. cтакана 270 мл, чорна, 50 шт/уп",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:50:36+00:00
+nonfood-0017,NONFood,Pro Стакан паперовий двошаровий 340 мл КРАФТ(25 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:50:39+00:00
+nonfood-0018,NONFood,"PRO Кришка біла для папер. cтакана 340 мл, чорна, 50 шт/уп",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:50:44+00:00
+nonfood-0019,NONFood,Pro Стакан паперовий двошаровий 400 мл КРАФТ(25 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:50:47+00:00
+nonfood-0020,NONFood,"PRO Кришка біла для папер. cтакана 400 мл, чорна, 50 шт/уп",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:50:52+00:00
+nonfood-0021,NONFood,"PRO Кришка для папер. cтакана 175 мл, чорна, 50 шт/уп",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:50:55+00:00
+nonfood-0022,NONFood,"PRO Стакан паперовий 110 мл, білий, 50 шт/уп 1 шар",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:00+00:00
+nonfood-0023,NONFood,"PRO Стакан паперовий 250 мл, білий, 50 шт/уп 1 шар",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:06+00:00
+nonfood-0024,NONFood,"PRO Стакан паперовий 340 мл, білий, 50 шт/уп 1 шар",no_match,,0.0,,,,source domain is not suitable,2026-07-19T17:51:09+00:00
+nonfood-0025,NONFood,АП Стакан двошаровий 110 мл КРАФТ (25 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:12+00:00
+nonfood-0026,NONFood,АП Стакан двошаровий 180 мл КРАФТ (25 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:17+00:00
+nonfood-0027,NONFood,АП Стакан двошаровий 270 мл КРАФТ (25 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:20+00:00
+nonfood-0028,NONFood,АП Стакан двошаровий 340 мл КРАФТ (25 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T17:51:24+00:00
+nonfood-0029,NONFood,АП Стакан одношаровий 180 мл (100 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:27+00:00
+nonfood-0030,NONFood,ЛФ Стакан гофрований білий 110 мл (30 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:31+00:00
+nonfood-0031,NONFood,ЛФ Стакан гофрований білий 250 мл (30 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:34+00:00
+nonfood-0032,NONFood,ЛФ Стакан гофрований білий 350 мл (30 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:37+00:00
+nonfood-0033,NONFood,ЛФ КРИШКА пластикова біла d 90 (100 шт/пак),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:51:41+00:00
+nonfood-0034,NONFood,ЛФ КРИШКА пластикова чорна d 90 (50 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T17:51:46+00:00
+nonfood-0035,NONFood,ЛФ Стакан двошаровий білий 110 мл (30 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:49+00:00
+nonfood-0036,NONFood,ЛФ Стакан двошаровий білий 250 мл (30 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T17:51:52+00:00
+nonfood-0037,NONFood,ЛФ Стакан двошаровий білий 350 мл (30 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:56+00:00
+nonfood-0038,NONFood,ЛФ Стакан ЄВРО двошаровий білий 350 мл (25 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:51:59+00:00
+nonfood-0039,NONFood,ЛФ Стакан одношаровий білий 175 мл d 70 (50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:52:03+00:00
+nonfood-0040,NONFood,ЛФ Стакан одношаровий білий 270 мл d 79 (50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:52:08+00:00
+nonfood-0041,NONFood,ЛФ Стакан одношаровий білий 340 мл d 79 (50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:52:13+00:00
+nonfood-0042,NONFood,АП Тарілка з картону 14 × 20(100 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:52:17+00:00
+nonfood-0043,NONFood,АП Тарілка з картону 14 × 25(100 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:52:20+00:00
+nonfood-0044,NONFood,SP Тарілка крафт зібрана 200 × 120 × 45 мм без ламінації (100 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:52:24+00:00
+nonfood-0045,NONFood,SP Тарілка крафт зібрана 270 × 110 × 47 мм без ламінації (100 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:52:27+00:00
+nonfood-0046,NONFood,SP Тарілка крафт Хот-Дог 200 × 40 × 40 мм без ламінації (50 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:52:31+00:00
+nonfood-0047,NONFood,SP Тарілка глибока ламінована d 155 h 55 біла (25 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:53:00+00:00
+nonfood-0048,NONFood,SP Тарілка глибока ламінована d 200 h 35 біла (25 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:53:41+00:00
+nonfood-0049,NONFood,SP Тарілка паперова рифлена ламінована біла d 180 (50 шт),no_match,,0.0,,,,source domain is not suitable,2026-07-19T17:54:21+00:00
+nonfood-0050,NONFood,SP Тарілка паперова рифлена ламінована біла d 200 (50 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:55:02+00:00
+nonfood-0051,NONFood,LF Тарілка мілка PP преміум чорна d 170 (100 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:55:42+00:00
+nonfood-0052,NONFood,LF Тарілка мілка PP біла d 170 (100 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:56:23+00:00
+nonfood-0053,NONFood,LF Тарілка мілка PP чорна d 180 (100 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:57:04+00:00
+nonfood-0054,NONFood,LF Тарілка мілка PP чорна d 210 (100 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:57:46+00:00
+nonfood-0055,NONFood,LF Тарілка PP біла 360 мл d 155 (100 шт),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:58:28+00:00
+nonfood-0056,NONFood,LF Тарілка PP біла 500 мл d 155 (100 шт),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T17:59:08+00:00
+nonfood-0057,NONFood,АП Підложка біла 178 × 133 × 20 300 шт,no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T17:59:49+00:00
+nonfood-0058,NONFood,АП Контейнер карт/крафт 113 × 90 × 64(50 шт/пак),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:00:30+00:00
+nonfood-0059,NONFood,"КП Контейнер краф.2 з кришкою 1200 мл, 50 шт",no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:01:11+00:00
+nonfood-0060,NONFood,АП Пакет фас. без ручок 10 / 4 / 27,no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:01:38+00:00
+nonfood-0061,NONFood,АП Пакет ЕКО фас. без ручок 18 / 4 / 35 (550 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:02:06+00:00
+nonfood-0062,NONFood,"АП Пакети ""Майка Вишиванка"" 30/50 (100 шт)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:02:34+00:00
+nonfood-0063,NONFood,АП Пакет Майка БМВ 36 × 55(50 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:03:15+00:00
+nonfood-0064,NONFood,"АП Пакети для фасовки""майка""22 х 43 (200 рул)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:03:55+00:00
+nonfood-0065,NONFood,АП Пакет крафт з ручками 320 × 150 × 380(50 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:04:36+00:00
+nonfood-0066,NONFood,ЯО Пакет паперовий багет 500 / 100 / 40 (1000 шт),no_match,,0.0,,,,brand does not match (iao),2026-07-19T18:05:03+00:00
+nonfood-0067,NONFood,ЯО Пакет паперовий 380 / 220 / 60 (1000 шт),no_match,,0.0,,,,brand does not match (iao),2026-07-19T18:05:31+00:00
+nonfood-0068,NONFood,ЯО Пакет паперовий 70 / 0 / 225 (2000 шт),no_match,,0.0,,,,brand does not match (iao),2026-07-19T18:05:58+00:00
+nonfood-0069,NONFood,АП Термо Пакет з фольги 260 × 350 (100 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:06:39+00:00
+nonfood-0070,NONFood,АП Термо Пакет з фольги 420 × 350 (100 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:07:20+00:00
+nonfood-0071,NONFood,ГЕТ Вакуумний Пакет 10 × 15 (500 шт),no_match,,0.0,,,,brand does not match (get),2026-07-19T18:08:01+00:00
+nonfood-0072,NONFood,ГЕТ Вакуумний Пакет 15 × 20 (500 шт),no_match,,0.0,,,,brand does not match (get),2026-07-19T18:08:41+00:00
+nonfood-0073,NONFood,"PRO Вакуумний пакет 15 × 20 60 мкм, 500 шт/уп (1 уп/ящ)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:09:23+00:00
+nonfood-0074,NONFood,"PRO Вакуумний пакет 30 × 40 60 мкм, 500 шт/уп (1 уп/ящ)",no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:10:05+00:00
+nonfood-0075,NONFood,"АП Упак/крафт ФРІ Midi буро-біла, 130 × 175(50 шт/пак)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:10:46+00:00
+nonfood-0076,NONFood,"АП Упак/крафт ФРІ Mini буро-біла, 125 × 120(50 шт/пак)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:11:27+00:00
+nonfood-0077,NONFood,SP ФРІ крафт 250 S 115 × 85 × 45 мм (50 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:12:07+00:00
+nonfood-0078,NONFood,SP ФРІ крафт 300 М 140 × 80 × 40 мм (50 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:12:49+00:00
+nonfood-0079,NONFood,SP ФРІ крафт 500 L 165 × 100 × 40 мм (50 шт),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:13:29+00:00
+nonfood-0080,NONFood,АП Контейнер 500 мл Ч ПП-118(50 шт/уп),no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:14:10+00:00
+nonfood-0081,NONFood,АП Контейнер 750 мл Ч ПП-118(50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:14:51+00:00
+nonfood-0082,NONFood,АП Кришка до контейнера ПП-118(50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:15:18+00:00
+nonfood-0083,NONFood,АП Коробка для піци крафт 300 × 300 × 35 (100 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:16:00+00:00
+nonfood-0084,NONFood,АП Коробка для піци крафт 320 × 320 × 35 (100 шт/пак),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:16:41+00:00
+nonfood-0085,NONFood,АП Коробка для піци крафт 350 × 350 × 35 (100 шт/пак),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:17:21+00:00
+nonfood-0086,NONFood,АП Коробка для піци крафт 500 × 500 × 40 (50 шт/пак),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:18:02+00:00
+nonfood-0087,NONFood,SP Бупгер крафт Коробка збірна 125 × 125 × 90 без ламінації (50 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:18:43+00:00
+nonfood-0088,NONFood,SP Бупгер крафт Коробка збірна 150 × 150 × 115 ламінована (50 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:19:23+00:00
+nonfood-0089,NONFood,Підкладка Т 3 33(С 79)чорний 222 × 133 × 33 200 шт,no_match,,0.0,,,,brand does not match (pidkladka),2026-07-19T18:20:04+00:00
+nonfood-0090,NONFood,Підкладка Т 4 20(С 70)чорний 178 × 133 × 20 300 шт,no_match,,0.0,,,,brand does not match (pidkladka),2026-07-19T18:20:45+00:00
+nonfood-0091,NONFood,LF Соусник PP з відкидною кришкою 45 мл(50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:21:26+00:00
+nonfood-0092,NONFood,АП Соусниця чорна 50 мл(105 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:22:07+00:00
+nonfood-0093,NONFood,АП Соусниця прозова з кришкою 30 мл(100 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:22:48+00:00
+nonfood-0094,NONFood,АП Пластмасовий виріб Соусниця 50 мл(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:23:15+00:00
+nonfood-0095,NONFood,АП Соусниця з відкидною кришкою 80 мл(50 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:23:56+00:00
+nonfood-0096,NONFood,АП Кришка до соусниці 110 мл(100 шт/пак)ПС-40 К,no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:24:37+00:00
+nonfood-0097,NONFood,АП Соусниця прозова 110 мл(100 шт/пак)ПС-40 Д,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:25:18+00:00
+nonfood-0098,NONFood,КП Кришка до салатника РР d 150 (500/750/1000 мл) (50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:26:00+00:00
+nonfood-0099,NONFood,КП Кришка до салатника РР d 185 (1100/1300 мл) (50 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:26:42+00:00
+nonfood-0100,NONFood,SP Кришка до Салатник PP d 116 (50 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:27:24+00:00
+nonfood-0101,NONFood,SP Кришка до Салатник PET d 116 (50 шт/пак),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:28:04+00:00
+nonfood-0102,NONFood,SP Салатник круглий 1000 мл КРАФТ d 150(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:28:46+00:00
+nonfood-0103,NONFood,SP Салатник круглий 1300 мл КРАФТ d 185(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:29:28+00:00
+nonfood-0104,NONFood,SP Салатник круглий 550 мл КРАФТ d 150(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:30:11+00:00
+nonfood-0105,NONFood,SP Салатник круглий 750 мл КРАФТ d 150(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:30:51+00:00
+nonfood-0106,NONFood,SP Салатник круглий 350 мл КРАФТ d 116(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:31:33+00:00
+nonfood-0107,NONFood,SP Салатник круглий 450 мл КРАФТ d 116(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:32:14+00:00
+nonfood-0108,NONFood,SP Салатник Овальний 500 мл КРАФТ(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:32:55+00:00
+nonfood-0109,NONFood,SP Салатник Овальний 750 мл КРАФТ(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:33:36+00:00
+nonfood-0110,NONFood,SP Салатник Овальний 900 мл КРАФТ(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:34:18+00:00
+nonfood-0111,NONFood,SP Салатник Овальний 1000 мл КРАФТ(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:35:00+00:00
+nonfood-0112,NONFood,SP Кришка до Салатник Овальний 500/750/1000 мл (50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:35:40+00:00
+nonfood-0113,NONFood,SP Кришка до Салатник Овальний 900 мл (50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:36:22+00:00
+nonfood-0114,NONFood,АП Салатник прямокутний 500 мл КРАФТ(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:37:04+00:00
+nonfood-0115,NONFood,АП Салатник прямокутний 750 мл КРАФТ(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:37:44+00:00
+nonfood-0116,NONFood,АП Салатник прямокутний 1000 мл КРАФТ(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:38:25+00:00
+nonfood-0117,NONFood,АП кришка до салатник прямокутний 500/750/1000 мл пет(50 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:39:06+00:00
+nonfood-0118,NONFood,АП Салатник круглий 550 мл КРАФТ d 154(50 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:39:46+00:00
+nonfood-0119,NONFood,АП Салатник круглий 1000 мл КРАФТ d 154(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:40:27+00:00
+nonfood-0120,NONFood,АП Кришка салатника круглого 1000 мл d 154(50 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:41:08+00:00
+nonfood-0121,NONFood,LF Трубочка алкогольна міксd 3-125 мм(500 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:41:50+00:00
+nonfood-0122,NONFood,LF Трубочка гофра в інд.уп.міксd 4.8-210 мм(100 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:42:31+00:00
+nonfood-0123,NONFood,LF Трубочка гофра в інд.уп.чорнаd 4.8-210 мм(100 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:43:11+00:00
+nonfood-0124,NONFood,LF Трубочка гофра чорнаd 4.8-210 мм(200 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:43:52+00:00
+nonfood-0125,NONFood,LF Трубочка паперова біла в інд.уп.d 8-195 мм(100 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:44:33+00:00
+nonfood-0126,NONFood,LF Трубочка паперова кольорова/інд.уп.d 6-195 мм(100 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:45:15+00:00
+nonfood-0127,NONFood,LF Трубочка паперова крафт/інд.уп.d 8-195 мм(100 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:45:55+00:00
+nonfood-0128,NONFood,LF Трубочка паперова чорна/інд.уп.d 8-195 мм(100 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:46:36+00:00
+nonfood-0129,NONFood,LF Трубочка смузі міксd 9-210 мм(100 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:47:16+00:00
+nonfood-0130,NONFood,LF Трубочка фреш в інд.уп.прозораd 7-210 мм(200 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:47:58+00:00
+nonfood-0131,NONFood,LF Трубочка фреш в інд.уп.чорнаd 7-210 мм(200 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:48:40+00:00
+nonfood-0132,NONFood,"LF Трубочка Bubble Tea в інд.упак. Чорна, коса 210 мм (100 шт/уп)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:49:20+00:00
+nonfood-0133,NONFood,"АП Трубочка 6, 8 мікс фреш 210 мм (500 шт/уп)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:50:02+00:00
+nonfood-0134,NONFood,LF Трубочка фреш чорнаd 7-210 мм(500 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:50:44+00:00
+nonfood-0135,NONFood,Блістер 1330 мл 155 × 155 × 75 2222-Н ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:51:24+00:00
+nonfood-0136,NONFood,Блістер 1330 мл терм 155 × 155 × 75 2222-Н,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:52:06+00:00
+nonfood-0137,NONFood,Блістер 1740 мл 229 × 130 × 84 2237(8)ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:52:46+00:00
+nonfood-0138,NONFood,Блістер 1740 мл терм 229 × 130 × 84 2237(8),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:53:28+00:00
+nonfood-0139,NONFood,Блістер 470 мл 120 × 119 × 53 2209 ПЕТ,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:54:08+00:00
+nonfood-0140,NONFood,Блістер 880 мл 132 × 131 × 75 2221(9)ПЕТ,no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:54:50+00:00
+nonfood-0141,NONFood,Блістер 880 мл терм 132 × 131 × 75 2221(8),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:55:30+00:00
+nonfood-0142,NONFood,Блістер 3250 мл 220 × 223 × 85 2216 ПЕТ,no_match,,0.0,,,,source domain is not suitable,2026-07-19T18:56:11+00:00
+nonfood-0143,NONFood,АП Супник 350 мл ПП-115 (50 шт) чорний,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:56:52+00:00
+nonfood-0144,NONFood,АП Супник 500 мл ПП-115 (50 шт) чорний,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:57:33+00:00
+nonfood-0145,NONFood,АП Кришка до супника ПП-115 (50 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T18:58:01+00:00
+nonfood-0146,NONFood,АП Супник 350 мл ПП-117 (60 шт) чорний міцний,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:58:41+00:00
+nonfood-0147,NONFood,АП Супник 500 мл ПП-117 (60 шт) чорний міцний,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T18:59:23+00:00
+nonfood-0148,NONFood,АП Супник 750 мл ПП-117 (60 шт) чорний міцний,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:00:03+00:00
+nonfood-0149,NONFood,АП Кришка до супника ПП-117 (60 шт),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:00:31+00:00
+nonfood-0150,NONFood,АП Супник Крафт 240 мл (25 шт),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:01:11+00:00
+nonfood-0151,NONFood,АП Супник Крафт 480 мл (25 шт),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:01:52+00:00
+nonfood-0152,NONFood,АП Кришка Супника 240 / 480 мл (50 шт),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:02:33+00:00
+nonfood-0153,NONFood,SP Супник круглий / крафт 350 мл d 90 (50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:03:14+00:00
+nonfood-0154,NONFood,SP Кришка до супника ПЕТ d 90 350 мл(50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:03:55+00:00
+nonfood-0155,NONFood,SP Кришка до супника ПП d 90 350 мл(50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:04:35+00:00
+nonfood-0156,NONFood,SP Супник круглий / крафт 450 мл d 97 (50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:05:17+00:00
+nonfood-0157,NONFood,SP Кришка до супника ПП d 97 450 мл (50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:05:57+00:00
+nonfood-0158,NONFood,SP Кришка до супника ПЕТ d 97 450 мл (50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:06:38+00:00
+nonfood-0159,NONFood,SP Супник круглий / крафт 750 мл d 116 (50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:07:18+00:00
+nonfood-0160,NONFood,SP Супник круглий / крафт 900 мл d 116 (50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:07:59+00:00
+nonfood-0161,NONFood,SP Кришка до супника ПП d 116 750/900 мл (50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:08:40+00:00
+nonfood-0162,NONFood,SP Кришка до супника ПЕТ d 116 750/900 мл (50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:09:20+00:00
+nonfood-0163,NONFood,Контейнер 330 мл (чашкаб/зручки) 25 шт/уп Пінополістерол,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:10:02+00:00
+nonfood-0164,NONFood,Контейнер 450 мл (чашкаб/зручки) 25 шт/уп Пінополістерол,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:10:43+00:00
+nonfood-0165,NONFood,Контейнер 650 мл (чашкаб/зручки) 25 шт/уп Пінополістерол,no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:11:24+00:00
+nonfood-0166,NONFood,Кришка до контейнера (чашкаб/зручки) 330/450/650 мл (50 шт/уп),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:12:04+00:00
+nonfood-0167,NONFood,Ланч бокс НР-1 125 шт,no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:12:32+00:00
+nonfood-0168,NONFood,Ланч бокс НР-10 гамбургер 250 шт 246 × 150 × 60,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:13:13+00:00
+nonfood-0169,NONFood,Ланч бокс НР-10 чорн.гамбургер 250 шт 246 × 150 × 60,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:13:54+00:00
+nonfood-0170,NONFood,Ланч бокс НР-1 чорний 125 шт,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:14:22+00:00
+nonfood-0171,NONFood,Ланч бокс НР-2 125 шт,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:14:49+00:00
+nonfood-0172,NONFood,Ланч бокс НР-2 чорний 125 шт,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:15:17+00:00
+nonfood-0173,NONFood,Ланч бокс НР-3 125 шт,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:15:45+00:00
+nonfood-0174,NONFood,Ланч бокс НР-3 чорний 125 шт,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:16:12+00:00
+nonfood-0175,NONFood,Ланч бокс НР-6 сендвіч 250 шт 152 × 150 × 60,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:16:53+00:00
+nonfood-0176,NONFood,Ланч бокс НР-6 чорн.сендвіч 250 шт 152 × 150 × 60,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:17:34+00:00
+nonfood-0177,NONFood,Ланч бокс НР-7 сендвіч 250 шт 130 × 143 × 60,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:18:15+00:00
+nonfood-0178,NONFood,Ланч бокс НР-7 чорн.сендвіч 250 шт 130 × 143 × 60,no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:18:56+00:00
+nonfood-0179,NONFood,Ланч бокс НР-9 міні гамбургер 250 шт 150 × 190 × 60,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:19:38+00:00
+nonfood-0180,NONFood,Ланч бокс НР-9 чорн. Міні гамбургер 250 шт 150 × 190 × 60,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:20:18+00:00
+nonfood-0181,NONFood,Ланч бокс НР-9 чорн.мінігамбургер 250 шт 150 × 190 × 60,no_match,,0.0,,,,brand does not match (lanch),2026-07-19T19:21:00+00:00
+nonfood-0182,NONFood,АП Ланч бокс з кришкою 3 Відділи РР (200 шт/ящ),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:21:28+00:00
+nonfood-0183,NONFood,LF Виделка преміум біла (50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:21:56+00:00
+nonfood-0184,NONFood,LF Виделка преміум прозора (50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:22:23+00:00
+nonfood-0185,NONFood,LF Виделка преміум чорна (50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:22:52+00:00
+nonfood-0186,NONFood,LF Ложка преміум біла (50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:23:20+00:00
+nonfood-0187,NONFood,LF Ложка преміум чайна Eco Lux чорна(50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:24:01+00:00
+nonfood-0188,NONFood,LF Ложка преміум Eco Lux чорна 180 мм (50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:24:41+00:00
+nonfood-0189,NONFood,LF Ложка преміум прозора (50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:25:09+00:00
+nonfood-0190,NONFood,LF Ложка преміум чорна (50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:25:37+00:00
+nonfood-0191,NONFood,LF Ніж преміум білий (50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:26:05+00:00
+nonfood-0192,NONFood,LF Ніж преміум прозорий (50 шт/уп),no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:26:32+00:00
+nonfood-0193,NONFood,LF Ніж преміум чорний (50 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:27:00+00:00
+nonfood-0194,NONFood,КП Ніж преміум прозорий (100 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:27:27+00:00
+nonfood-0195,NONFood,АП Ніж преміум чорний (100 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:27:55+00:00
+nonfood-0196,NONFood,АП Ніж білий (100 шт/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:28:23+00:00
+nonfood-0197,NONFood,SP 24 L 430 мл Контейнер/алюм.фольги(100 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:29:04+00:00
+nonfood-0198,NONFood,SP Кришка LA-CAR 24 L (100 шт/пак) картон,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:29:45+00:00
+nonfood-0199,NONFood,SP 44 L 586 мл Контейнер/алюм.фольги(100 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:30:27+00:00
+nonfood-0200,NONFood,SP 84 L 850 мл Контейнер/алюм.фольги(100 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:31:08+00:00
+nonfood-0201,NONFood,SP Кришка LA-CAR 84 L (100 шт/пак) картон,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:31:48+00:00
+nonfood-0202,NONFood,SP Кришка LA-CAR R 84 L (100 шт/пак) пластик прозора,no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:32:29+00:00
+nonfood-0203,NONFood,SP 62 L 900 мл Контейнер/алюм.фольги(100 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:33:11+00:00
+nonfood-0204,NONFood,SP Кришка LA-CAR 62 L (100 шт/пак) картон,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:33:53+00:00
+nonfood-0205,NONFood,SP 64 L 960 мл Контейнер/алюм.фольги(100 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:34:34+00:00
+nonfood-0206,NONFood,SP Кришка LA-CAR 64 L (100 шт/пак) картон,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:35:14+00:00
+nonfood-0207,NONFood,SP 94 L 1990 мл Контейнер/алюм.фольги(100 шт/пак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:35:55+00:00
+nonfood-0208,NONFood,SP Кришка LA-CAR 94 L (100 шт/пак) картон,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:36:36+00:00
+nonfood-0209,NONFood,SP 88 L 2000 мл Контейнер/алюм.фольги(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:37:16+00:00
+nonfood-0210,NONFood,SP Кришка LA-CAR 88 L (50 шт/пак) картон,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:37:57+00:00
+nonfood-0211,NONFood,SP 86 L 2100 мл Контейнер/алюм.фольги(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:38:38+00:00
+nonfood-0212,NONFood,SP Кришка LA-CAR 86 L (50 шт/пак) картон,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:39:20+00:00
+nonfood-0213,NONFood,SP 98 L 3000 мл Контейнер/алюм.фольги(50 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:40:01+00:00
+nonfood-0214,NONFood,SP Кришка LA-CAR 98 L (50 шт/пак) картон,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:40:42+00:00
+nonfood-0215,NONFood,SP 74 L 1300 мл Контейнер/алюм.фольги(100 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:41:22+00:00
+nonfood-0216,NONFood,SP М 2 L 520/320 мл Контейнер/алюм.фольги(100 шт/пак) 2 секції,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:42:03+00:00
+nonfood-0217,NONFood,SP Кришка LA-CAR М 2 L (50 шт/пак) картон,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:42:44+00:00
+nonfood-0218,NONFood,SP Т 546 L 1440 мл Контейнер/алюм.фольги(100 шт/пак) круглий,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:43:24+00:00
+nonfood-0219,NONFood,SP Кришка LA-CAR T 546 L (100 шт/пак) картон,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:44:06+00:00
+nonfood-0220,NONFood,SP Т 62 L 1450 мл Контейнер/алюм.фольги(100 шт/пак) круглий,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:44:46+00:00
+nonfood-0221,NONFood,SP Кришка T 62 L (100 шт/пак) h 30 пластик,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:45:28+00:00
+nonfood-0222,NONFood,SP R 1-56 G 1550 мл Контейнер/алюм.фольги(40 шт/пак) гриль,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:46:09+00:00
+nonfood-0223,NONFood,Контейнер з алюмінієвої фольги R 14 L,no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:46:49+00:00
+nonfood-0224,NONFood,Кришка картонна ламінована R 14 L,no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:47:30+00:00
+nonfood-0225,NONFood,Контейнер з алюмінієвої фольги R 31 L,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:48:10+00:00
+nonfood-0226,NONFood,Кришка картонна ламінована R 31 L,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:48:52+00:00
+nonfood-0227,NONFood,Контейнер з алюмінієвої фольги R 331 L,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:49:33+00:00
+nonfood-0228,NONFood,Кришка картонна ламінована R 331 L,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:50:14+00:00
+nonfood-0229,NONFood,Контейнер з алюмінієвої фольги R 64 L,no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:50:55+00:00
+nonfood-0230,NONFood,Кришка картонна ламінована R 64 L,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:51:36+00:00
+nonfood-0231,NONFood,Pro Контейнер з алюмінієвої фольги R 26 L (100 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:52:18+00:00
+nonfood-0232,NONFood,Pro кришка картонна ламінована R 26 L (100 шт/пак),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:52:46+00:00
+nonfood-0233,NONFood,"GT Рук огл ніт текс. без пудри р.L, Чорний(50 пар/уп)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:52:51+00:00
+nonfood-0234,NONFood,"GT Рук огл ніт текс. без пудри р.S, Чорний(50 пар/уп)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:52:55+00:00
+nonfood-0235,NONFood,"GT Рук огл ніт текс. без пудри р.XS, Кобальт(50 пар/уп)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:53:00+00:00
+nonfood-0236,NONFood,"GT Рук огл ніт текс. без пудри р.XS, Рожевий(50 пар/уп)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:53:04+00:00
+nonfood-0237,NONFood,"GT Рук огл ніт текс. без пудри р.М, Чорний(50 пар/уп)",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:53:09+00:00
+nonfood-0238,NONFood,HOFFEN Рук огл він н/т без пудри р.L(50 пар/уп),no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:14+00:00
+nonfood-0239,NONFood,HOFFEN Рук огл він н/т без пудри р.S(50 пар/уп),no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:18+00:00
+nonfood-0240,NONFood,HOFFEN Рук огл він н/т без пудри р.М(50 пар/уп),no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:22+00:00
+nonfood-0241,NONFood,HOFFEN Рук огл він н/т без пудри р.ХL(50 пар/уп),no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:25+00:00
+nonfood-0242,NONFood,"HOFFEN Рук огл лат текс. без пудри(HR 10)р.XL, Чорні(25 пар)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:32+00:00
+nonfood-0243,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.L, Фіолетові(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:36+00:00
+nonfood-0244,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.L, Блакитні(50 пар/уп)",no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:53:40+00:00
+nonfood-0245,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.L, Чорні(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:44+00:00
+nonfood-0246,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.М, Блакитні(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:47+00:00
+nonfood-0247,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.M, Чорні(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:51+00:00
+nonfood-0248,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.S, Фіолетові(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:55+00:00
+nonfood-0249,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.S, Блакитні(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:53:58+00:00
+nonfood-0250,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.S, Чорні(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:54:02+00:00
+nonfood-0251,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.XL, Блакитні(50 пар/уп)",no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:54:05+00:00
+nonfood-0252,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.XL, Чорні(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:54:09+00:00
+nonfood-0253,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.XS, Фіолетові(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:54:13+00:00
+nonfood-0254,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.XS, Рожеві(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:54:17+00:00
+nonfood-0255,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.XS, Блакитні(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:54:21+00:00
+nonfood-0256,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.XS, Чорні(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:54:25+00:00
+nonfood-0257,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.М, Фіолетові(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:54:29+00:00
+nonfood-0258,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.М, 4, 0 чорні(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:54:33+00:00
+nonfood-0259,NONFood,"HOFFEN Рук огл ніт текс. без пудри р.ХL, Фіолетові(50 пар/уп)",no_match,,0.0,,,,brand does not match (hoffen),2026-07-19T19:54:37+00:00
+nonfood-0260,NONFood,PRO Рукавички одноразові HDPE 500 шт в боксі (20 шт/ящ),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:54:42+00:00
+nonfood-0261,NONFood,"Серветки вологі для рук та обличчя, чорнi, в боксі 80 шт. (12 шт/ящ)",no_match,,0.0,,,,brand does not match (servetki),2026-07-19T19:54:45+00:00
+nonfood-0262,NONFood,КП Серветки для рук спресовані 100 шт/уп,no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:54:49+00:00
+nonfood-0263,NONFood,зубочистки в ПП оболонці 1000 шт 2328,no_match,,0.0,,,,brand does not match (zubochistki),2026-07-19T19:54:53+00:00
+nonfood-0264,NONFood,ГЕТ Шапочка медична з нетканого матеріалу (100 шт/уп) Блакитна,no_match,,0.0,,,,brand does not match (get),2026-07-19T19:54:58+00:00
+nonfood-0265,NONFood,ГЕТ Шапочка медична з нетканого матеріалу (100 шт/уп) Рожева,no_match,,0.0,,,,brand does not match (get),2026-07-19T19:55:02+00:00
+nonfood-0266,NONFood,ГЕТ Шапочка (100 шт/уп) Біла,no_match,,0.0,,,,brand does not match (get),2026-07-19T19:55:05+00:00
+nonfood-0267,NONFood,ГЕТ Фартух білий 2 XL (20 шт/уп),no_match,,0.0,,,,brand does not match (get),2026-07-19T19:55:10+00:00
+nonfood-0268,NONFood,ГЕТ Халат ПП на кнопках 2 XL (100 шт/уп),no_match,,0.0,,,,brand does not match (get),2026-07-19T19:55:13+00:00
+nonfood-0269,NONFood,ГЕТ Бахіли 2 гр (50 пар/100 шт/уп),no_match,,0.0,,,,brand does not match (get),2026-07-19T19:55:18+00:00
+nonfood-0270,NONFood,"Папір Крафт для випікання ТМ ""СМАЧНО"" коричневий 42 см × 50 м",no_match,,0.0,,,,brand does not match (papir),2026-07-19T19:55:22+00:00
+nonfood-0271,NONFood,Папір Бурий для випікання Жиронепроникний 28 × 28 40 г/м 2 (1000 шт),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:55:26+00:00
+nonfood-0272,NONFood,"Пергамент ТМ ""СМАЧНО"" білий сілікон 29 см × 50 м",no_match,,0.0,,,,brand does not match (pergament),2026-07-19T19:55:30+00:00
+nonfood-0273,NONFood,"Пергамент ТМ ""СМАЧНО"" білий сілікон 38 см × 50 м",no_match,,0.0,,,,brand does not match (pergament),2026-07-19T19:55:33+00:00
+nonfood-0274,NONFood,"Плівка харчова ТМ ""СМАЧНО"" ПЕ 29 см × 100 м × 8 мкм",no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:55:36+00:00
+nonfood-0275,NONFood,"Плівка харчова ТМ ""СМАЧНО"" ПЕ 29 см × 300 м × 8 мкм",no_match,,0.0,,,,brand does not match (plivka),2026-07-19T19:55:40+00:00
+nonfood-0276,NONFood,"Плівка харчова ТМ ""СМАЧНО"" ПЕ 44 см × 100 м × 8 мкм",no_match,,0.0,,,,brand does not match (plivka),2026-07-19T19:55:43+00:00
+nonfood-0277,NONFood,"Плівка харчова ТМ ""СМАЧНО"" ПЕ 44 см × 300 м × 8 мкм",no_match,,0.0,,,,brand does not match (plivka),2026-07-19T19:55:47+00:00
+nonfood-0278,NONFood,АП Папір силіконізований білий 38/400 × 600 — 500 арк,no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:55:50+00:00
+nonfood-0279,NONFood,Серветка мікрофібри для скла (30 × 30) 1 шт 7 Чудес,no_match,,0.0,,,,brand does not match (servetka),2026-07-19T19:55:53+00:00
+nonfood-0280,NONFood,Серветка мікрофібри для скла (35 × 35) 1 шт,no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:55:57+00:00
+nonfood-0281,NONFood,Серветка мікрофібри універсальна 5 шт,no_match,,0.0,,,,brand does not match (servetka),2026-07-19T19:55:59+00:00
+nonfood-0282,NONFood,Серветка мікрофібри для Скла (30 × 30 )5 шт,no_match,,0.0,,,,source domain is not suitable,2026-07-19T19:56:03+00:00
+nonfood-0283,NONFood,Серветка мікрофібри для Скла (35 × 35) 5 шт,no_match,,0.0,,,,brand does not match (servetka),2026-07-19T19:56:07+00:00
+nonfood-0284,NONFood,Pro Серветка мікрофібри для Скла 4 шт,no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:56:10+00:00
+nonfood-0285,NONFood,Pro Серветка мікрофібри для Універсальна 5 шт,no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:56:13+00:00
+nonfood-0286,NONFood,Серветка універсальна з мікрофібри 5 шт жовта,no_match,,0.0,,,,brand does not match (servetka),2026-07-19T19:56:15+00:00
+nonfood-0287,NONFood,Фольга 28 см × 100 м × 11 мкм,no_match,,0.0,,,,brand does not match (folga),2026-07-19T19:56:20+00:00
+nonfood-0288,NONFood,Фольга 28 см × 50 м × 11 мкм,no_match,,0.0,,,,brand does not match (folga),2026-07-19T19:56:23+00:00
+nonfood-0289,NONFood,Фольга 44 см × 50 м × 11 мкм,no_match,,0.0,,,,brand does not match (folga),2026-07-19T19:56:27+00:00
+nonfood-0290,NONFood,"Pro Фольга 44 см × 100 м × 8, 5 мкм",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:56:45+00:00
+nonfood-0291,NONFood,"Pro Фольга 28 см × 100 м × 8, 5 мкм",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T19:57:27+00:00
+nonfood-0292,NONFood,Антисептик Засіб для дезінфекції 1 л STERILIO (9 шт/ящ),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:57:55+00:00
+nonfood-0293,NONFood,Антисептик Засіб для дезінфекції 5 л STERILIO,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:58:23+00:00
+nonfood-0294,NONFood,Pro Антисептик Засіб для дезінфекції 5 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:58:50+00:00
+nonfood-0295,NONFood,АХД 2000 Засіб для дезінфекції Експрес 1 л (12 шт/ящ),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:59:18+00:00
+nonfood-0296,NONFood,"АХД 2000 Засіб для дезінфекції Експрес, 5000 мл (2 шт/ящ)",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T19:59:46+00:00
+nonfood-0297,NONFood,"OPTIMAL Засіб для Миття посуду в посудомийних машинах, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:00:27+00:00
+nonfood-0298,NONFood,"OPTIMAL Засіб для Ополіскування посуду в посудомийних машинах, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:01:08+00:00
+nonfood-0299,NONFood,"OPTIMAL Засіб для ручного миття посуду, 1 л (з пуш-пулл)",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:01:48+00:00
+nonfood-0300,NONFood,"OPTIMAL Засіб для ручного миття посуду, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:02:30+00:00
+nonfood-0301,NONFood,2 KHORECA Концентров. рідина для посуду Соковитий лимон 5 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:03:10+00:00
+nonfood-0302,NONFood,Засіб миття посуду Хосен 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:03:51+00:00
+nonfood-0303,NONFood,Cleon Засіб для миття посуду OPTIMA Лимон 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:04:32+00:00
+nonfood-0304,NONFood,Cleon Засіб для миття посуду OPTIMA Яблуко 5 л.,no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:05:14+00:00
+nonfood-0305,NONFood,LYNKS Засіб для миття посуду Лайм ПЕТ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:05:55+00:00
+nonfood-0306,NONFood,LYNKS Засіб для миття посуду Алоє ПЕТ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:06:37+00:00
+nonfood-0307,NONFood,PORADA Засіб для миття посуду Лайм/лимон ПЕ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:07:18+00:00
+nonfood-0308,NONFood,PORADA Засіб для миття посуду Алоє ПЕ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:07:59+00:00
+nonfood-0309,NONFood,"2 KHORECA Засіб для видалення жиру, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:08:40+00:00
+nonfood-0310,NONFood,"OPTIMAL Засіб для скляних та глянцевих поверхонь (концентрат), 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:09:22+00:00
+nonfood-0311,NONFood,"OPTIMAL ""Анти Жир"", універсал, 1 л (з пінним розпилювачем)",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:10:03+00:00
+nonfood-0312,NONFood,"OPTIMAL Засіб для чищення грилів ""Анти Жир"", універсал 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:10:45+00:00
+nonfood-0313,NONFood,"OPTIMAL Засіб для чищення грилів, 1 л (з пінним розпилювачем)",no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:11:27+00:00
+nonfood-0314,NONFood,"OPTIMAL Засіб для чищення грилів, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:12:08+00:00
+nonfood-0315,NONFood,"OPTIMAL Засіб універсальний для кухні - поверхні та обладнання, 1 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:12:50+00:00
+nonfood-0316,NONFood,"OPTIMAL Засіб універсальний для кухні - поверхні та обладнання, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:13:31+00:00
+nonfood-0317,NONFood,"OPTIMAL Гель-шампунь для душу ""Весняна свіжість"", 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:14:13+00:00
+nonfood-0318,NONFood,"Pro Wash Гель-шампунь для тіла та волосся, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:14:54+00:00
+nonfood-0319,NONFood,"OPTIMAL Крем-мило для рук ""Кашемір"", 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:15:34+00:00
+nonfood-0320,NONFood,"OPTIMAL Мило-пінка, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:16:15+00:00
+nonfood-0321,NONFood,Мило рідке Хосен 5 л. (економ),no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:16:56+00:00
+nonfood-0322,NONFood,LYNKS Рідке мило Конвалія ПЕТ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:17:37+00:00
+nonfood-0323,NONFood,Cleon Мило рідке Польова квітка 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:18:18+00:00
+nonfood-0324,NONFood,Cleon Мило рідке Лимон 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:18:59+00:00
+nonfood-0325,NONFood,Galax Мило рідке з Алое вера 1500 г (дойпак),no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:19:40+00:00
+nonfood-0326,NONFood,Мило рідке Господарське 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:20:22+00:00
+nonfood-0327,NONFood,GALAX Засіб для миття скла та дзеркал Кипарисовий сад 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:21:02+00:00
+nonfood-0328,NONFood,GALAX Засіб для миття скла та дзеркал Океанська свідість 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:21:44+00:00
+nonfood-0329,NONFood,GALAX Засіб для миття скла та дзеркал Кипарисовий сад 500 мл,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:22:25+00:00
+nonfood-0330,NONFood,"OPTIMAL Засіб для миття скла, вікон та дзеркал, 1 л (з розпилювачем)",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:23:06+00:00
+nonfood-0331,NONFood,"OPTIMAL Засіб для миття скла, вікон та дзеркал, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:23:46+00:00
+nonfood-0332,NONFood,Засіб для миття вікон 5 л«Хосен»,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:24:27+00:00
+nonfood-0333,NONFood,Омивач для скла -22 С 5 л«Хосен»,no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:25:08+00:00
+nonfood-0334,NONFood,LYNKS Очисник для скла ПЕТ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:25:49+00:00
+nonfood-0335,NONFood,"Порошок для прання універсальний ""Wash&Free"", 9 кг",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:26:30+00:00
+nonfood-0336,NONFood,"Порошок для прання універсальний ""Океанська свіжість"" ""Pro Wash"", 3 кг",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:27:11+00:00
+nonfood-0337,NONFood,"Засіб для прання у вигляді капсул ""Wash&Free""/""Pro WASH"" 150 шт",no_match,,0.0,,,,brand does not match (zasib),2026-07-19T20:27:52+00:00
+nonfood-0338,NONFood,WASH&FREE Гель для прання універсальний 5 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:28:33+00:00
+nonfood-0339,NONFood,WASH&FREE Гель для прання універсальний Гірська свіжість 5 л,no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:29:15+00:00
+nonfood-0340,NONFood,"PRO WASH Плямовивідник для кольорових речей ""Кисневий"" 900 г",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:29:56+00:00
+nonfood-0341,NONFood,PRO WASH Гель для прання універсальний 4 кг,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:30:37+00:00
+nonfood-0342,NONFood,DOCTOR WASH Гель для прання універсальний 4200 г,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:31:18+00:00
+nonfood-0343,NONFood,"OPTIMAL Гель для прання білих та кольорових речей ""White and Color"", 5 л",no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:31:59+00:00
+nonfood-0344,NONFood,"OPTIMAL Гель для прання делікатних тканин ""Делікат"", 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:32:41+00:00
+nonfood-0345,NONFood,"OPTIMAL для видалення плям при пранні ""Кислий"", 0, 5 л (з розпилювачем)",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:33:21+00:00
+nonfood-0346,NONFood,"OPTIMAL для видалення плям при пранні ""Лужний"", 0, 5 л (з розпилювачем)",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:34:03+00:00
+nonfood-0347,NONFood,"OPTIMAL Пінний плямовивідник для килимів та текстилю, 0, 5 л,",no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:34:43+00:00
+nonfood-0348,NONFood,ТП Domestos Експерт сила 7 1 л,no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:35:25+00:00
+nonfood-0349,NONFood,ТП Domestos Лимонна свіжість 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:36:05+00:00
+nonfood-0350,NONFood,ТП Domestos Свіжість атлантики 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:36:46+00:00
+nonfood-0351,NONFood,ТП Domestos Ультра білий 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:37:28+00:00
+nonfood-0352,NONFood,ТП Domestos Хвойна свіжість 1 л,no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:38:09+00:00
+nonfood-0353,NONFood,"OPTIMAL Гель для чищення унітазу, 1 л",no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:38:49+00:00
+nonfood-0354,NONFood,"OPTIMAL для миття ванних і туалетних кімнат, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:39:30+00:00
+nonfood-0355,NONFood,"OPTIMAL для чищення ванни, кахлю та сантехніки 1 л (з розпилювачем)",no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:40:12+00:00
+nonfood-0356,NONFood,"OPTIMAL Конц. для вид. складн забруднень в туалетній кімнаті, 1 л (з розп)",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:40:53+00:00
+nonfood-0357,NONFood,2 KHORECA Засіб для прочищення каналізаційних труб 1 л,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:41:33+00:00
+nonfood-0358,NONFood,"OPTIMAL Конц. для видалення складних забруднень в туалетній кімнаті, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:42:14+00:00
+nonfood-0359,NONFood,Білизна рідкий засіб 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:42:54+00:00
+nonfood-0360,NONFood,"Засіб для чищення туалету 1, 1 л. Хосен",no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:43:36+00:00
+nonfood-0361,NONFood,"Засіб рідкий для відбілювання тканин, 1 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:44:16+00:00
+nonfood-0362,NONFood,"LYNKS Очисник кахлю, акрилу, душевих ПЕТ 5 л.",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:44:57+00:00
+nonfood-0363,NONFood,LYNKS Очисник унітазів концентрат ПЕТ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:45:38+00:00
+nonfood-0364,NONFood,LYNKS Очисник для керамічних поаерхонь ПЕТ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:46:19+00:00
+nonfood-0365,NONFood,PORADA Засіб для прочищення каналізаційних труб ПЕ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:46:59+00:00
+nonfood-0366,NONFood,PORADA Сантрі-Гель ПЕ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:47:41+00:00
+nonfood-0367,NONFood,Сантрі гель д/сант 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:48:21+00:00
+nonfood-0368,NONFood,"Універсальний засіб для миття підлог і стін ""Galax"" das Power Clean, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:49:03+00:00
+nonfood-0369,NONFood,"WASH&FREE ЗАСІБ УНІВЕРСАЛЬНИЙ ""Рідке господарське мило"" 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:49:43+00:00
+nonfood-0370,NONFood,GALAX Універсальний засіб для догляду за меблями 5 в 1 з алое вера 500 мл,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:50:25+00:00
+nonfood-0371,NONFood,"OPTIMAL для твердих вологостійких поверхонь. Машинне прибирання, 10 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:51:07+00:00
+nonfood-0372,NONFood,"OPTIMAL Засіб для ручного миття підлоги (концентрат), 1 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:51:47+00:00
+nonfood-0373,NONFood,"OPTIMAL Засіб для ручного миття підлоги (концентрат), 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:52:29+00:00
+nonfood-0374,NONFood,"OPTIMAL Засіб для чищення килимів та м'яких меблів, 5 л",no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:53:09+00:00
+nonfood-0375,NONFood,"OPTIMAL Поліроль для меблів, 0, 5 л (з розпилювачем)",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:53:50+00:00
+nonfood-0376,NONFood,"OPTIMAL Поліроль для меблів, 1 л (з розпилювачем)",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:54:31+00:00
+nonfood-0377,NONFood,"OPTIMAL Поліроль для меблів, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:55:13+00:00
+nonfood-0378,NONFood,Засіб для миття підлоги 5 л«Хосен»,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:55:54+00:00
+nonfood-0379,NONFood,"PRO Засіб миючий універсальний МОРСЬКА СВІЖІСТЬ, 5 л (3 шт/ящ) І",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:56:35+00:00
+nonfood-0380,NONFood,LYNKS Очисник паркету та ламінату ПЕТ 5 л.,no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:57:16+00:00
+nonfood-0381,NONFood,PORADA Універсальний миючий засіб ПЕ 5 л.,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:57:57+00:00
+nonfood-0382,NONFood,"OPTIMAL для вид. накипу в автомат. кавовій машині (конц), 0, 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T20:58:38+00:00
+nonfood-0383,NONFood,"OPTIMAL для видалення накипу в автоматичній кавовій машині (конц.), 5 л",no_match,,0.0,,,,source domain is not suitable,2026-07-19T20:59:19+00:00
+nonfood-0384,NONFood,"OPTIMAL для чищення кавової машини від кавових масел, з міркою конц. 1 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:00:00+00:00
+nonfood-0385,NONFood,"OPTIMAL чищення кавомашин від кавових масел (конц.), 0, 5 л, з мірн кришк",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:00:41+00:00
+nonfood-0386,NONFood,"OPTIMAL Засіб для чищення кавомашин від кавових масел (концентрат), 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:01:22+00:00
+nonfood-0387,NONFood,"OPTIMAL для чищення молочної системи кавової машини конц 0, 5 л,",no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:02:04+00:00
+nonfood-0388,NONFood,"OPTIMAL для чищення молочної системи кавової машини (концентрат), 5 л",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:02:44+00:00
+nonfood-0389,NONFood,"OPTIMAL для чищення пральної машини від накипу конц. 0, 5 л,",no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:03:25+00:00
+nonfood-0390,NONFood,Пакети д/сміття 120 л х 10 шт ЧОРНІ ЕКО А. LD (А),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:03:53+00:00
+nonfood-0391,NONFood,Пакети д/сміття 120 л х 20 шт ЧОРНІ ЕКО В. LD (В),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:04:20+00:00
+nonfood-0392,NONFood,Пакети д/сміття 120 л х 10 шт ЧОРНІ ЕКО С. LD (С),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:04:48+00:00
+nonfood-0393,NONFood,Пакети д/сміття 160 л х 10 шт ЧОРНІ ЕКО А. LD (А),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:05:15+00:00
+nonfood-0394,NONFood,Пакети д/сміття 160 л х 10 шт ЧОРНІ ЕКО С. LD (С),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:05:42+00:00
+nonfood-0395,NONFood,Пакети д/сміття 20 л х 50 шт. БІЛІ ЕКО В. HD (В),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:06:10+00:00
+nonfood-0396,NONFood,ГЕТ Пакети д/сміття 20 л х 30 шт. БІЛІ ЕКО В. HD (В) міцні,no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:06:37+00:00
+nonfood-0397,NONFood,Пакети д/сміття 240 л х 5 шт ЧОРНІ ЕКО В. LD (В),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:07:04+00:00
+nonfood-0398,NONFood,Пакети д/сміття 35 л х 100 шт ЧОРНІ ЕКО В. HD (В),no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:07:32+00:00
+nonfood-0399,NONFood,Пакети д/сміття 35 л х 100 шт. ЧОРНІ ЕКО С. HD (С),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:08:00+00:00
+nonfood-0400,NONFood,Пакети д/сміття 35 л х 50 шт. ЧОРНІ ЕКО В. HD (В),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:08:28+00:00
+nonfood-0401,NONFood,Пакети д/сміття 35 л х 50 шт. ЧОРНІ ЕКО С. HD (С),no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:08:56+00:00
+nonfood-0402,NONFood,Пакети д/сміття 60 л х 10 шт ЧОРНІ ЕКО А. LD (А),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:09:23+00:00
+nonfood-0403,NONFood,Пакети д/сміття 60 л х 20 шт ЧОРНІ ЕКО А. LD (А),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:09:51+00:00
+nonfood-0404,NONFood,Пакети д/сміття 60 л х 20 шт ЧОРНІ ЕКО В. HD (В),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:10:19+00:00
+nonfood-0405,NONFood,Пакети д/сміття 60 л х 20 шт ЧОРНІ ЕКО С. HD (С),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:10:47+00:00
+nonfood-0406,NONFood,Пакети д/сміття 60 л х 40 шт ЧОРНІ ЕКО В. HD (В),no_match,,0.0,,,,package size/weight does not match or is missing,2026-07-19T21:11:15+00:00
+nonfood-0407,NONFood,Серветки паперові 2 шар.V-складання КУБ,no_match,,0.0,,,,brand does not match (servetki),2026-07-19T21:11:43+00:00
+nonfood-0408,NONFood,Серветка паперова диспенсерна біла (1500 шт).,no_match,,0.0,,,,brand does not match (servetka),2026-07-19T21:12:10+00:00
+nonfood-0409,NONFood,"Серветка 24 × 24 біла, гладка 1/4 2-х шар 200 шт./уп.",no_match,,0.0,,,,brand does not match (servetka),2026-07-19T21:12:52+00:00
+nonfood-0410,NONFood,Серветка 33 х 33 2-х шар 1/8 (125 шт),no_match,,0.0,,,,brand does not match (servetka),2026-07-19T21:13:34+00:00
+nonfood-0411,NONFood,"Серветка барна біла, 500 шт",no_match,,0.0,,,,brand does not match (servetka),2026-07-19T21:14:02+00:00
+nonfood-0412,NONFood,Серветка Мяко 33 х 33 2-х шар 1/4 (125 шт),no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:14:43+00:00
+nonfood-0413,NONFood,Серветка Мяко 33 х 33 БІЛА 1-х шар 1/8 (125 шт),no_match,,0.0,,,,brand does not match (servetka),2026-07-19T21:15:25+00:00
+nonfood-0414,NONFood,"ДИВО серв. папер. 1-шарові 24 × 24, в п/п упаковці 100 шт білі",no_match,,0.0,,,,brand does not match (divo),2026-07-19T21:16:06+00:00
+nonfood-0415,NONFood,"Рушник V- складання Lux, 2 шар., 150 арк",no_match,,0.0,,,,brand does not match (rushnik),2026-07-19T21:16:33+00:00
+nonfood-0416,NONFood,"Рушник Z-Z складання Lux, 2 шар., 150 арк.",no_match,,0.0,,,,brand does not match (rushnik),2026-07-19T21:17:02+00:00
+nonfood-0417,NONFood,Рушник паперовий V-скл. Лайт сірий макулатурний 160 шт(25 шт/ящ),no_match,,0.0,,,,brand does not match (rushnik),2026-07-19T21:17:29+00:00
+nonfood-0418,NONFood,Рушник паперовий V-скл. зелений макулатурний 160 шт.(25 шт/ящ),no_match,,0.0,,,,brand does not match (rushnik),2026-07-19T21:17:57+00:00
+nonfood-0419,NONFood,"Рушник целюлоза (350 відривів), 2-х шар, перферація",no_match,,0.0,,,,brand does not match (rushnik),2026-07-19T21:18:26+00:00
+nonfood-0420,NONFood,"Рушник целюлоза (75 м перфорація), 2-х шар, (6 рул/уп)",no_match,,0.0,,,,brand does not match (rushnik),2026-07-19T21:19:07+00:00
+nonfood-0421,NONFood,Рушник целюлозний д/автомат. диспенсерів 2-х шар.(6 рул/уп),no_match,,0.0,,,,brand does not match (rushnik),2026-07-19T21:19:35+00:00
+nonfood-0422,NONFood,"Рушник, целюлозний 200 м 1 шар, перфорація, (23 грм)",no_match,,0.0,,,,brand does not match (rushnik),2026-07-19T21:20:16+00:00
+nonfood-0423,NONFood,"Рушники цел. на гільзі по 8 рул., 2-шар., ""Soffi PRO Optimal""",no_match,,0.0,,,,brand does not match (rushniki),2026-07-19T21:20:57+00:00
+nonfood-0424,NONFood,"Рушник паперовий ""Mildi Smart"" 210 × 110/50 целюл. 2 шар. (2 шт.)",no_match,,0.0,,,,brand does not match (rushnik),2026-07-19T21:21:38+00:00
+nonfood-0425,NONFood,ТП Хосен Джамбо-Велетень макул 120 м.п.(12 рул/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T21:22:19+00:00
+nonfood-0426,NONFood,"Туалетний папір ""Хосен"" ТМ ""Хосен"" 65 м.",no_match,,0.0,,,,brand does not match (tualetnii),2026-07-19T21:22:47+00:00
+nonfood-0427,NONFood,ТП Мяко Джамбо-Рулон макул 125 м.п.(12 рул/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T21:23:28+00:00
+nonfood-0428,NONFood,ТП Мяко Джамбо-Рулон макул 95 м/п (12 рул/уп),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T21:24:09+00:00
+nonfood-0429,NONFood,ТП Мяко Целюлоза 2-х шар готельний економ (Білий) (24 шт/уп) 12 м,no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T21:24:50+00:00
+nonfood-0430,NONFood,"ТП Мяко Целюлоза 50 м/п, Г-32 см, Д-12 см (Білий) (24 рул/упак) 2 шар",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T21:25:32+00:00
+nonfood-0431,NONFood,"ТП Мяко Целюлоза 90 м/п, Г-60 см, Д-19 см (Білий) (12 рул/уп) 2 шар",no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T21:26:13+00:00
+nonfood-0432,NONFood,"Папір туалетний ""Велетень""90 × 190/60 сір",no_match,,0.0,,,,brand does not match (papir),2026-07-19T21:26:54+00:00
+nonfood-0433,NONFood,"Папір туалетний целюл. ""Soffi PRO Basic"" 1-шар. D 190 мм 12 рул. в упак.",no_match,,0.0,,,,brand does not match (papir),2026-07-19T21:27:35+00:00
+nonfood-0434,NONFood,PRO Серветки віскозні балком 50 шт комплект (1 балк/ящ),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T21:28:16+00:00
+nonfood-0435,NONFood,PRO Серветки віскозні 10 шт 30 × 30,no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T21:28:58+00:00
+nonfood-0436,NONFood,ГЕТ Серветки віскозна 50 шт,no_match,,0.0,,,,brand does not match (get),2026-07-19T21:29:26+00:00
+nonfood-0437,NONFood,"Серветки універсальні віскозні ТМ 7 чудес, 10 шт",no_match,,0.0,,,,brand does not match (servetki),2026-07-19T21:29:53+00:00
+nonfood-0438,NONFood,"Серветки універсальні віскозні ТМ 7 чудес, 5 шт",no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:30:21+00:00
+nonfood-0439,NONFood,PRO Серветки целюлознi балком 60 шт комплект (1 балк/ящ),no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T21:31:01+00:00
+nonfood-0440,NONFood,PRO Серветки целюлознi 10 шт,no_match,,0.0,,,,generic product match is not specific enough,2026-07-19T21:31:29+00:00
+nonfood-0441,NONFood,"Серветки целюлозні вологопоглинаючі ТМ 7 чудес, 5 шт",no_match,,0.0,,,,brand does not match (servetki),2026-07-19T21:31:56+00:00
+nonfood-0442,NONFood,"Серветки целюлозні вологопоглинаючі ТМ 7 чудес, 7 шт",no_match,,0.0,,,,brand does not match (servetki),2026-07-19T21:32:24+00:00
+nonfood-0443,NONFood,"Ганчірка для підлоги, 1 шт",no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:32:51+00:00
+nonfood-0444,NONFood,"Ганчірка для підлоги 7 чудес (50 × 60), 1 шт",no_match,,0.0,,,,brand does not match (ganchirka),2026-07-19T21:33:33+00:00
+nonfood-0445,NONFood,Губка кухонна Максі Супер піна 5+1 шт,no_match,,0.0,,,,brand does not match (gubka),2026-07-19T21:34:00+00:00
+nonfood-0446,NONFood,"Губка кухонна ""Максіма"" піноефект ТМ 7 чудес, 5 шт",no_match,,0.0,,,,brand does not match (gubka),2026-07-19T21:34:28+00:00
+nonfood-0447,NONFood,"Губка кухонна ""Іжак"" ТМ 7 чудес, 3 шт",no_match,,0.0,,,,brand does not match (gubka),2026-07-19T21:34:56+00:00
+nonfood-0448,NONFood,"Губка кухонна Ho Re Ca cупер піна ТМ 7 Чудес, 5 шт",no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:35:36+00:00
+nonfood-0449,NONFood,"Губка кухонна Ho Re Ca чорна ТМ 7 Чудес, 5 шт",no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:36:18+00:00
+nonfood-0450,NONFood,"Губка кухонна Хорека ТМ 7 Чудес, 10 шт",no_match,,0.0,,,,brand does not match (gubka),2026-07-19T21:36:46+00:00
+nonfood-0451,NONFood,"Скребок металевий Гігант, 3 шт",no_match,,0.0,,,,brand does not match (skrebok),2026-07-19T21:37:13+00:00
+nonfood-0452,NONFood,"Скребок металевий Максіма ТМ 7 чудес, 3 шт",no_match,,0.0,,,,brand does not match (skrebok),2026-07-19T21:37:40+00:00
+nonfood-0453,NONFood,"Скребок пластиковий ТМ 7 чудес, 6 шт",no_match,,0.0,,,,source domain is not suitable,2026-07-19T21:38:08+00:00
+nonfood-0454,NONFood,"Скребок спіральний нержавіючий, 10 шт",no_match,,0.0,,,,brand does not match (skrebok),2026-07-19T21:38:36+00:00
