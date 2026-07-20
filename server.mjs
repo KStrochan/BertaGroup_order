@@ -4,6 +4,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { extname, join, normalize, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { randomInt, randomUUID, randomBytes } from "node:crypto";
+import { Redis } from "@upstash/redis";
 import { createJsonCollection } from "./lib/store.mjs";
 import { hashPassword, verifyPassword, createSessionToken, verifySessionToken, parseCookies } from "./lib/auth.mjs";
 
@@ -27,8 +28,47 @@ if (!SESSION_SECRET) {
   );
 }
 
-const users = createJsonCollection(join(dataDir, "users.json"), { defaultValue: [] });
-const orders = createJsonCollection(join(dataDir, "orders.json"), { defaultValue: [] });
+// Ініціалізація Upstash Redis (якщо є змінні оточення)
+const redis = (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN)
+  ? Redis.fromEnv()
+  : null;
+
+// Локальний фолбек на JSON-файли
+const localUsers = createJsonCollection(join(dataDir, "users.json"), { defaultValue: [] });
+const localOrders = createJsonCollection(join(dataDir, "orders.json"), { defaultValue: [] });
+
+// Абстракція для роботи з колекціями (Redis -> Local JSON)
+const users = {
+  async all() {
+    if (!redis) return localUsers.all();
+    const data = await redis.get("berta_users");
+    if (!data) return [];
+    return typeof data === "string" ? JSON.parse(data) : data;
+  },
+  async mutate(fn) {
+    if (!redis) return localUsers.mutate(fn);
+    const current = await this.all();
+    const updated = await fn(JSON.parse(JSON.stringify(current)));
+    await redis.set("berta_users", updated);
+    return updated;
+  },
+};
+
+const orders = {
+  async all() {
+    if (!redis) return localOrders.all();
+    const data = await redis.get("berta_orders");
+    if (!data) return [];
+    return typeof data === "string" ? JSON.parse(data) : data;
+  },
+  async mutate(fn) {
+    if (!redis) return localOrders.mutate(fn);
+    const current = await this.all();
+    const updated = await fn(JSON.parse(JSON.stringify(current)));
+    await redis.set("berta_orders", updated);
+    return updated;
+  },
+};
 
 const products = JSON.parse(
   await readFile(join(publicDir, "data", "products.json"), "utf8"),
@@ -57,6 +97,7 @@ const server = createServer(async (req, res) => {
       return sendJson(res, 200, {
         ok: true,
         telegramConfigured: Boolean(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID),
+        redisConfigured: Boolean(redis),
         productCount: products.length,
       });
     }
@@ -117,6 +158,7 @@ server.listen(PORT, "0.0.0.0", () => {
   console.log(`Berta HoReCa: http://localhost:${PORT}`);
   console.log(`Товарів у каталозі: ${products.length}`);
   console.log(`Telegram: ${TELEGRAM_BOT_TOKEN ? "налаштовано" : "токен не задано"}`);
+  console.log(`Upstash Redis: ${redis ? "підключено успішно" : "використовується локальний JSON"}`);
 });
 
 async function handleOrder(req, res) {
@@ -146,7 +188,6 @@ async function handleOrder(req, res) {
     });
   }
 
-  // Невидиме поле-пастка для простих спам-ботів.
   if (String(payload.website || "").trim()) {
     return sendJson(res, 200, { ok: true });
   }
@@ -219,7 +260,6 @@ async function handleOrder(req, res) {
     return list;
   });
 
-  // Відповідь успішна лише після підтвердження Telegram для кожної частини замовлення.
   return sendJson(res, 200, { ok: true, orderId });
 }
 
@@ -542,7 +582,6 @@ async function serveStatic(pathname, req, res) {
     if (req.method === "HEAD") return res.end();
     res.end(body);
   } catch {
-    // SPA fallback for ordinary browser routes.
     if (!extname(relative)) {
       const body = await readFile(join(publicDir, "index.html"));
       res.statusCode = 200;
