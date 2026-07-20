@@ -336,17 +336,35 @@ img { max-width: 100%; display: block; }
 }
 .product-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); border-color: #d8dce0; }
 .product-visual {
+  position: relative;
   height: 170px;
   margin-bottom: 14px;
   border-radius: 16px;
   overflow: hidden;
-  background: #f7f8fa;
+  background: linear-gradient(155deg, var(--tint-strong), var(--tint-soft));
   display: grid;
   place-items: center;
-  border: 1px solid #eef0f2;
+  border: 1px solid var(--tint-line);
 }
-.product-image { width: 100%; height: 100%; object-fit: contain; padding: 10px; background: white; }
-.product-symbol { width: 72px; height: 72px; border-radius: 22px; display: grid; place-items: center; background: var(--red-soft); font-size: 34px; }
+.product-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 12px; background: white; }
+.product-symbol {
+  width: 76px;
+  height: 76px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.6);
+  font-size: 36px;
+  box-shadow: 0 6px 16px rgba(27,35,44,.06);
+}
+.product-visual--amber  { --tint-strong: #ffe9c7; --tint-soft: #fff6ea; --tint-line: #ffdca3; }
+.product-visual--teal   { --tint-strong: #c9f1ea; --tint-soft: #ecfbf8; --tint-line: #a9e7db; }
+.product-visual--pink   { --tint-strong: #ffd9e4; --tint-soft: #fff0f4; --tint-line: #ffc0d3; }
+.product-visual--blue   { --tint-strong: #d6e6ff; --tint-soft: #eff5ff; --tint-line: #bcd6ff; }
+.product-visual--violet { --tint-strong: #e4d9ff; --tint-soft: #f4efff; --tint-line: #d2c0ff; }
+.product-visual--green  { --tint-strong: #d3f0d6; --tint-soft: #eefaf0; --tint-line: #b6e3bc; }
+.product-visual--orange { --tint-strong: #ffdcc2; --tint-soft: #fff3e9; --tint-line: #ffc79c; }
+.product-visual--sand   { --tint-strong: #ece2d0; --tint-soft: #f8f4ec; --tint-line: #dccfb2; }
 .product-card-top { display: flex; align-items: center; min-height: 28px; }
 .product-category { color: var(--muted); font-size: 11px; font-weight: 850; text-transform: uppercase; letter-spacing: .06em; line-height: 1.25; }
 .product-name { margin: 10px 0 20px; font-size: 16px; line-height: 1.42; letter-spacing: -0.015em; overflow-wrap: anywhere; }

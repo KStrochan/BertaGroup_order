@@ -243,7 +243,9 @@ function renderProducts() {
     card.dataset.productId = product.id;
     const symbol = card.querySelector(".product-symbol");
     const image = card.querySelector(".product-image");
+    const visual = card.querySelector(".product-visual");
     symbol.textContent = getCategoryEmoji(product);
+    visual.classList.add(`product-visual--${getCategoryColor(product)}`);
     if (product.image) {
       image.src = "." + product.image;
       image.src = product.image;
@@ -859,6 +861,24 @@ function getCategoryEmoji(product) {
     [/касов|стріч/, "🧾"],
   ];
   return rules.find(([pattern]) => pattern.test(text))?.[1] || (product.section === "Food" ? "🍴" : "🧰");
+}
+
+function getCategoryColor(product) {
+  const text = `${product.category} ${product.parentCategory}`.toLocaleLowerCase("uk-UA");
+  const rules = [
+    [/олія|соус|майонез|кетчуп|оцет/, "amber"],
+    [/макарон|бакалі|консерва|спец|приправа|дріждж/, "sand"],
+    [/сироп|напої|соки|чай|пюре|топінг/, "teal"],
+    [/кондитер|снек/, "pink"],
+    [/стакан|таріл|посуд|прибор/, "blue"],
+    [/пакет|упаков|короб|блістер|ланч|фольг/, "violet"],
+    [/хім|дезін|мило|миття|чищення|підлоги|ванної/, "green"],
+    [/рукавич/, "orange"],
+    [/папер|сервет|рушник|туалет/, "sand"],
+    [/прибиран|скребок/, "green"],
+    [/касов|стріч/, "blue"],
+  ];
+  return rules.find(([pattern]) => pattern.test(text))?.[1] || (product.section === "Food" ? "amber" : "blue");
 }
 
 function pluralize(number, forms) {
