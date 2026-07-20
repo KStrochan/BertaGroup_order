@@ -3,10 +3,13 @@ import { readFile, stat } from "node:fs/promises";
 import { existsSync, readFileSync } from "node:fs";
 import { extname, join, normalize, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
-import { randomInt } from "node:crypto";
+import { randomInt, randomUUID, randomBytes } from "node:crypto";
+import { createJsonCollection } from "./lib/store.mjs";
+import { hashPassword, verifyPassword, createSessionToken, verifySessionToken, parseCookies } from "./lib/auth.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const publicDir = resolve(__dirname, "public");
+const dataDir = resolve(__dirname, "data");
 
 loadDotEnv(join(__dirname, ".env"));
 
@@ -14,11 +17,25 @@ const PORT = Number(process.env.PORT || 3000);
 const TELEGRAM_BOT_TOKEN = String(process.env.TELEGRAM_BOT_TOKEN || "").trim();
 const TELEGRAM_CHAT_ID = String(process.env.TELEGRAM_CHAT_ID || "-1004299599812").trim();
 
+let SESSION_SECRET = String(process.env.SESSION_SECRET || "").trim();
+if (!SESSION_SECRET) {
+  SESSION_SECRET = randomBytes(32).toString("hex");
+  console.warn(
+    "SESSION_SECRET не задано в .env — згенеровано тимчасовий на цей запуск.\n" +
+    "Усі клієнти будуть розлогинені при кожному перезапуску сервера.\n" +
+    `Додайте у .env: SESSION_SECRET=${SESSION_SECRET}`,
+  );
+}
+
+const users = createJsonCollection(join(dataDir, "users.json"), { defaultValue: [] });
+const orders = createJsonCollection(join(dataDir, "orders.json"), { defaultValue: [] });
+
 const products = JSON.parse(
   await readFile(join(publicDir, "data", "products.json"), "utf8"),
 );
 const productById = new Map(products.map((product) => [product.id, product]));
 const rateLimits = new Map();
+const authRateLimits = new Map();
 
 const MIME_TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -52,6 +69,39 @@ const server = createServer(async (req, res) => {
       return handleOrder(req, res);
     }
 
+    if (url.pathname === "/api/auth/register") {
+      if (req.method !== "POST") return sendJson(res, 405, { ok: false, error: "Метод не підтримується" });
+      return handleRegister(req, res);
+    }
+
+    if (url.pathname === "/api/auth/login") {
+      if (req.method !== "POST") return sendJson(res, 405, { ok: false, error: "Метод не підтримується" });
+      return handleLogin(req, res);
+    }
+
+    if (url.pathname === "/api/auth/logout") {
+      if (req.method !== "POST") return sendJson(res, 405, { ok: false, error: "Метод не підтримується" });
+      return handleLogout(req, res);
+    }
+
+    if (url.pathname === "/api/auth/me") {
+      if (req.method !== "GET") return sendJson(res, 405, { ok: false, error: "Метод не підтримується" });
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 200, { ok: true, user: null });
+      return sendJson(res, 200, { ok: true, user: publicUser(user) });
+    }
+
+    if (url.pathname === "/api/orders") {
+      if (req.method !== "GET") return sendJson(res, 405, { ok: false, error: "Метод не підтримується" });
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { ok: false, error: "Потрібно увійти в акаунт" });
+      const allOrders = await orders.all();
+      const mine = allOrders
+        .filter((order) => order.userId === user.id)
+        .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+      return sendJson(res, 200, { ok: true, orders: mine });
+    }
+
     if (req.method !== "GET" && req.method !== "HEAD") {
       return sendText(res, 405, "Method Not Allowed");
     }
@@ -71,7 +121,7 @@ server.listen(PORT, "0.0.0.0", () => {
 
 async function handleOrder(req, res) {
   const ip = getClientIp(req);
-  if (!consumeRateLimit(ip)) {
+  if (!consumeRateLimit(rateLimits, ip)) {
     return sendJson(res, 429, {
       ok: false,
       error: "Забагато спроб. Повторіть відправлення трохи пізніше.",
@@ -148,8 +198,136 @@ async function handleOrder(req, res) {
     });
   }
 
+  const user = await getSessionUser(req);
+  await orders.mutate((list) => {
+    list.push({
+      id: orderId,
+      userId: user ? user.id : null,
+      createdAt: new Date().toISOString(),
+      orderTime,
+      customer,
+      items: calculatedItems.map((item) => ({
+        id: item.id,
+        name: item.name,
+        quantity: item.quantity,
+        packSize: item.packSize,
+        price: item.price,
+        lineTotal: item.lineTotal,
+      })),
+      total,
+    });
+    return list;
+  });
+
   // Відповідь успішна лише після підтвердження Telegram для кожної частини замовлення.
+  return sendJson(res, 200, { ok: true, orderId });
+}
+
+async function handleRegister(req, res) {
+  const ip = getClientIp(req);
+  if (!consumeRateLimit(authRateLimits, ip, 10, 10 * 60 * 1000)) {
+    return sendJson(res, 429, { ok: false, error: "Забагато спроб. Спробуйте пізніше." });
+  }
+
+  let payload;
+  try {
+    payload = await readJsonBody(req, 20_000);
+  } catch (error) {
+    return sendJson(res, error.statusCode || 400, { ok: false, error: error.message || "Некоректний запит" });
+  }
+
+  const phone = normalizePhone(payload.phone);
+  const password = String(payload.password || "");
+  const company = cleanInput(payload.company, 160);
+  const contact = cleanInput(payload.contact, 160);
+
+  if (!phone) return sendJson(res, 400, { ok: false, error: "Вкажіть коректний номер телефону" });
+  if (password.length < 6) return sendJson(res, 400, { ok: false, error: "Пароль має містити мінімум 6 символів" });
+  if (!company) return sendJson(res, 400, { ok: false, error: "Вкажіть назву ФОП або компанії" });
+  if (!contact) return sendJson(res, 400, { ok: false, error: "Вкажіть контактну особу" });
+
+  const existing = await users.all();
+  if (existing.some((u) => u.phone === phone)) {
+    return sendJson(res, 409, { ok: false, error: "Клієнт із таким телефоном уже зареєстрований" });
+  }
+
+  const user = {
+    id: randomUUID(),
+    phone,
+    company,
+    contact,
+    passwordHash: await hashPassword(password),
+    createdAt: new Date().toISOString(),
+  };
+  await users.mutate((list) => {
+    list.push(user);
+    return list;
+  });
+
+  setSessionCookie(res, createSessionToken(user.id, SESSION_SECRET));
+  return sendJson(res, 200, { ok: true, user: publicUser(user) });
+}
+
+async function handleLogin(req, res) {
+  const ip = getClientIp(req);
+  if (!consumeRateLimit(authRateLimits, ip, 10, 10 * 60 * 1000)) {
+    return sendJson(res, 429, { ok: false, error: "Забагато спроб. Спробуйте пізніше." });
+  }
+
+  let payload;
+  try {
+    payload = await readJsonBody(req, 20_000);
+  } catch (error) {
+    return sendJson(res, error.statusCode || 400, { ok: false, error: error.message || "Некоректний запит" });
+  }
+
+  const phone = normalizePhone(payload.phone);
+  const password = String(payload.password || "");
+  const existing = await users.all();
+  const user = existing.find((u) => u.phone === phone);
+  const valid = user ? await verifyPassword(password, user.passwordHash) : false;
+
+  if (!user || !valid) {
+    return sendJson(res, 401, { ok: false, error: "Невірний телефон або пароль" });
+  }
+
+  setSessionCookie(res, createSessionToken(user.id, SESSION_SECRET));
+  return sendJson(res, 200, { ok: true, user: publicUser(user) });
+}
+
+async function handleLogout(req, res) {
+  setSessionCookie(res, "", 0);
   return sendJson(res, 200, { ok: true });
+}
+
+async function getSessionUser(req) {
+  const cookies = parseCookies(req.headers.cookie);
+  const userId = verifySessionToken(cookies.session, SESSION_SECRET);
+  if (!userId) return null;
+  const existing = await users.all();
+  return existing.find((u) => u.id === userId) || null;
+}
+
+function publicUser(user) {
+  return { id: user.id, phone: user.phone, company: user.company, contact: user.contact };
+}
+
+function setSessionCookie(res, token, maxAgeSeconds = 7 * 24 * 60 * 60) {
+  const parts = [
+    `session=${encodeURIComponent(token)}`,
+    "Path=/",
+    "HttpOnly",
+    "SameSite=Lax",
+    `Max-Age=${maxAgeSeconds}`,
+  ];
+  if (process.env.NODE_ENV === "production") parts.push("Secure");
+  res.setHeader("Set-Cookie", parts.join("; "));
+}
+
+function normalizePhone(value) {
+  const digits = String(value || "").replace(/\D/g, "");
+  if (digits.length < 9 || digits.length > 15) return "";
+  return digits;
 }
 
 function validateOrder(payload) {
@@ -404,19 +582,17 @@ function readJsonBody(req, maxBytes) {
   });
 }
 
-function consumeRateLimit(ip) {
+function consumeRateLimit(store, ip, maxRequests = 8, windowMs = 10 * 60 * 1000) {
   const now = Date.now();
-  const windowMs = 10 * 60 * 1000;
-  const maxRequests = 8;
-  const previous = rateLimits.get(ip) || [];
+  const previous = store.get(ip) || [];
   const recent = previous.filter((timestamp) => now - timestamp < windowMs);
   if (recent.length >= maxRequests) return false;
   recent.push(now);
-  rateLimits.set(ip, recent);
+  store.set(ip, recent);
 
-  if (rateLimits.size > 5000) {
-    for (const [key, timestamps] of rateLimits) {
-      if (!timestamps.some((timestamp) => now - timestamp < windowMs)) rateLimits.delete(key);
+  if (store.size > 5000) {
+    for (const [key, timestamps] of store) {
+      if (!timestamps.some((timestamp) => now - timestamp < windowMs)) store.delete(key);
     }
   }
   return true;

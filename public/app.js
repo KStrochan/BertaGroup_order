@@ -8,6 +8,8 @@ const state = {
   cart: loadCart(),
   checkoutOpen: false,
   submitting: false,
+  user: null,
+  accountMode: "login",
 };
 
 const els = {
@@ -53,6 +55,24 @@ const els = {
   nonfoodCountHero: document.querySelector("#nonfoodCountHero"),
   foodTabCount: document.querySelector("#foodTabCount"),
   nonfoodTabCount: document.querySelector("#nonfoodTabCount"),
+  headerAccountButton: document.querySelector("#headerAccountButton"),
+  headerAccountLabel: document.querySelector("#headerAccountLabel"),
+  accountModal: document.querySelector("#accountModal"),
+  accountModalClose: document.querySelector("#accountModalClose"),
+  accountTabLogin: document.querySelector("#accountTabLogin"),
+  accountTabRegister: document.querySelector("#accountTabRegister"),
+  loginForm: document.querySelector("#loginForm"),
+  registerForm: document.querySelector("#registerForm"),
+  loginError: document.querySelector("#loginError"),
+  registerError: document.querySelector("#registerError"),
+  accountLoggedOut: document.querySelector("#accountLoggedOut"),
+  accountLoggedIn: document.querySelector("#accountLoggedIn"),
+  accountCompany: document.querySelector("#accountCompany"),
+  accountContact: document.querySelector("#accountContact"),
+  accountPhone: document.querySelector("#accountPhone"),
+  accountOrdersEmpty: document.querySelector("#accountOrdersEmpty"),
+  accountOrdersList: document.querySelector("#accountOrdersList"),
+  accountLogoutButton: document.querySelector("#accountLogoutButton"),
 };
 
 init();
@@ -71,6 +91,7 @@ async function init() {
     populateCategories();
     renderProducts();
     renderCart();
+    refreshSession();
   } catch (error) {
     els.resultsText.textContent = "Не вдалося завантажити каталог.";
     els.emptyState.hidden = false;
@@ -143,11 +164,26 @@ function bindEvents() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       if (!els.successModal.hidden) closeSuccess();
+      else if (!els.accountModal.hidden) closeAccountModal();
       else if (els.cartDrawer.classList.contains("is-open")) closeDrawer();
     }
   });
 
   els.checkoutButton.addEventListener("click", showCheckout);
+
+  els.headerAccountButton.addEventListener("click", () => {
+    if (state.user) openAccountModal();
+    else openAccountModal("login");
+  });
+  els.accountModalClose.addEventListener("click", closeAccountModal);
+  els.accountModal.addEventListener("click", (event) => {
+    if (event.target === els.accountModal) closeAccountModal();
+  });
+  els.accountTabLogin.addEventListener("click", () => setAccountMode("login"));
+  els.accountTabRegister.addEventListener("click", () => setAccountMode("register"));
+  els.loginForm.addEventListener("submit", submitLogin);
+  els.registerForm.addEventListener("submit", submitRegister);
+  els.accountLogoutButton.addEventListener("click", logout);
   els.backToCartButton.addEventListener("click", showCartStep);
   els.checkoutForm.addEventListener("submit", submitOrder);
   els.checkoutForm.addEventListener("input", (event) => {
@@ -380,6 +416,7 @@ function closeDrawer() {
 
 function showCheckout() {
   if (!getCartEntries().length) return;
+  prefillCheckoutFromAccount();
   state.checkoutOpen = true;
   els.cartStep.hidden = true;
   els.checkoutStep.hidden = false;
@@ -398,6 +435,181 @@ function showCartStep() {
   els.submitOrderButton.hidden = true;
   els.drawerTitle.textContent = "Кошик";
   hideFormError();
+}
+
+async function refreshSession() {
+  try {
+    const response = await fetch("/api/auth/me");
+    const result = await response.json().catch(() => ({}));
+    state.user = result.user || null;
+  } catch {
+    state.user = null;
+  }
+  renderAccountHeader();
+}
+
+function renderAccountHeader() {
+  els.headerAccountLabel.textContent = state.user ? state.user.contact.split(" ")[0] : "Увійти";
+}
+
+function openAccountModal(mode) {
+  if (state.user) {
+    els.accountLoggedOut.hidden = true;
+    els.accountLoggedIn.hidden = false;
+    els.accountCompany.textContent = state.user.company;
+    els.accountContact.textContent = state.user.contact;
+    els.accountPhone.textContent = formatPhone(state.user.phone);
+    loadAccountOrders();
+  } else {
+    els.accountLoggedOut.hidden = false;
+    els.accountLoggedIn.hidden = true;
+    setAccountMode(mode || state.accountMode);
+  }
+  els.accountModal.hidden = false;
+  document.body.classList.add("drawer-open");
+}
+
+function closeAccountModal() {
+  els.accountModal.hidden = true;
+  if (!els.cartDrawer.classList.contains("is-open")) {
+    document.body.classList.remove("drawer-open");
+  }
+}
+
+function setAccountMode(mode) {
+  state.accountMode = mode;
+  const isLogin = mode === "login";
+  els.accountTabLogin.classList.toggle("is-active", isLogin);
+  els.accountTabRegister.classList.toggle("is-active", !isLogin);
+  els.loginForm.hidden = !isLogin;
+  els.registerForm.hidden = isLogin;
+}
+
+async function submitLogin(event) {
+  event.preventDefault();
+  const formData = new FormData(els.loginForm);
+  const payload = Object.fromEntries(formData.entries());
+  els.loginError.hidden = true;
+
+  try {
+    const response = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.ok) throw new Error(result.error || "Не вдалося увійти");
+
+    state.user = result.user;
+    els.loginForm.reset();
+    renderAccountHeader();
+    prefillCheckoutFromAccount();
+    openAccountModal();
+  } catch (error) {
+    els.loginError.textContent = error.message;
+    els.loginError.hidden = false;
+  }
+}
+
+async function submitRegister(event) {
+  event.preventDefault();
+  const formData = new FormData(els.registerForm);
+  const payload = Object.fromEntries(formData.entries());
+  els.registerError.hidden = true;
+
+  try {
+    const response = await fetch("/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.ok) throw new Error(result.error || "Не вдалося зареєструватися");
+
+    state.user = result.user;
+    els.registerForm.reset();
+    renderAccountHeader();
+    prefillCheckoutFromAccount();
+    openAccountModal();
+  } catch (error) {
+    els.registerError.textContent = error.message;
+    els.registerError.hidden = false;
+  }
+}
+
+async function logout() {
+  try {
+    await fetch("/api/auth/logout", { method: "POST" });
+  } catch {
+    // Best-effort — the cookie may already be gone.
+  }
+  state.user = null;
+  renderAccountHeader();
+  closeAccountModal();
+  showToast("Ви вийшли з акаунту");
+}
+
+function prefillCheckoutFromAccount() {
+  if (!state.user || !els.checkoutForm) return;
+  els.checkoutForm.elements.company.value ||= state.user.company;
+  els.checkoutForm.elements.contact.value ||= state.user.contact;
+  els.checkoutForm.elements.phone.value ||= formatPhone(state.user.phone);
+}
+
+async function loadAccountOrders() {
+  els.accountOrdersList.textContent = "Завантаження…";
+  els.accountOrdersEmpty.hidden = true;
+  try {
+    const response = await fetch("/api/orders");
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.ok) throw new Error(result.error || "Не вдалося завантажити замовлення");
+    renderAccountOrders(result.orders || []);
+  } catch (error) {
+    els.accountOrdersList.textContent = "";
+    els.accountOrdersEmpty.textContent = error.message || "Не вдалося завантажити замовлення.";
+    els.accountOrdersEmpty.hidden = false;
+  }
+}
+
+function renderAccountOrders(orders) {
+  els.accountOrdersList.replaceChildren();
+  if (!orders.length) {
+    els.accountOrdersEmpty.textContent = "Замовлень поки немає.";
+    els.accountOrdersEmpty.hidden = false;
+    return;
+  }
+  els.accountOrdersEmpty.hidden = true;
+
+  const fragment = document.createDocumentFragment();
+  for (const order of orders) {
+    const card = document.createElement("div");
+    card.className = "account-order";
+
+    const head = document.createElement("div");
+    head.className = "account-order-head";
+    const idEl = document.createElement("strong");
+    idEl.textContent = order.id;
+    const dateEl = document.createElement("span");
+    dateEl.textContent = order.orderTime || "";
+    head.append(idEl, dateEl);
+
+    const itemsEl = document.createElement("p");
+    itemsEl.className = "account-order-items";
+    itemsEl.textContent = order.items.map((item) => `${item.name} × ${item.quantity}`).join(", ");
+
+    const totalEl = document.createElement("strong");
+    totalEl.className = "account-order-total";
+    totalEl.textContent = formatMoney(order.total);
+
+    card.append(head, itemsEl, totalEl);
+    fragment.append(card);
+  }
+  els.accountOrdersList.append(fragment);
+}
+
+function formatPhone(digits) {
+  const value = String(digits || "");
+  return value.startsWith("380") ? `+${value}` : value;
 }
 
 async function submitOrder(event) {
@@ -431,6 +643,7 @@ async function submitOrder(event) {
     els.checkoutForm.reset();
     setMinimumDeliveryDate();
     closeDrawer();
+    if (state.user && !els.accountModal.hidden) loadAccountOrders();
     setTimeout(() => {
       els.successModal.hidden = false;
       document.body.classList.add("drawer-open");

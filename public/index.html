@@ -22,6 +22,10 @@
         <a href="#catalog">Каталог</a>
         <a href="#delivery">Доставка</a>
       </nav>
+      <button class="account-button" id="headerAccountButton" type="button">
+        <span aria-hidden="true">👤</span>
+        <span id="headerAccountLabel">Увійти</span>
+      </button>
       <button class="cart-button" id="headerCartButton" type="button" aria-label="Відкрити кошик">
         <span class="cart-icon" aria-hidden="true">🛒</span>
         <span class="cart-button-text">Кошик</span>
@@ -268,6 +272,70 @@
       <div class="success-icon">✓</div>
       <h2 id="successTitle">Замовлення відправлено</h2>
       <button class="button button-primary" id="successCloseButton" type="button">Готово</button>
+    </div>
+  </div>
+
+  <div class="account-modal" id="accountModal" hidden>
+    <div class="account-card" role="dialog" aria-modal="true" aria-labelledby="accountModalTitle">
+      <button class="icon-button account-close" id="accountModalClose" type="button" aria-label="Закрити">×</button>
+
+      <div id="accountLoggedOut">
+        <div class="account-tabs">
+          <button class="account-tab is-active" id="accountTabLogin" type="button">Вхід</button>
+          <button class="account-tab" id="accountTabRegister" type="button">Реєстрація</button>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <h2 id="accountModalTitle">Вхід в акаунт</h2>
+          <label class="form-field form-field-wide">
+            <span>Телефон *</span>
+            <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+380…" required />
+          </label>
+          <label class="form-field form-field-wide">
+            <span>Пароль *</span>
+            <input name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <div class="form-error" id="loginError" role="alert" hidden></div>
+          <button class="button button-primary button-full" type="submit">Увійти</button>
+        </form>
+
+        <form id="registerForm" novalidate hidden>
+          <h2>Реєстрація</h2>
+          <label class="form-field form-field-wide">
+            <span>ФОП або назва компанії *</span>
+            <input name="company" type="text" maxlength="160" autocomplete="organization" required />
+          </label>
+          <label class="form-field form-field-wide">
+            <span>Контактна особа *</span>
+            <input name="contact" type="text" maxlength="160" autocomplete="name" required />
+          </label>
+          <label class="form-field form-field-wide">
+            <span>Телефон *</span>
+            <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+380…" required />
+          </label>
+          <label class="form-field form-field-wide">
+            <span>Пароль (мінімум 6 символів) *</span>
+            <input name="password" type="password" autocomplete="new-password" minlength="6" required />
+          </label>
+          <div class="form-error" id="registerError" role="alert" hidden></div>
+          <button class="button button-primary button-full" type="submit">Зареєструватися</button>
+        </form>
+      </div>
+
+      <div id="accountLoggedIn" hidden>
+        <h2>Мій акаунт</h2>
+        <p class="account-summary">
+          <strong id="accountCompany"></strong><br />
+          <span id="accountContact"></span> · <span id="accountPhone"></span>
+        </p>
+
+        <div class="account-orders" id="accountOrders">
+          <p class="account-orders-empty" id="accountOrdersEmpty" hidden>Замовлень поки немає.</p>
+          <div id="accountOrdersList"></div>
+        </div>
+
+        <button class="button button-secondary button-full" id="accountLogoutButton" type="button">Вийти з акаунту</button>
+      </div>
     </div>
   </div>
 
