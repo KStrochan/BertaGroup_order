@@ -243,9 +243,9 @@ function renderProducts() {
     card.dataset.productId = product.id;
     const symbol = card.querySelector(".product-symbol");
     const image = card.querySelector(".product-image");
-    const visual = card.querySelector(".product-visual");
+    const head = card.querySelector(".product-card-head");
     symbol.textContent = getCategoryEmoji(product);
-    visual.classList.add(`product-visual--${getCategoryColor(product)}`);
+    head.classList.add(`product-head--${getCategoryColor(product)}`);
     if (product.image) {
       image.src = "." + product.image;
       image.src = product.image;

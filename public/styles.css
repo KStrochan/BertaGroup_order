@@ -324,8 +324,8 @@ img { max-width: 100%; display: block; }
 .link-button { border: 0; background: transparent; color: var(--red); font-weight: 800; cursor: pointer; }
 .product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .product-card {
-  min-height: 390px;
-  padding: 16px;
+  min-height: 210px;
+  padding: 18px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: white;
@@ -335,39 +335,39 @@ img { max-width: 100%; display: block; }
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .product-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); border-color: #d8dce0; }
-.product-visual {
+.product-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.product-symbol {
   position: relative;
-  height: 170px;
-  margin-bottom: 14px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: linear-gradient(155deg, var(--tint-strong), var(--tint-soft));
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
+  font-size: 19px;
+  background: var(--tint-soft);
   border: 1px solid var(--tint-line);
 }
-.product-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 12px; background: white; }
-.product-symbol {
-  width: 76px;
-  height: 76px;
-  border-radius: 22px;
-  display: grid;
-  place-items: center;
-  background: rgba(255,255,255,.6);
-  font-size: 36px;
-  box-shadow: 0 6px 16px rgba(27,35,44,.06);
+.product-image {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: white;
+  border: 1px solid var(--line);
+  padding: 4px;
 }
-.product-visual--amber  { --tint-strong: #ffe9c7; --tint-soft: #fff6ea; --tint-line: #ffdca3; }
-.product-visual--teal   { --tint-strong: #c9f1ea; --tint-soft: #ecfbf8; --tint-line: #a9e7db; }
-.product-visual--pink   { --tint-strong: #ffd9e4; --tint-soft: #fff0f4; --tint-line: #ffc0d3; }
-.product-visual--blue   { --tint-strong: #d6e6ff; --tint-soft: #eff5ff; --tint-line: #bcd6ff; }
-.product-visual--violet { --tint-strong: #e4d9ff; --tint-soft: #f4efff; --tint-line: #d2c0ff; }
-.product-visual--green  { --tint-strong: #d3f0d6; --tint-soft: #eefaf0; --tint-line: #b6e3bc; }
-.product-visual--orange { --tint-strong: #ffdcc2; --tint-soft: #fff3e9; --tint-line: #ffc79c; }
-.product-visual--sand   { --tint-strong: #ece2d0; --tint-soft: #f8f4ec; --tint-line: #dccfb2; }
-.product-card-top { display: flex; align-items: center; min-height: 28px; }
+.product-head--amber  { --tint-soft: #fff3e2; --tint-line: #ffdca3; }
+.product-head--teal   { --tint-soft: #e7faf6; --tint-line: #a9e7db; }
+.product-head--pink   { --tint-soft: #fff0f4; --tint-line: #ffc0d3; }
+.product-head--blue   { --tint-soft: #eff5ff; --tint-line: #bcd6ff; }
+.product-head--violet { --tint-soft: #f4efff; --tint-line: #d2c0ff; }
+.product-head--green  { --tint-soft: #eefaf0; --tint-line: #b6e3bc; }
+.product-head--orange { --tint-soft: #fff3e9; --tint-line: #ffc79c; }
+.product-head--sand   { --tint-soft: #f8f4ec; --tint-line: #dccfb2; }
 .product-category { color: var(--muted); font-size: 11px; font-weight: 850; text-transform: uppercase; letter-spacing: .06em; line-height: 1.25; }
-.product-name { margin: 10px 0 20px; font-size: 16px; line-height: 1.42; letter-spacing: -0.015em; overflow-wrap: anywhere; }
+.product-name { margin: 0 0 20px; font-size: 16px; line-height: 1.42; letter-spacing: -0.015em; overflow-wrap: anywhere; }
 .product-card-bottom { margin-top: auto; display: flex; align-items: end; justify-content: space-between; gap: 10px; }
 .product-price-wrap { display: grid; }
 .product-price { font-size: 21px; letter-spacing: -0.02em; }
@@ -583,7 +583,7 @@ img { max-width: 100%; display: block; }
   .section-tab { flex: 1; }
   .catalog-filters { grid-template-columns: 1fr; }
   .product-grid { grid-template-columns: 1fr; }
-  .product-card { min-height: 370px; }
+  .product-card { min-height: 190px; }
   .catalog-summary { align-items: flex-start; }
   .delivery-section { padding: 72px 0; }
   .steps-list li { grid-template-columns: 42px 1fr; padding: 18px; }
