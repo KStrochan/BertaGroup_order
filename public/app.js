@@ -3,6 +3,7 @@ const state = {
   productById: new Map(),
   section: "Food",
   category: "",
+  brand: "",
   search: "",
   visibleCount: 36,
   cart: loadCart(),
@@ -21,6 +22,8 @@ const els = {
   emptyState: document.querySelector("#emptyState"),
   loadMoreButton: document.querySelector("#loadMoreButton"),
   categorySelect: document.querySelector("#categorySelect"),
+  brandField: document.querySelector("#brandField"),
+  brandSelect: document.querySelector("#brandSelect"),
   searchInput: document.querySelector("#searchInput"),
   clearSearchButton: document.querySelector("#clearSearchButton"),
   resetFiltersButton: document.querySelector("#resetFiltersButton"),
@@ -106,6 +109,7 @@ function bindEvents() {
     tab.addEventListener("click", () => {
       state.section = tab.dataset.section;
       state.category = "";
+      state.brand = "";
       state.visibleCount = 36;
       els.tabs.forEach((item) => {
         const active = item === tab;
@@ -139,6 +143,14 @@ function bindEvents() {
 
   els.categorySelect.addEventListener("change", () => {
     state.category = els.categorySelect.value;
+    state.brand = "";
+    state.visibleCount = 36;
+    populateBrands();
+    renderProducts();
+  });
+
+  els.brandSelect.addEventListener("change", () => {
+    state.brand = els.brandSelect.value;
     state.visibleCount = 36;
     renderProducts();
   });
@@ -203,6 +215,20 @@ function updateCatalogCounts() {
   els.nonfoodTabCount.textContent = String(nonfood);
 }
 
+const KNOWN_BRANDS = [
+  "Hokkaido", "GIFFARD", "HOFFEN", "OPTIMAL", "LYNKS", "Heinz", "Domestos",
+  "Nutella", "Kinder", "Iberica", "Cantare", "PORADA", "GALAX", "HELCOM",
+  "PROSMAZH", "Джафа", "Хілвей", "Джоні Тічер", "Кама",
+];
+
+function detectBrand(name) {
+  const lower = name.toLocaleLowerCase("uk-UA");
+  for (const brand of KNOWN_BRANDS) {
+    if (lower.includes(brand.toLocaleLowerCase("uk-UA"))) return brand;
+  }
+  return "";
+}
+
 function populateCategories() {
   const categories = [];
   const seen = new Set();
@@ -217,6 +243,36 @@ function populateCategories() {
     els.categorySelect.add(new Option(toTitleCase(category), category));
   }
   els.categorySelect.value = state.category;
+  populateBrands();
+}
+
+function populateBrands() {
+  const brands = [];
+  const seen = new Set();
+  for (const product of state.products) {
+    if (product.section !== state.section) continue;
+    if (state.category && product.category !== state.category) continue;
+    const brand = detectBrand(product.name);
+    if (!brand || seen.has(brand)) continue;
+    seen.add(brand);
+    brands.push(brand);
+  }
+
+  if (brands.length < 2) {
+    state.brand = "";
+    els.brandField.hidden = true;
+    els.brandSelect.replaceChildren(new Option("Усі бренди", ""));
+    return;
+  }
+
+  brands.sort((a, b) => a.localeCompare(b, "uk-UA"));
+  els.brandSelect.replaceChildren(new Option("Усі бренди", ""));
+  for (const brand of brands) {
+    els.brandSelect.add(new Option(brand, brand));
+  }
+  if (!brands.includes(state.brand)) state.brand = "";
+  els.brandSelect.value = state.brand;
+  els.brandField.hidden = false;
 }
 
 function getFilteredProducts() {
@@ -224,6 +280,7 @@ function getFilteredProducts() {
   return state.products.filter((product) => {
     if (product.section !== state.section) return false;
     if (state.category && product.category !== state.category) return false;
+    if (state.brand && detectBrand(product.name) !== state.brand) return false;
     if (!query) return true;
 
     return matchesSearch(
@@ -303,9 +360,11 @@ function renderProducts() {
 
 function resetFilters() {
   state.category = "";
+  state.brand = "";
   state.search = "";
   state.visibleCount = 36;
   els.categorySelect.value = "";
+  populateBrands();
   els.searchInput.value = "";
   els.searchInput.closest(".search-field").classList.remove("has-value");
   renderProducts();
