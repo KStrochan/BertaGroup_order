@@ -603,3 +603,30 @@ img { max-width: 100%; display: block; }
 
 .footer-inner a { color: #ff6b7d; text-decoration: none; font-size: 12px; font-weight: 750; }
 .footer-inner a:hover { text-decoration: underline; }
+
+
+/* Картка товару, який купували раніше */
+.product-card.is-ordered {
+  border: 2px solid #2e7d32;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.12);
+}
+
+/* Бейдж в шапці картки */
+.product-card-head {
+  position: relative;
+}
+
+.product-badge-ordered {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #2e7d32;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}

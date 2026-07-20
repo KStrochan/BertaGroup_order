@@ -10,6 +10,7 @@ const state = {
   submitting: false,
   user: null,
   accountMode: "login",
+  orderedProductIds: new Set(),
 };
 
 const els = {
@@ -82,16 +83,15 @@ async function init() {
   setMinimumDeliveryDate();
 
   try {
-   const response = await fetch("./data/products.json", { cache: "no-cache" });
+    const response = await fetch("./data/products.json", { cache: "no-cache" });
     if (!response.ok) throw new Error("Не вдалося завантажити каталог");
     state.products = await response.json();
     state.productById = new Map(state.products.map((product) => [product.id, product]));
     pruneCart();
     updateCatalogCounts();
     populateCategories();
-    renderProducts();
     renderCart();
-    refreshSession();
+    await refreshSession();
   } catch (error) {
     els.resultsText.textContent = "Не вдалося завантажити каталог.";
     els.emptyState.hidden = false;
@@ -241,13 +241,26 @@ function renderProducts() {
   for (const product of visible) {
     const card = els.productCardTemplate.content.firstElementChild.cloneNode(true);
     card.dataset.productId = product.id;
+
+    // Перевірка чи замовлявся товар раніше
+    const isPreviouslyOrdered = state.orderedProductIds && state.orderedProductIds.has(product.id);
+    if (isPreviouslyOrdered) {
+      card.classList.add("is-ordered");
+      const head = card.querySelector(".product-card-head");
+      if (head) {
+        const badge = document.createElement("span");
+        badge.className = "product-badge-ordered";
+        badge.textContent = "✓ Замовляли";
+        head.append(badge);
+      }
+    }
+
     const symbol = card.querySelector(".product-symbol");
     const image = card.querySelector(".product-image");
     const head = card.querySelector(".product-card-head");
     symbol.textContent = getCategoryEmoji(product);
     head.classList.add(`product-head--${getCategoryColor(product)}`);
     if (product.image) {
-      image.src = "." + product.image;
       image.src = product.image;
       image.alt = product.name;
       image.hidden = false;
@@ -439,6 +452,25 @@ function showCartStep() {
   hideFormError();
 }
 
+async function loadUserOrdersHistory() {
+  if (!state.user) {
+    state.orderedProductIds = new Set();
+    return;
+  }
+  try {
+    const response = await fetch("/api/orders");
+    const result = await response.json().catch(() => ({}));
+    if (response.ok && result.ok && Array.isArray(result.orders)) {
+      const ids = result.orders.flatMap((order) => order.items.map((item) => item.id));
+      state.orderedProductIds = new Set(ids);
+    } else {
+      state.orderedProductIds = new Set();
+    }
+  } catch {
+    state.orderedProductIds = new Set();
+  }
+}
+
 async function refreshSession() {
   try {
     const response = await fetch("/api/auth/me");
@@ -447,7 +479,9 @@ async function refreshSession() {
   } catch {
     state.user = null;
   }
+  await loadUserOrdersHistory();
   renderAccountHeader();
+  renderProducts();
 }
 
 function renderAccountHeader() {
@@ -503,9 +537,11 @@ async function submitLogin(event) {
     if (!response.ok || !result.ok) throw new Error(result.error || "Не вдалося увійти");
 
     state.user = result.user;
+    await loadUserOrdersHistory();
     els.loginForm.reset();
     renderAccountHeader();
     prefillCheckoutFromAccount();
+    renderProducts();
     openAccountModal();
   } catch (error) {
     els.loginError.textContent = error.message;
@@ -529,9 +565,11 @@ async function submitRegister(event) {
     if (!response.ok || !result.ok) throw new Error(result.error || "Не вдалося зареєструватися");
 
     state.user = result.user;
+    await loadUserOrdersHistory();
     els.registerForm.reset();
     renderAccountHeader();
     prefillCheckoutFromAccount();
+    renderProducts();
     openAccountModal();
   } catch (error) {
     els.registerError.textContent = error.message;
@@ -546,7 +584,9 @@ async function logout() {
     // Best-effort — the cookie may already be gone.
   }
   state.user = null;
+  state.orderedProductIds = new Set();
   renderAccountHeader();
+  renderProducts();
   closeAccountModal();
   showToast("Ви вийшли з акаунту");
 }
@@ -645,7 +685,13 @@ async function submitOrder(event) {
     els.checkoutForm.reset();
     setMinimumDeliveryDate();
     closeDrawer();
-    if (state.user && !els.accountModal.hidden) loadAccountOrders();
+
+    if (state.user) {
+      await loadUserOrdersHistory();
+      renderProducts();
+      if (!els.accountModal.hidden) loadAccountOrders();
+    }
+
     setTimeout(() => {
       els.successModal.hidden = false;
       document.body.classList.add("drawer-open");
@@ -779,6 +825,15 @@ function formatMoney(value) {
   return `${Number(value).toLocaleString("uk-UA", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} грн`;
 }
 
+function pluralize(number, titles) {
+  const cases = [2, 0, 1, 1, 1, 2];
+  return titles[
+    number % 100 > 4 && number % 100 < 20
+      ? 2
+      : cases[number % 10 < 5 ? number % 10 : 5]
+  ];
+}
+
 function normalizeSearch(value) {
   return String(value || "")
     .toLocaleLowerCase("uk-UA")
@@ -788,8 +843,6 @@ function normalizeSearch(value) {
     .trim();
 }
 
-// Пошук не залежить від порядку слів, підтримує частини слів і одну невелику помилку.
-// Наприклад, "Олія Pros" знайде "PROSMAZH Олія РВД 5 л".
 function matchesSearch(value, normalizedQuery) {
   const searchText = normalizeSearch(value);
   const searchWords = searchText.split(" ").filter(Boolean);
@@ -879,13 +932,4 @@ function getCategoryColor(product) {
     [/касов|стріч/, "blue"],
   ];
   return rules.find(([pattern]) => pattern.test(text))?.[1] || (product.section === "Food" ? "amber" : "blue");
-}
-
-function pluralize(number, forms) {
-  const n = Math.abs(number) % 100;
-  const n1 = n % 10;
-  if (n > 10 && n < 20) return forms[2];
-  if (n1 > 1 && n1 < 5) return forms[1];
-  if (n1 === 1) return forms[0];
-  return forms[2];
 }
