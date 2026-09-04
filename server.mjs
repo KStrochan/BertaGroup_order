@@ -37,13 +37,30 @@ const redis = (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_R
 const localUsers = createJsonCollection(join(dataDir, "users.json"), { defaultValue: [] });
 const localOrders = createJsonCollection(join(dataDir, "orders.json"), { defaultValue: [] });
 
+// Якщо в Redis під ключем лежать пошкоджені/несумісні дані (не масив, не
+// валідний JSON), краще повернути порожній список і залогувати проблему,
+// ніж впасти з винятком і забрати із собою весь процес.
+function parseRedisList(key, data) {
+  if (!data) return [];
+  try {
+    const parsed = typeof data === "string" ? JSON.parse(data) : data;
+    if (!Array.isArray(parsed)) {
+      console.error(`Redis key "${key}" не є масивом, ігноруємо:`, parsed);
+      return [];
+    }
+    return parsed;
+  } catch (error) {
+    console.error(`Не вдалося розібрати дані Redis для ключа "${key}":`, error);
+    return [];
+  }
+}
+
 // Абстракція для роботи з колекціями (Redis -> Local JSON)
 const users = {
   async all() {
     if (!redis) return localUsers.all();
     const data = await redis.get("berta_users");
-    if (!data) return [];
-    return typeof data === "string" ? JSON.parse(data) : data;
+    return parseRedisList("berta_users", data);
   },
   async mutate(fn) {
     if (!redis) return localUsers.mutate(fn);
@@ -58,8 +75,7 @@ const orders = {
   async all() {
     if (!redis) return localOrders.all();
     const data = await redis.get("berta_orders");
-    if (!data) return [];
-    return typeof data === "string" ? JSON.parse(data) : data;
+    return parseRedisList("berta_orders", data);
   },
   async mutate(fn) {
     if (!redis) return localOrders.mutate(fn);
@@ -107,22 +123,22 @@ const server = createServer(async (req, res) => {
         res.setHeader("Allow", "POST");
         return sendJson(res, 405, { ok: false, error: "Метод не підтримується" });
       }
-      return handleOrder(req, res);
+      return await handleOrder(req, res);
     }
 
     if (url.pathname === "/api/auth/register") {
       if (req.method !== "POST") return sendJson(res, 405, { ok: false, error: "Метод не підтримується" });
-      return handleRegister(req, res);
+      return await handleRegister(req, res);
     }
 
     if (url.pathname === "/api/auth/login") {
       if (req.method !== "POST") return sendJson(res, 405, { ok: false, error: "Метод не підтримується" });
-      return handleLogin(req, res);
+      return await handleLogin(req, res);
     }
 
     if (url.pathname === "/api/auth/logout") {
       if (req.method !== "POST") return sendJson(res, 405, { ok: false, error: "Метод не підтримується" });
-      return handleLogout(req, res);
+      return await handleLogout(req, res);
     }
 
     if (url.pathname === "/api/auth/me") {
@@ -147,7 +163,7 @@ const server = createServer(async (req, res) => {
       return sendText(res, 405, "Method Not Allowed");
     }
 
-    return serveStatic(url.pathname, req, res);
+    return await serveStatic(url.pathname, req, res);
   } catch (error) {
     console.error("Unhandled request error:", error);
     return sendJson(res, 500, { ok: false, error: "Внутрішня помилка сервера" });
@@ -159,6 +175,17 @@ server.listen(PORT, "0.0.0.0", () => {
   console.log(`Товарів у каталозі: ${products.length}`);
   console.log(`Telegram: ${TELEGRAM_BOT_TOKEN ? "налаштовано" : "токен не задано"}`);
   console.log(`Upstash Redis: ${redis ? "підключено успішно" : "використовується локальний JSON"}`);
+});
+
+// Останній рубіж захисту: без цього будь-яка необроблена помилка чи відхилений
+// проміс (наприклад, обробник маршруту, викликаний без await) валить увесь
+// процес Node і кладе сайт для всіх користувачів, поки Render його не
+// перезапустить. Тут ми лише логуємо і продовжуємо працювати.
+process.on("unhandledRejection", (reason) => {
+  console.error("Unhandled promise rejection:", reason);
+});
+process.on("uncaughtException", (error) => {
+  console.error("Uncaught exception:", error);
 });
 
 async function handleOrder(req, res) {
