@@ -82,6 +82,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument(
+        "--no-similar", action="store_true",
+        help=(
+            "Disable the 'similar' fallback: keep the original strict behaviour where a "
+            "product with no exact name+brand+package match gets no photo at all."
+        ),
+    )
+    parser.add_argument(
         "--hotlink",
         action="store_true",
         help=(
@@ -233,7 +240,16 @@ def candidate_text(candidate: dict[str, Any]) -> str:
     return " ".join(str(item) for item in fields if item)
 
 
-def score_candidate(product: dict[str, Any], candidate: dict[str, Any]) -> tuple[float, str]:
+def score_candidate(product: dict[str, Any], candidate: dict[str, Any]) -> tuple[float, str, bool]:
+    """Score a candidate image against a product.
+
+    Returns (score, reason, is_exact). `is_exact` marks a candidate that satisfies the strict
+    name + brand + package-size match (the original, conservative behaviour). When a product
+    has no exact match anywhere, callers may still fall back to the highest-scoring *inexact*
+    candidate ("similar" tier) rather than leaving the product with no photo at all -- as long
+    as it is at least plausibly the same kind of item (shared name tokens), never a random,
+    unrelated image.
+    """
     source_name = str(product.get("name") or product.get("sourceName") or "")
     target_text = candidate_text(candidate)
     image_url = str(candidate.get("image_front_url") or candidate.get("image_url") or "")
@@ -241,9 +257,9 @@ def score_candidate(product: dict[str, Any], candidate: dict[str, Any]) -> tuple
     provider = str(candidate.get("provider") or "")
 
     if not target_text or not image_url:
-        return 0.0, "candidate has no useful text or image"
+        return 0.0, "candidate has no useful text or image", False
     if domain_denied(source_page) or domain_denied(image_url):
-        return 0.0, "source domain is not suitable"
+        return 0.0, "source domain is not suitable", False
 
     source_norm = normalize(clean_query_name(source_name))
     target_norm = normalize(target_text)
@@ -256,30 +272,39 @@ def score_candidate(product: dict[str, Any], candidate: dict[str, Any]) -> tuple
     brand_ok, brand_score = brand_compatible(brand_hint, target_text)
     measure_ok, measure_score = measurement_compatible(source_name, target_text)
 
-    if not measure_ok:
-        return 0.0, "package size/weight does not match or is missing"
-    if not brand_ok:
-        return 0.0, f"brand does not match ({brand_hint})"
-
     provider_bonus = 0.05 if provider == "openfacts" else 0.0
     domain_bonus = 0.0
     source_domain = domain_of(source_page)
     if brand_hint and brand_hint in normalize(source_domain):
         domain_bonus = 0.04
 
-    score = (
+    base_score = min(1.0, (
         text_ratio * 0.49 + coverage * 0.29 + brand_score * 0.12
         + measure_score * 0.10 + provider_bonus + domain_bonus
-    )
+    ))
 
-    if not brand_hint and (text_ratio < 0.90 or coverage < 0.75):
-        return 0.0, "generic product match is not specific enough"
-    if provider != "openfacts" and (text_ratio < 0.79 or coverage < 0.64):
-        return 0.0, "web result name similarity is too low"
-    if text_ratio < 0.72 or coverage < 0.58:
-        return 0.0, "name similarity is too low"
+    exact_reason: str | None = None
+    if not measure_ok:
+        exact_reason = "package size/weight does not match or is missing"
+    elif not brand_ok:
+        exact_reason = f"brand does not match ({brand_hint})"
+    elif not brand_hint and (text_ratio < 0.90 or coverage < 0.75):
+        exact_reason = "generic product match is not specific enough"
+    elif provider != "openfacts" and (text_ratio < 0.79 or coverage < 0.64):
+        exact_reason = "web result name similarity is too low"
+    elif text_ratio < 0.72 or coverage < 0.58:
+        exact_reason = "name similarity is too low"
 
-    return min(1.0, score), "strong name, brand and package match"
+    if exact_reason is None:
+        return base_score, "strong name, brand and package match", True
+
+    # Not an exact match (wrong pack size/brand, or a weaker text match). Still eligible as a
+    # "similar" fallback candidate only if there is real, non-trivial name overlap -- this is
+    # what keeps the fallback from ever grabbing an unrelated product's photo.
+    if text_ratio < 0.45 and coverage < 0.30:
+        return 0.0, exact_reason, False
+
+    return base_score * 0.85, f"similar only: {exact_reason}", False
 
 
 def build_queries(product: dict[str, Any]) -> list[str]:
@@ -407,25 +432,47 @@ def search_bing(session: requests.Session, product: dict[str, Any], delay: float
     return results
 
 
-def choose_best(product: dict[str, Any], candidates: Iterable[dict[str, Any]], min_score: float) -> tuple[dict[str, Any] | None, float, str]:
-    ranked: list[tuple[float, dict[str, Any], str]] = []
+def choose_best(
+    product: dict[str, Any], candidates: Iterable[dict[str, Any]], min_score: float,
+    *, allow_similar: bool = True,
+) -> tuple[dict[str, Any] | None, float, str, bool]:
+    """Return (candidate, score, reason, is_exact).
+
+    Tries for an exact match first (unchanged strict behaviour, including the ambiguity
+    check between the top two exact candidates). If nothing clears the exact bar and
+    `allow_similar` is set, falls back to the single highest-scoring inexact candidate --
+    the closest available "similar" photo -- instead of leaving the product without one.
+    """
+    ranked: list[tuple[float, dict[str, Any], str, bool]] = []
     for candidate in candidates:
-        score, reason = score_candidate(product, candidate)
-        ranked.append((score, candidate, reason))
+        score, reason, is_exact = score_candidate(product, candidate)
+        ranked.append((score, candidate, reason, is_exact))
     ranked.sort(key=lambda item: item[0], reverse=True)
     if not ranked:
-        return None, 0.0, "no candidates"
-    score, candidate, reason = ranked[0]
-    threshold = min_score if candidate.get("provider") == "openfacts" else max(min_score, 0.88)
-    if score < threshold:
-        return None, score, reason
-    if len(ranked) > 1:
-        second_score, second, _ = ranked[1]
-        second_threshold = min_score if second.get("provider") == "openfacts" else max(min_score, 0.88)
-        if second_score >= second_threshold and score - second_score < 0.025:
-            if str(candidate.get("image_url")) != str(second.get("image_url")):
-                return None, score, "ambiguous: two similarly strong images"
-    return candidate, score, reason
+        return None, 0.0, "no candidates", False
+
+    exact_ranked = [item for item in ranked if item[3]]
+    if exact_ranked:
+        score, candidate, reason, _ = exact_ranked[0]
+        threshold = min_score if candidate.get("provider") == "openfacts" else max(min_score, 0.88)
+        if score >= threshold:
+            ambiguous = False
+            if len(exact_ranked) > 1:
+                second_score, second, _, _ = exact_ranked[1]
+                second_threshold = min_score if second.get("provider") == "openfacts" else max(min_score, 0.88)
+                if second_score >= second_threshold and score - second_score < 0.025:
+                    if str(candidate.get("image_url")) != str(second.get("image_url")):
+                        ambiguous = True
+            if not ambiguous:
+                return candidate, score, reason, True
+
+    if allow_similar:
+        best_score, best_candidate, best_reason, _ = ranked[0]
+        if best_score > 0.0:
+            return best_candidate, best_score, best_reason, False
+
+    top_score, _, top_reason, _ = ranked[0]
+    return None, top_score, top_reason, False
 
 
 def download_image(session: requests.Session, image_url: str, destination: Path) -> tuple[bool, str]:
@@ -533,7 +580,7 @@ def main() -> int:
             image_path = IMAGES_DIR / f"{product_id}.webp"
             if not args.force and product.get("image") and image_path.exists():
                 continue
-            if not args.force and existing.get("status") == "matched" and image_path.exists():
+            if not args.force and existing.get("status") in ("matched", "similar_match") and image_path.exists():
                 product["image"] = f"/images/products/{product_id}.webp"
                 continue
         if not args.retry_unmatched and existing.get("status") == "no_match":
@@ -543,7 +590,8 @@ def main() -> int:
     selected = eligible[:max(0, args.limit)]
     print(f"Products in catalog: {len(products)}")
     print(f"Checking this run: {len(selected)}")
-    matched = no_match = errors = 0
+    matched = similar = no_match = errors = 0
+    allow_similar = not args.no_similar
     run_started = time.monotonic()
     time_budget_seconds = max(0.0, args.max_minutes) * 60
 
@@ -570,6 +618,8 @@ def main() -> int:
         candidate = None
         score = 0.0
         reason = "no exact match"
+        is_exact = False
+        best_fallback: tuple[dict[str, Any], float, str] | None = None
 
         provider_functions = []
         if "openfacts" in providers:
@@ -581,11 +631,26 @@ def main() -> int:
 
         for provider_name, search_fn in provider_functions:
             candidates = search_fn(session, product, args.sleep)
-            candidate, score, reason = choose_best(product, candidates, args.min_score)
-            if candidate is not None:
+            # Ask for an exact match per-provider first (keeps the original, stricter
+            # cross-provider short-circuit behaviour); remember the best inexact ("similar")
+            # candidate seen so far in case no provider yields an exact match at all.
+            exact_candidate, exact_score, exact_reason, exact_is_exact = choose_best(
+                product, candidates, args.min_score, allow_similar=False)
+            if exact_candidate is not None:
+                candidate, score, reason, is_exact = exact_candidate, exact_score, exact_reason, True
                 print(f"  matched via {provider_name}: {score:.3f}")
                 break
-            print(f"  {provider_name}: no accepted match ({score:.3f}; {reason})")
+            print(f"  {provider_name}: no accepted match ({exact_score:.3f}; {exact_reason})")
+            if allow_similar:
+                sim_candidate, sim_score, sim_reason, _ = choose_best(
+                    product, candidates, args.min_score, allow_similar=True)
+                if sim_candidate is not None and (best_fallback is None or sim_score > best_fallback[1]):
+                    best_fallback = (sim_candidate, sim_score, sim_reason)
+
+        if candidate is None and best_fallback is not None:
+            candidate, score, reason = best_fallback
+            is_exact = False
+            print(f"  no exact match anywhere -- using closest similar photo: {score:.3f} ({reason})")
 
         if candidate is None:
             state[product_id] = {
@@ -624,8 +689,10 @@ def main() -> int:
 
         provider = str(candidate.get("provider") or "")
         product["image"] = image_url if args.hotlink else f"/images/products/{product_id}.webp"
+        product["imageMatch"] = "exact" if is_exact else "similar"
         state[product_id] = {
-            "status": "matched", "provider": provider, "score": round(score, 4),
+            "status": "matched" if is_exact else "similar_match",
+            "provider": provider, "score": round(score, 4),
             "matchedName": candidate_text(candidate), "sourcePage": source_page,
             "imageUrl": image_url, "reason": reason, "checkedAt": now_iso(),
         }
@@ -633,9 +700,13 @@ def main() -> int:
         attributions[product_id] = {
             "productName": product.get("name", ""), "source": provider,
             "sourcePage": source_page, "originalImage": image_url,
+            "imageMatch": "exact" if is_exact else "similar",
             "license": license_note, "retrievedAt": now_iso(),
         }
-        matched += 1
+        if is_exact:
+            matched += 1
+        else:
+            similar += 1
 
         if index % max(1, args.checkpoint_every) == 0:
             checkpoint()
@@ -645,9 +716,10 @@ def main() -> int:
         checkpoint()
 
     print("\nSummary")
-    print(f"  matched:  {matched}")
-    print(f"  no match: {no_match}")
-    print(f"  errors:   {errors}")
+    print(f"  matched (exact):  {matched}")
+    print(f"  similar (approx): {similar}")
+    print(f"  no match:         {no_match}")
+    print(f"  errors:           {errors}")
     return 0 if errors == 0 else 1
 
 
