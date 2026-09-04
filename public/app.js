@@ -313,6 +313,7 @@ function renderProducts() {
     }
 
     const symbol = card.querySelector(".product-symbol");
+    const media = card.querySelector(".product-media");
     const image = card.querySelector(".product-image");
     const head = card.querySelector(".product-card-head");
     symbol.textContent = getCategoryEmoji(product);
@@ -321,10 +322,10 @@ function renderProducts() {
       image.src = product.image;
       image.alt = product.name;
       image.hidden = false;
-      symbol.hidden = true;
+      media.hidden = false;
       image.addEventListener("error", () => {
         image.hidden = true;
-        symbol.hidden = false;
+        media.hidden = true;
       }, { once: true });
     }
     card.querySelector(".product-category").textContent = toTitleCase(product.category);

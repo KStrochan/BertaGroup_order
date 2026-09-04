@@ -350,9 +350,11 @@
 
   <template id="productCardTemplate">
     <article class="product-card">
+      <div class="product-media" hidden>
+        <img class="product-image" alt="" loading="lazy" decoding="async" hidden />
+      </div>
       <div class="product-card-head">
         <span class="product-symbol" aria-hidden="true"></span>
-        <img class="product-image" alt="" loading="lazy" decoding="async" hidden />
         <span class="product-category"></span>
       </div>
       <h3 class="product-name"></h3>
