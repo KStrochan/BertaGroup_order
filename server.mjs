@@ -5,7 +5,7 @@ import { extname, join, normalize, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { randomInt, randomUUID, randomBytes } from "node:crypto";
 import { Redis } from "@upstash/redis";
-import { createJsonCollection } from "./lib/store.mjs";
+import { createStorage, DuplicatePhoneError } from "./lib/db.mjs";
 import { hashPassword, verifyPassword, createSessionToken, verifySessionToken, parseCookies } from "./lib/auth.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
@@ -28,63 +28,32 @@ if (!SESSION_SECRET) {
   );
 }
 
-// Ініціалізація Upstash Redis (якщо є змінні оточення)
-const redis = (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN)
-  ? Redis.fromEnv()
+// Сховище даних: Upstash Redis, якщо задано обидві змінні оточення, інакше —
+// локальні JSON-файли в ./data (зручно для розробки на комп'ютері).
+// Структура даних у Redis описана в lib/db.mjs.
+const upstashUrl = String(process.env.UPSTASH_REDIS_REST_URL || "").trim();
+const upstashToken = String(process.env.UPSTASH_REDIS_REST_TOKEN || "").trim();
+const redis = (upstashUrl && upstashToken)
+  ? new Redis({ url: upstashUrl, token: upstashToken, automaticDeserialization: false })
   : null;
 
-// Локальний фолбек на JSON-файли
-const localUsers = createJsonCollection(join(dataDir, "users.json"), { defaultValue: [] });
-const localOrders = createJsonCollection(join(dataDir, "orders.json"), { defaultValue: [] });
-
-// Якщо в Redis під ключем лежать пошкоджені/несумісні дані (не масив, не
-// валідний JSON), краще повернути порожній список і залогувати проблему,
-// ніж впасти з винятком і забрати із собою весь процес.
-function parseRedisList(key, data) {
-  if (!data) return [];
-  try {
-    const parsed = typeof data === "string" ? JSON.parse(data) : data;
-    if (!Array.isArray(parsed)) {
-      console.error(`Redis key "${key}" не є масивом, ігноруємо:`, parsed);
-      return [];
-    }
-    return parsed;
-  } catch (error) {
-    console.error(`Не вдалося розібрати дані Redis для ключа "${key}":`, error);
-    return [];
+const storage = createStorage({ redis, dataDir });
+try {
+  const init = await storage.init();
+  if (init.migrated) {
+    console.log(`Дані зі старого формату Redis перенесено: клієнтів — ${init.users}, замовлень — ${init.orders}`);
   }
+} catch (error) {
+  // Якщо Redis налаштовано, але недоступний, краще не стартувати зовсім, ніж
+  // працювати з порожньою базою: клієнти б не змогли увійти, а нові реєстрації
+  // і замовлення пішли б повз реальні дані.
+  console.error("Не вдалося підключитися до сховища даних:", error);
+  console.error(
+    "Перевірте UPSTASH_REDIS_REST_URL і UPSTASH_REDIS_REST_TOKEN " +
+    "(або приберіть їх, щоб працювати з локальними JSON-файлами).",
+  );
+  process.exit(1);
 }
-
-// Абстракція для роботи з колекціями (Redis -> Local JSON)
-const users = {
-  async all() {
-    if (!redis) return localUsers.all();
-    const data = await redis.get("berta_users");
-    return parseRedisList("berta_users", data);
-  },
-  async mutate(fn) {
-    if (!redis) return localUsers.mutate(fn);
-    const current = await this.all();
-    const updated = await fn(JSON.parse(JSON.stringify(current)));
-    await redis.set("berta_users", updated);
-    return updated;
-  },
-};
-
-const orders = {
-  async all() {
-    if (!redis) return localOrders.all();
-    const data = await redis.get("berta_orders");
-    return parseRedisList("berta_orders", data);
-  },
-  async mutate(fn) {
-    if (!redis) return localOrders.mutate(fn);
-    const current = await this.all();
-    const updated = await fn(JSON.parse(JSON.stringify(current)));
-    await redis.set("berta_orders", updated);
-    return updated;
-  },
-};
 
 const products = JSON.parse(
   await readFile(join(publicDir, "data", "products.json"), "utf8"),
@@ -114,6 +83,7 @@ const server = createServer(async (req, res) => {
         ok: true,
         telegramConfigured: Boolean(TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID),
         redisConfigured: Boolean(redis),
+        storage: storage.kind,
         productCount: products.length,
       });
     }
@@ -152,10 +122,7 @@ const server = createServer(async (req, res) => {
       if (req.method !== "GET") return sendJson(res, 405, { ok: false, error: "Метод не підтримується" });
       const user = await getSessionUser(req);
       if (!user) return sendJson(res, 401, { ok: false, error: "Потрібно увійти в акаунт" });
-      const allOrders = await orders.all();
-      const mine = allOrders
-        .filter((order) => order.userId === user.id)
-        .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+      const mine = await storage.listOrdersByUser(user.id);
       return sendJson(res, 200, { ok: true, orders: mine });
     }
 
@@ -174,7 +141,7 @@ server.listen(PORT, "0.0.0.0", () => {
   console.log(`Berta HoReCa: http://localhost:${PORT}`);
   console.log(`Товарів у каталозі: ${products.length}`);
   console.log(`Telegram: ${TELEGRAM_BOT_TOKEN ? "налаштовано" : "токен не задано"}`);
-  console.log(`Upstash Redis: ${redis ? "підключено успішно" : "використовується локальний JSON"}`);
+  console.log(`Сховище даних: ${redis ? "Upstash Redis (підключено успішно)" : "локальні JSON-файли в ./data"}`);
 });
 
 // Останній рубіж захисту: без цього будь-яка необроблена помилка чи відхилений
@@ -266,9 +233,12 @@ async function handleOrder(req, res) {
     });
   }
 
-  const user = await getSessionUser(req);
-  await orders.mutate((list) => {
-    list.push({
+  // Замовлення вже в Telegram. Збій збереження історії не повинен ламати
+  // відповідь клієнту: інакше він побачить помилку, повторить замовлення, і
+  // в Telegram прийде дубль.
+  try {
+    const user = await getSessionUser(req);
+    await storage.addOrder({
       id: orderId,
       userId: user ? user.id : null,
       createdAt: new Date().toISOString(),
@@ -284,8 +254,9 @@ async function handleOrder(req, res) {
       })),
       total,
     });
-    return list;
-  });
+  } catch (error) {
+    console.error(`Замовлення ${orderId} надіслано в Telegram, але не збережено в історію:`, error);
+  }
 
   return sendJson(res, 200, { ok: true, orderId });
 }
@@ -313,9 +284,9 @@ async function handleRegister(req, res) {
   if (!company) return sendJson(res, 400, { ok: false, error: "Вкажіть назву ФОП або компанії" });
   if (!contact) return sendJson(res, 400, { ok: false, error: "Вкажіть контактну особу" });
 
-  const existing = await users.all();
-  if (existing.some((u) => u.phone === phone)) {
-    return sendJson(res, 409, { ok: false, error: "Клієнт із таким телефоном уже зареєстрований" });
+  const duplicateError = { ok: false, error: "Клієнт із таким телефоном уже зареєстрований" };
+  if (await storage.findUserByPhone(phone)) {
+    return sendJson(res, 409, duplicateError);
   }
 
   const user = {
@@ -326,10 +297,13 @@ async function handleRegister(req, res) {
     passwordHash: await hashPassword(password),
     createdAt: new Date().toISOString(),
   };
-  await users.mutate((list) => {
-    list.push(user);
-    return list;
-  });
+  try {
+    await storage.createUser(user);
+  } catch (error) {
+    // Двоє одночасно зареєстрували один номер — переміг перший.
+    if (error instanceof DuplicatePhoneError) return sendJson(res, 409, duplicateError);
+    throw error;
+  }
 
   setSessionCookie(res, createSessionToken(user.id, SESSION_SECRET));
   return sendJson(res, 200, { ok: true, user: publicUser(user) });
@@ -350,8 +324,7 @@ async function handleLogin(req, res) {
 
   const phone = normalizePhone(payload.phone);
   const password = String(payload.password || "");
-  const existing = await users.all();
-  const user = existing.find((u) => u.phone === phone);
+  const user = await storage.findUserByPhone(phone);
   const valid = user ? await verifyPassword(password, user.passwordHash) : false;
 
   if (!user || !valid) {
@@ -371,8 +344,7 @@ async function getSessionUser(req) {
   const cookies = parseCookies(req.headers.cookie);
   const userId = verifySessionToken(cookies.session, SESSION_SECRET);
   if (!userId) return null;
-  const existing = await users.all();
-  return existing.find((u) => u.id === userId) || null;
+  return storage.findUserById(userId);
 }
 
 function publicUser(user) {

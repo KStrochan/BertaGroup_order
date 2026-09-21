@@ -6,7 +6,8 @@
   "description": "B2B-каталог Berta HoReCa з відправленням замовлень у Telegram",
   "scripts": {
     "start": "node server.mjs",
-    "dev": "node --watch server.mjs"
+    "dev": "node --watch server.mjs",
+    "test": "node --test"
   },
   "engines": {
     "node": ">=20"
